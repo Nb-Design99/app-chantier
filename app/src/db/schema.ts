@@ -223,23 +223,40 @@ export class BaseChantier extends Dexie {
 
   constructor() {
     super('app-chantier')
-    this.version(2).stores({
+    // ─────────────────────────────────────────────────────────────────
+    // Historique des versions. IndexedDB ne sait PAS changer la clé primaire
+    // d'une table existante : il faut la supprimer dans une version, puis la
+    // recréer dans la suivante. D'où v2 qui jette `articles` et v3 qui la
+    // reconstruit sur `ref`. Ne jamais modifier une version déjà publiée —
+    // toujours en ajouter une.
+    // ─────────────────────────────────────────────────────────────────
+    this.version(1).stores({
       profils: 'id, role',
       affaires: 'id, statut, type, updated_at',
       etapes: 'id, affaire_id, [affaire_id+ordre]',
       locaux: 'id, affaire_id, [affaire_id+ordre]',
       metres: 'id, affaire_id, statut',
-      metre_lignes: 'id, metre_id, local_id, poste_code, article_ref',
-      materiel_mouvements: 'id, affaire_id, article_ref, created_at',
-
-      articles: 'ref, e_no, couleur, designation',
+      metre_lignes: 'id, metre_id, local_id, poste_code, article_e_no',
+      materiel_mouvements: 'id, affaire_id, e_no, created_at',
+      articles: 'e_no, couleur, designation',
       ensembles: 'libelle, categorie, favori, ordre',
-      postes: 'code, categorie, no_can, ordre',
-      codes_ci: 'code, groupe',
+      postes: 'code, categorie, ordre',
       categories: 'code, ordre',
       locaux_types: '++id, famille',
-
       sync_file: 'id, created_at',
+    })
+
+    // v2 : on jette `articles`, dont la clé passe du numéro ELDAS à `ref`
+    // (les fils et câbles n'ont pas de numéro ELDAS). C'est un référentiel
+    // entièrement rechargé depuis le bundle : rien à sauvegarder.
+    this.version(2).stores({ articles: null })
+
+    this.version(3).stores({
+      metre_lignes: 'id, metre_id, local_id, poste_code, article_ref',
+      materiel_mouvements: 'id, affaire_id, article_ref, created_at',
+      articles: 'ref, e_no, couleur, designation',
+      postes: 'code, categorie, no_can, ordre',
+      codes_ci: 'code, groupe',
     })
   }
 }
