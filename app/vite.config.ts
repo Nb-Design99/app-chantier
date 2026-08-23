@@ -8,6 +8,17 @@ export default defineConfig({
     react(),
     tailwindcss(),
     VitePWA({
+      /*
+       * selfDestroying : le service worker généré se désinscrit et vide ses
+       * caches au lieu de servir l'app.
+       *
+       * Pourquoi : tant qu'on développe et que l'app tourne sur un serveur
+       * local, le précache n'apporte rien — mais il sert obstinément l'ancienne
+       * version, au point qu'une modification livrée n'arrivait jamais à
+       * l'écran. À remettre à `false` le jour de l'hébergement, quand le vrai
+       * hors ligne (téléphone, sous-sol) deviendra le sujet.
+       */
+      selfDestroying: true,
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
