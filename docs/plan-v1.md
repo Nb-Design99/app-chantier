@@ -133,6 +133,34 @@ viennent du même endroit (`data/locaux_types.csv`).
 **Séquencement volontaire :** hors ligne en étape 3, avant toute fonctionnalité.
 Ajouter le mode hors ligne à une app déjà écrite en ligne, c'est la réécrire.
 
+### Où on en est — 21.08.2026
+
+Le squelette est monté **en mode 100 % local**, sans Supabase, et il tourne :
+`node.exe … vite` sur <http://localhost:5180> (config `app-chantier` du launch.json).
+
+| Étape | État |
+|---|---|
+| 0 Fondations | ✅ sauf hébergement (rien à héberger pour l'instant) |
+| 1 Schéma + RLS | 🟡 SQL écrit, **jamais exécuté sur un vrai Postgres** |
+| 2 Seed référentiels | ✅ 184 postes, 47 locaux types, 21 ensembles, 126 articles |
+| 3 Couche hors ligne | 🟡 base locale + file d'attente ✅ ; la synchro reste à écrire |
+| 4 Auth + coquille | 🟡 coquille ✅ ; auth simulée par un sélecteur de profil |
+| 5 Affaires + étapes | ✅ testé, note libre comprise |
+| 6 Matériel | ✅ **1 tap = +1** (mieux que les 3 clics demandés) |
+| 7 Métrés | ✅ recherche, locaux, validation, figeage |
+| 8 Exports | 🟡 CSV matériel ✅ ; PDF/Excel du métré à faire |
+| 9 Durcissement terrain | ⬜ demande les vrais téléphones |
+
+**Ce qui ne sera pas à refaire au branchement de Supabase :** aucun écran. Les
+écrans lisent et écrivent dans la base locale, `src/db/repo.ts` dépose une
+opération dans `sync_file` à chaque écriture, et `src/sync/index.ts` est le seul
+fichier qui parlera au serveur. Le schéma Dexie est le miroir exact du SQL — c'est
+la seule chose à maintenir en phase entre les deux.
+
+**Ce qui restera à faire :** écrire `pousser()` / `tirer()`, remplacer le sélecteur
+de profil par Supabase Auth (le reste du code ne connaît qu'un `profil.id`),
+et éprouver la RLS pour de vrai.
+
 **Jalon utile à mi-parcours :** après l'étape 6, l'app est déjà utilisable sur un
 vrai chantier pour le matériel seul. Ça vaut la peine de la faire tourner une
 semaine avant d'attaquer les métrés — les retours terrain changeront l'écran de métré.
