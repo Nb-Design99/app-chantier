@@ -4,6 +4,7 @@ import postes from '../data/postes.json'
 import locauxTypes from '../data/locaux-types.json'
 import ensembles from '../data/ensembles.json'
 import articles from '../data/articles.json'
+import codesCi from '../data/codes-ci.json'
 
 /**
  * Chargement des référentiels dans la base locale.
@@ -13,19 +14,24 @@ import articles from '../data/articles.json'
  * utilisable au premier lancement même sans réseau.
  */
 export async function chargerReferentiels() {
-  await db.transaction('rw', db.categories, db.postes, db.locaux_types, db.ensembles, db.articles, async () => {
+  await db.transaction(
+    'rw',
+    [db.categories, db.postes, db.locaux_types, db.ensembles, db.articles, db.codes_ci],
+    async () => {
     // Les référentiels sont entièrement dérivés du bundle : on les remplace au
     // lieu de les fusionner, sinon un libellé renommé laisse un doublon fantôme
     // (la clé primaire des ensembles est le libellé).
-    await db.ensembles.clear()
-    await db.categories.bulkPut(categories as never)
-    await db.postes.bulkPut(postes as never)
-    await db.ensembles.bulkPut(ensembles as never)
-    await db.articles.bulkPut(articles as never)
-    if ((await db.locaux_types.count()) === 0) {
-      await db.locaux_types.bulkAdd(locauxTypes as never)
-    }
-  })
+      await db.ensembles.clear()
+      await db.categories.bulkPut(categories as never)
+      await db.postes.bulkPut(postes as never)
+      await db.codes_ci.bulkPut(codesCi as never)
+      await db.ensembles.bulkPut(ensembles as never)
+      await db.articles.bulkPut(articles as never)
+      if ((await db.locaux_types.count()) === 0) {
+        await db.locaux_types.bulkAdd(locauxTypes as never)
+      }
+    },
+  )
 }
 
 /**

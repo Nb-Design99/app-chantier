@@ -1,0 +1,35 @@
+# Postes de métré propres à app-chantier, en complément des 184 postes repris
+# de ~/metre-elec/data/nomenclature.csv. Délimiteur = "|".
+# Ajoutés le 23.08.2026 à la demande de Nathan.
+#
+# cat|code|libelle|unite|schema|notes
+#
+# ============================ FILS ET CÂBLES ============================
+# Métrés au mètre courant, hors forfait point.
+FIL|FIL-1.5|Fil T 1,5 mm²|m||Conducteur seul, tiré en tube.
+FIL|FIL-2.5|Fil T 2,5 mm²|m||Conducteur seul, tiré en tube.
+FIL|FIL-4|Fil T 4 mm²|m||Conducteur seul, tiré en tube.
+FIL|FIL-6|Fil T 6 mm²|m||Conducteur seul, tiré en tube.
+FIL|FIL-10|Fil T 10 mm²|m||Conducteur seul, tiré en tube.
+FIL|FIL-16|Fil T 16 mm²|m||Conducteur seul, tiré en tube.
+FIL|CAB-2x1.5|Câble 2×1,5 mm²|m||
+FIL|CAB-3x1.5|Câble 3×1,5 mm²|m||
+FIL|CAB-4x1.5|Câble 4×1,5 mm²|m||
+FIL|CAB-5x1.5|Câble 5×1,5 mm²|m||
+FIL|CAB-3x2.5|Câble 3×2,5 mm²|m||
+FIL|CAB-5x2.5|Câble 5×2,5 mm²|m||
+#
+# ============================ CANAUX ============================
+# Goulottes apparentes, au mètre courant. Dimensions à ajuster si le catalogue
+# du fournisseur en propose d'autres.
+TUB|CANAL-20x20|Canal 20×20 mm|m||
+TUB|CANAL-25x25|Canal 25×25 mm|m||
+TUB|CANAL-30x30|Canal 30×30 mm|m||
+TUB|CANAL-40x40|Canal 40×40 mm|m||
+TUB|CANAL-40x60|Canal 40×60 mm|m||
+TUB|CANAL-60x60|Canal 60×60 mm|m||
+#
+# ============================ TEMPS (heures) ============================
+# Positions comptées en heures et non en pièces.
+TPS|TPS-DEMO|Démontage d'installation existante|h||Compté en heures, pas en pièces.
+TPS|TPS-TAB|Modification de tableau|h||Compté en heures, pas en pièces.

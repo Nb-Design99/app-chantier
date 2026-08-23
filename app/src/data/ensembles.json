@@ -2,819 +2,966 @@
 {
 "libelle": "Prise T13",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 0,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "639113000"
+"ref": "87003.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "639113950"
+"ref": "87003.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "639113010"
+"ref": "87003.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "639113030"
+"ref": "87003.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "639113040"
+"ref": "87003.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "639113890"
+"ref": "87003.FMI.57"
 }
 ]
 },
 {
 "libelle": "Prise T13 avec shutter",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 10,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "639123000"
+"ref": "87003.FMI.K.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "639123950"
+"ref": "87003.FMI.K.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "639123010"
+"ref": "87003.FMI.K.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "639123030"
+"ref": "87003.FMI.K.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "639123040"
+"ref": "87003.FMI.K.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "639123890"
+"ref": "87003.FMI.K.57"
 }
 ]
 },
 {
 "libelle": "Prise 2×T13",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 20,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "657114000"
+"ref": "87203.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "657114950"
+"ref": "87203.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "657114010"
+"ref": "87203.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "657114030"
+"ref": "87203.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "657114040"
+"ref": "87203.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "657114890"
+"ref": "87203.FMI.57"
 }
 ]
 },
 {
 "libelle": "Prise 2×T13 avec shutter",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 30,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "657124000"
+"ref": "87203.FMI.K.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "657124950"
+"ref": "87203.FMI.K.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "657124010"
+"ref": "87203.FMI.K.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "657124030"
+"ref": "87203.FMI.K.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "657124040"
+"ref": "87203.FMI.K.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "657124890"
+"ref": "87203.FMI.K.57"
 }
 ]
 },
 {
 "libelle": "Prise 2×T13 dont 1 commutée",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 40,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "657134000"
+"ref": "87203.FMI.S.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "657134950"
+"ref": "87203.FMI.S.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "657134010"
+"ref": "87203.FMI.S.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "657134030"
+"ref": "87203.FMI.S.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "657134040"
+"ref": "87203.FMI.S.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "657134890"
+"ref": "87203.FMI.S.57"
 }
 ]
 },
 {
 "libelle": "Prise 3×T13",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 50,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "657115000"
+"ref": "87303.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "657115950"
+"ref": "87303.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "657115010"
+"ref": "87303.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "657115030"
+"ref": "87303.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "657115040"
+"ref": "87303.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "657115890"
+"ref": "87303.FMI.57"
 }
 ]
 },
 {
 "libelle": "Prise 3×T13 avec shutter",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 60,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "657125000"
+"ref": "87303.FMI.K.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "657125950"
+"ref": "87303.FMI.K.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "657125010"
+"ref": "87303.FMI.K.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "657125030"
+"ref": "87303.FMI.K.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "657125040"
+"ref": "87303.FMI.K.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "657125890"
+"ref": "87303.FMI.K.57"
 }
 ]
 },
 {
 "libelle": "Prise 3×T13 dont 1 commutée",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 70,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "657135000"
+"ref": "87303.FMI.S.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "657135950"
+"ref": "87303.FMI.S.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "657135010"
+"ref": "87303.FMI.S.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "657135030"
+"ref": "87303.FMI.S.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "657135040"
+"ref": "87303.FMI.S.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "657135890"
+"ref": "87303.FMI.S.57"
 }
 ]
 },
 {
 "libelle": "Prise T23 16A (bornes enfichables)",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 80,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "639600000"
+"ref": "87023.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "639600950"
+"ref": "87023.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "639600010"
+"ref": "87023.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "639600030"
+"ref": "87023.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "639600040"
+"ref": "87023.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "639600890"
+"ref": "87023.FMI.57"
 }
 ]
 },
 {
 "libelle": "Prise T23 16A (bornes à vis)",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 90,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "639601000"
+"ref": "87123.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "639601950"
+"ref": "87123.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "639601010"
+"ref": "87123.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "639601030"
+"ref": "87123.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "639601040"
+"ref": "87123.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "639601890"
+"ref": "87123.FMI.57"
 }
 ]
 },
 {
 "libelle": "Prise T15",
 "categorie": "Prises",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 100,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "641300000"
+"ref": "8715.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "641300950"
+"ref": "8715.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "641300010"
+"ref": "8715.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "641300030"
+"ref": "8715.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "641300040"
+"ref": "8715.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "641300890"
+"ref": "8715.FMI.57"
 }
 ]
 },
 {
-"libelle": "Interrupteur 3/1P + prise T13",
+"libelle": "Inter. sch. 3 + prise T13",
 "categorie": "Combinaisons",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 110,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "755143000"
+"ref": "87063.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "755143950"
+"ref": "87063.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "755143010"
+"ref": "87063.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "755143030"
+"ref": "87063.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "755143040"
+"ref": "87063.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "755143890"
+"ref": "87063.FMI.57"
 }
 ]
 },
 {
-"libelle": "Interrupteur schéma 1 (double)",
+"libelle": "Inter. sch. 1 / 3+3",
 "categorie": "Interrupteurs",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 120,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "226111000"
+"ref": "7561.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "226111950"
+"ref": "7561.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "226111010"
+"ref": "7561.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "226111030"
+"ref": "7561.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "226111040"
+"ref": "7561.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "226111890"
+"ref": "7561.FMI.57"
 }
 ]
 },
 {
-"libelle": "Interrupteur schéma 3 (va-et-vient)",
+"libelle": "Inter. sch. 3",
 "categorie": "Interrupteurs",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 130,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "226311000"
+"ref": "7563.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "226311950"
+"ref": "7563.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "226311010"
+"ref": "7563.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "226311030"
+"ref": "7563.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "226311040"
+"ref": "7563.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "226311890"
+"ref": "7563.FMI.57"
 }
 ]
 },
 {
-"libelle": "Interrupteur schéma 6 (croisement)",
+"libelle": "Inter. sch. 6",
 "categorie": "Interrupteurs",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 140,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "226601000"
+"ref": "7566.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "226601950"
+"ref": "7566.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "226601010"
+"ref": "7566.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "226601030"
+"ref": "7566.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "226601040"
+"ref": "7566.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "226601890"
+"ref": "7566.FMI.57"
 }
 ]
 },
 {
-"libelle": "Interrupteur schéma 3/2 (double VV)",
+"libelle": "Inter. sch. 3/2",
 "categorie": "Interrupteurs",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 150,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "226321000"
+"ref": "7569.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "226321950"
+"ref": "7569.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "226321010"
+"ref": "7569.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "226321030"
+"ref": "7569.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "226321040"
+"ref": "7569.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "226321890"
+"ref": "7569.FMI.57"
 }
 ]
 },
 {
 "libelle": "Poussoir A-R",
 "categorie": "Poussoirs",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 160,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "554521000"
+"ref": "7563.AR.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "554521950"
+"ref": "7563.AR.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "554521010"
+"ref": "7563.AR.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "554521030"
+"ref": "7563.AR.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "554521040"
+"ref": "7563.AR.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "554521890"
+"ref": "7563.AR.FMI.57"
 }
 ]
 },
 {
-"libelle": "Poussoir 2× A-R / 1P",
+"libelle": "Poussoir 2× A-R",
 "categorie": "Poussoirs",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 170,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "554621000"
+"ref": "7563.AR63AR.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "554621950"
+"ref": "7563.AR63AR.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "554621010"
+"ref": "7563.AR63AR.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "554621030"
+"ref": "7563.AR63AR.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "554621040"
+"ref": "7563.AR63AR.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "554621890"
+"ref": "7563.AR63AR.FMI.57"
 }
 ]
 },
 {
-"libelle": "Poussoir A-R (schéma 9)",
+"libelle": "Poussoir A-R (sch. 9)",
 "categorie": "Poussoirs",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 180,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "554551000"
+"ref": "7569.AR.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "554551950"
+"ref": "7569.AR.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "554551010"
+"ref": "7569.AR.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "554551030"
+"ref": "7569.AR.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "554551040"
+"ref": "7569.AR.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "554551890"
+"ref": "7569.AR.FMI.57"
 }
 ]
 },
 {
 "libelle": "Plaque d'obturation",
 "categorie": "Obturation",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 190,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "378006000"
+"ref": "751.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "378006950"
+"ref": "751.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "378006010"
+"ref": "751.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "378006030"
+"ref": "751.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "378006040"
+"ref": "751.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "378006890"
+"ref": "751.FMI.57"
 }
 ]
 },
 {
-"libelle": "Obturateur sans vis centrale",
+"libelle": "Obturateur",
 "categorie": "Obturation",
-"montage": "encastre",
+"unite": "pce",
+"sansCouleur": false,
 "favori": true,
 "ordre": 200,
 "variantes": [
 {
 "couleur": "blanc",
-"code_couleur": "61",
-"e_no": "378406000"
+"ref": "752.FMI.61"
 },
 {
 "couleur": "noir",
-"code_couleur": "60",
-"e_no": "378406950"
+"ref": "752.FMI.60"
 },
 {
 "couleur": "crema",
-"code_couleur": "35",
-"e_no": "378406010"
+"ref": "752.FMI.35"
 },
 {
 "couleur": "gris clair",
-"code_couleur": "65",
-"e_no": "378406030"
+"ref": "752.FMI.65"
 },
 {
 "couleur": "gris foncé",
-"code_couleur": "67",
-"e_no": "378406040"
+"ref": "752.FMI.67"
 },
 {
 "couleur": "coffee",
-"code_couleur": "57",
-"e_no": "378406890"
+"ref": "752.FMI.57"
+}
+]
+},
+{
+"libelle": "Fil T 1,5 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 220,
+"variantes": [
+{
+"couleur": "",
+"ref": "FIL-1.5"
+}
+]
+},
+{
+"libelle": "Fil T 2,5 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 230,
+"variantes": [
+{
+"couleur": "",
+"ref": "FIL-2.5"
+}
+]
+},
+{
+"libelle": "Fil T 4 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 240,
+"variantes": [
+{
+"couleur": "",
+"ref": "FIL-4"
+}
+]
+},
+{
+"libelle": "Fil T 6 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 250,
+"variantes": [
+{
+"couleur": "",
+"ref": "FIL-6"
+}
+]
+},
+{
+"libelle": "Fil T 10 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 260,
+"variantes": [
+{
+"couleur": "",
+"ref": "FIL-10"
+}
+]
+},
+{
+"libelle": "Fil T 16 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 270,
+"variantes": [
+{
+"couleur": "",
+"ref": "FIL-16"
+}
+]
+},
+{
+"libelle": "Câble 2×1,5 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 280,
+"variantes": [
+{
+"couleur": "",
+"ref": "CAB-2x1.5"
+}
+]
+},
+{
+"libelle": "Câble 3×1,5 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 290,
+"variantes": [
+{
+"couleur": "",
+"ref": "CAB-3x1.5"
+}
+]
+},
+{
+"libelle": "Câble 4×1,5 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 300,
+"variantes": [
+{
+"couleur": "",
+"ref": "CAB-4x1.5"
+}
+]
+},
+{
+"libelle": "Câble 5×1,5 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 310,
+"variantes": [
+{
+"couleur": "",
+"ref": "CAB-5x1.5"
+}
+]
+},
+{
+"libelle": "Câble 3×2,5 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 320,
+"variantes": [
+{
+"couleur": "",
+"ref": "CAB-3x2.5"
+}
+]
+},
+{
+"libelle": "Câble 5×2,5 mm²",
+"categorie": "Fils et câbles",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 330,
+"variantes": [
+{
+"couleur": "",
+"ref": "CAB-5x2.5"
+}
+]
+},
+{
+"libelle": "Canal 20×20 mm",
+"categorie": "Canaux",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 340,
+"variantes": [
+{
+"couleur": "",
+"ref": "CANAL-20x20"
+}
+]
+},
+{
+"libelle": "Canal 25×25 mm",
+"categorie": "Canaux",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 350,
+"variantes": [
+{
+"couleur": "",
+"ref": "CANAL-25x25"
+}
+]
+},
+{
+"libelle": "Canal 30×30 mm",
+"categorie": "Canaux",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 360,
+"variantes": [
+{
+"couleur": "",
+"ref": "CANAL-30x30"
+}
+]
+},
+{
+"libelle": "Canal 40×40 mm",
+"categorie": "Canaux",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 370,
+"variantes": [
+{
+"couleur": "",
+"ref": "CANAL-40x40"
+}
+]
+},
+{
+"libelle": "Canal 40×60 mm",
+"categorie": "Canaux",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 380,
+"variantes": [
+{
+"couleur": "",
+"ref": "CANAL-40x60"
+}
+]
+},
+{
+"libelle": "Canal 60×60 mm",
+"categorie": "Canaux",
+"unite": "m",
+"sansCouleur": true,
+"favori": true,
+"ordre": 390,
+"variantes": [
+{
+"couleur": "",
+"ref": "CANAL-60x60"
 }
 ]
 }

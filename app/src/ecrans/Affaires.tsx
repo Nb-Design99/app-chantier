@@ -23,7 +23,7 @@ export default function Affaires() {
   const [ouvert, setOuvert] = useState(false)
   const [type, setType] = useState<TypeAffaire>('chantier')
   const [nom, setNom] = useState('')
-  const [client, setClient] = useState('')
+  const [numeroAffaire, setNumeroAffaire] = useState('')
   const [localite, setLocalite] = useState('')
 
   const affaires = useLiveQuery(
@@ -57,9 +57,9 @@ export default function Affaires() {
   async function valider(e: React.FormEvent) {
     e.preventDefault()
     if (!nom.trim() || !profil) return
-    const id = await creerAffaire({ type, nom, client, localite }, profil.id)
+    const id = await creerAffaire({ type, nom, numero_affaire: numeroAffaire, localite }, profil.id)
     setOuvert(false)
-    setNom(''); setClient(''); setLocalite('')
+    setNom(''); setNumeroAffaire(''); setLocalite('')
     navigate(`/affaire/${id}`)
   }
 
@@ -102,7 +102,8 @@ export default function Affaires() {
           />
           <div className="grid grid-cols-2 gap-2">
             <input
-              value={client} onChange={(e) => setClient(e.target.value)} placeholder="Client"
+              value={numeroAffaire} onChange={(e) => setNumeroAffaire(e.target.value)}
+              placeholder="N° d'affaire"
               className="h-tap w-full rounded-xl border border-ardoise-200 px-4"
             />
             <input
@@ -142,7 +143,7 @@ export default function Affaires() {
                     </span>
                   </div>
                   <div className="mt-1 text-sm text-ardoise-600">
-                    {[a.client, a.localite].filter(Boolean).join(' · ') || '—'}
+                    {[a.numero_affaire, a.localite].filter(Boolean).join(' · ') || '—'}
                   </div>
                   {av && (
                     <div className="mt-3 flex items-center gap-2">

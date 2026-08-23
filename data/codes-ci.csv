@@ -1,0 +1,29 @@
+# Codes d'installation (CI) — colonne « CI » de la fiche OIKEN.
+# Source : USIE / 21.10.96, « Codes d'installation, CI », pages 6 et 7
+# (photocopie fournie par Nathan le 23.08.2026), recoupée avec l'onglet
+# « Codes CI » du modèle Fiche-OIKEN.xlsx.
+#
+# Le CI est un code à 2 chiffres : 1er = genre d'exécution, 2e = conditions de
+# montage (0 très simples, 1 simples, 2 normales, 3 difficiles).
+# Genres : 1 apparent (AP) · 2 encastré (ENC) · 3 à insérer / incorporé (INS)
+#          5 tirage et pose de câbles et fils (TIR) · 7 raccordement (RACC)
+#
+# ⚠ Il n'existe pas de CI 51 : le groupe TIR commence à 52.
+#
+# Délimiteur = "|".
+# code|groupe|conditions|libelle|exemples
+11|AP|simples|Apparent — conditions simples|Sur bois, plaques de plâtre, sols bruts, plafonds bruts, bases de montage déjà préparées.
+12|AP|normales|Apparent — conditions normales|Sur briques de terre cuite, briques silico-calcaires, béton, matières synthétiques, polyester renforcé de fibres de verre, tôles, rails d'ancrage et de fixation.
+13|AP|difficiles|Apparent — conditions difficiles|Sur constructions métalliques.
+20|ENC|très simples|Encastré — conditions très simples|Dans fouilles, saignées, ouvertures, percements et boîtes d'encastrement existants.
+21|ENC|simples|Encastré — conditions simples|Dans plaques de plâtre, matières synthétiques, matériaux isolants, coffrages de dalles ; saignées, ouvertures et percements effectués par la direction des travaux selon les indications de l'installateur.
+22|ENC|normales|Encastré — conditions normales|Dans parois creuses, briques de terre cuite, coffrages de mur ; dans coffrages de dalles avec isolation déjà posée. Exécution des découpes comprise.
+23|ENC|difficiles|Encastré — conditions difficiles|Dans briques silico-calcaires, poutres en bois, maçonnerie de parement, dalles avec cavités ou hourdis ; travaux de rhabillage aux soins de la direction des travaux.
+31|INS|simples|À insérer — conditions simples|Dans bases de montage déjà préparées ou combinaisons modulaires ; percements et découpes aux soins de la direction des travaux.
+32|INS|normales|À insérer — conditions normales|Dans matières synthétiques, matériaux tendres ; avec exécution des percements et découpes.
+33|INS|difficiles|À insérer — conditions difficiles|Dans tôles minces ; avec exécution des percements et découpes.
+52|TIR|normales|Tirage — conditions normales|Dans tubes, canaux avec séparations.
+53|TIR|difficiles|Tirage — conditions difficiles|Dans tubes existants contenant déjà des fils ou des câbles ; sur échelles à câbles, canaux à grilles ; fixation des câbles un à un ou en petits faisceaux, avec séparations.
+71|RACC|simples|Raccordement — conditions simples|Raccordement sur bornes, par enfichage, coupure-serrage.
+72|RACC|normales|Raccordement — conditions normales|Raccordement sur bornes, par vissage, brasage.
+73|RACC|difficiles|Raccordement — conditions difficiles|Raccordement par soudage, par cosses de câbles.

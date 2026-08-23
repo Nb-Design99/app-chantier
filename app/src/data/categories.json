@@ -58,5 +58,23 @@
 "libelle": "Divers & chantier",
 "ordre": 10,
 "couleur": "#78716c"
+},
+{
+"code": "FIL",
+"libelle": "Fils et câbles",
+"ordre": 11,
+"couleur": "#0ea5e9"
+},
+{
+"code": "TPS",
+"libelle": "Temps (heures)",
+"ordre": 12,
+"couleur": "#f43f5e"
+},
+{
+"code": "PI",
+"libelle": "Parties d'installation CAN",
+"ordre": 13,
+"couleur": "#8b5cf6"
 }
 ]

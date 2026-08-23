@@ -1,0 +1,107 @@
+[
+{
+"code": "11",
+"groupe": "AP",
+"conditions": "simples",
+"libelle": "Apparent — conditions simples",
+"exemples": "Sur bois, plaques de plâtre, sols bruts, plafonds bruts, bases de montage déjà préparées."
+},
+{
+"code": "12",
+"groupe": "AP",
+"conditions": "normales",
+"libelle": "Apparent — conditions normales",
+"exemples": "Sur briques de terre cuite, briques silico-calcaires, béton, matières synthétiques, polyester renforcé de fibres de verre, tôles, rails d'ancrage et de fixation."
+},
+{
+"code": "13",
+"groupe": "AP",
+"conditions": "difficiles",
+"libelle": "Apparent — conditions difficiles",
+"exemples": "Sur constructions métalliques."
+},
+{
+"code": "20",
+"groupe": "ENC",
+"conditions": "très simples",
+"libelle": "Encastré — conditions très simples",
+"exemples": "Dans fouilles, saignées, ouvertures, percements et boîtes d'encastrement existants."
+},
+{
+"code": "21",
+"groupe": "ENC",
+"conditions": "simples",
+"libelle": "Encastré — conditions simples",
+"exemples": "Dans plaques de plâtre, matières synthétiques, matériaux isolants, coffrages de dalles ; saignées, ouvertures et percements effectués par la direction des travaux selon les indications de l'installateur."
+},
+{
+"code": "22",
+"groupe": "ENC",
+"conditions": "normales",
+"libelle": "Encastré — conditions normales",
+"exemples": "Dans parois creuses, briques de terre cuite, coffrages de mur ; dans coffrages de dalles avec isolation déjà posée. Exécution des découpes comprise."
+},
+{
+"code": "23",
+"groupe": "ENC",
+"conditions": "difficiles",
+"libelle": "Encastré — conditions difficiles",
+"exemples": "Dans briques silico-calcaires, poutres en bois, maçonnerie de parement, dalles avec cavités ou hourdis ; travaux de rhabillage aux soins de la direction des travaux."
+},
+{
+"code": "31",
+"groupe": "INS",
+"conditions": "simples",
+"libelle": "À insérer — conditions simples",
+"exemples": "Dans bases de montage déjà préparées ou combinaisons modulaires ; percements et découpes aux soins de la direction des travaux."
+},
+{
+"code": "32",
+"groupe": "INS",
+"conditions": "normales",
+"libelle": "À insérer — conditions normales",
+"exemples": "Dans matières synthétiques, matériaux tendres ; avec exécution des percements et découpes."
+},
+{
+"code": "33",
+"groupe": "INS",
+"conditions": "difficiles",
+"libelle": "À insérer — conditions difficiles",
+"exemples": "Dans tôles minces ; avec exécution des percements et découpes."
+},
+{
+"code": "52",
+"groupe": "TIR",
+"conditions": "normales",
+"libelle": "Tirage — conditions normales",
+"exemples": "Dans tubes, canaux avec séparations."
+},
+{
+"code": "53",
+"groupe": "TIR",
+"conditions": "difficiles",
+"libelle": "Tirage — conditions difficiles",
+"exemples": "Dans tubes existants contenant déjà des fils ou des câbles ; sur échelles à câbles, canaux à grilles ; fixation des câbles un à un ou en petits faisceaux, avec séparations."
+},
+{
+"code": "71",
+"groupe": "RACC",
+"conditions": "simples",
+"libelle": "Raccordement — conditions simples",
+"exemples": "Raccordement sur bornes, par enfichage, coupure-serrage."
+},
+{
+"code": "72",
+"groupe": "RACC",
+"conditions": "normales",
+"libelle": "Raccordement — conditions normales",
+"exemples": "Raccordement sur bornes, par vissage, brasage."
+},
+{
+"code": "73",
+"groupe": "RACC",
+"conditions": "difficiles",
+"libelle": "Raccordement — conditions difficiles",
+"exemples": "Raccordement par soudage, par cosses de câbles."
+}
+]

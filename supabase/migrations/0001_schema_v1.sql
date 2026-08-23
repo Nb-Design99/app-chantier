@@ -59,6 +59,7 @@ create table public.affaires (
   id          uuid primary key,            -- généré côté client
   type        text not null check (type in ('chantier','depannage','remise_conformite')),
   nom         text not null,
+  numero_affaire text,                    -- n° d'affaire de l'entreprise
   client      text,
   adresse     text,
   npa         text,
@@ -274,6 +275,16 @@ create view public.materiel_export as
 -- =====================================================================
 -- 6. MÉTRÉS
 -- =====================================================================
+-- Codes d'installation (CI) — source USIE 21.10.96, colonne « CI » de la fiche.
+-- Il n'existe pas de CI 51 : le groupe TIR commence à 52.
+create table public.codes_ci (
+  code       text primary key,               -- 2 chiffres
+  groupe     text not null,                  -- AP | ENC | INS | TIR | RACC
+  conditions text not null,                  -- très simples | simples | normales | difficiles
+  libelle    text not null,
+  exemples   text
+);
+
 -- Nomenclature de métré (postes CAN/USIE) — réutilisable depuis ~/metre-elec
 -- (184 postes déjà rédigés, data/nomenclature.csv). Voir QUESTION 1 du plan.
 create table public.postes (
@@ -345,17 +356,20 @@ create trigger t_metres_touch before update on public.metres
 create table public.metre_lignes (
   id          uuid primary key,
   metre_id    uuid not null references public.metres(id) on delete cascade,
-  poste_id    uuid references public.postes(id),      -- métré CAN
-  article_id  uuid references public.articles(id),    -- ou article catalogue
-  local_id    uuid references public.locaux(id) on delete set null,
-  quantite    numeric(10,2) not null default 1,
-  ci          text,                                   -- code d'installation (2 chiffres)
-  note        text,
+  poste_id      uuid references public.postes(id),    -- poste du référentiel
+  article_id    uuid references public.articles(id),  -- ou article catalogue
+  libelle_libre text,                                 -- ou ligne libre (matériel spécial)
+  local_id      uuid references public.locaux(id) on delete set null,
+  quantite      numeric(10,2) not null default 1,
+  unite         text not null default 'pce' check (unite in ('pce','m','h')),
+  ci            text references public.codes_ci(code),  -- colonne « CI » de la fiche
+  no_can        text,                                 -- colonne « N° USIE / CAN »
+  note          text,
   auteur_id   uuid references public.profils(id),
   created_at  timestamptz not null default now(),
   updated_at  timestamptz not null default now(),
   supprime_le timestamptz,
-  constraint metre_cible_unique check (num_nonnulls(poste_id, article_id) = 1)
+  constraint metre_cible_unique check (num_nonnulls(poste_id, article_id, libelle_libre) = 1)
 );
 create index metre_lignes_metre_idx on public.metre_lignes (metre_id);
 create index metre_lignes_sync_idx on public.metre_lignes (updated_at);
@@ -403,6 +417,7 @@ alter table public.ensemble_lignes     enable row level security;
 alter table public.materiel_commandes  enable row level security;
 alter table public.materiel_mouvements enable row level security;
 alter table public.postes              enable row level security;
+alter table public.codes_ci            enable row level security;
 alter table public.locaux              enable row level security;
 alter table public.locaux_types        enable row level security;
 alter table public.metres              enable row level security;
@@ -429,6 +444,10 @@ create policy variantes_ecriture on public.ensemble_variantes for all to authent
 
 create policy ens_lignes_lecture on public.ensemble_lignes for select to authenticated using (true);
 create policy ens_lignes_ecriture on public.ensemble_lignes for all to authenticated
+  using (public.est_chef()) with check (public.est_chef());
+
+create policy codes_ci_lecture on public.codes_ci for select to authenticated using (true);
+create policy codes_ci_ecriture on public.codes_ci for all to authenticated
   using (public.est_chef()) with check (public.est_chef());
 
 create policy postes_lecture on public.postes for select to authenticated using (true);

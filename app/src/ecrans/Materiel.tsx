@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { db } from '../db/schema'
+import { db, type Ensemble } from '../db/schema'
 import { ajouterMateriel, besoinsMateriel } from '../db/repo'
 import { useSession } from '../lib/session'
 import { Onglets } from '../App'
@@ -13,7 +13,13 @@ import { Onglets } from '../App'
  * Le pari : la couleur ne change quasiment jamais dans une même affaire. On la
  * choisit une fois (elle est mémorisée par affaire), et ajouter un article
  * devient UN SEUL tap sur la grille de favoris.
+ *
+ * Les fils, câbles et canaux n'ont pas de couleur et se comptent au mètre : ils
+ * sont dans une section à part, et un tap ajoute PAS_METRE mètres d'un coup —
+ * personne ne tape 40 fois pour 40 mètres.
  */
+const PAS_METRE = 10
+
 export default function Materiel() {
   const { id = '' } = useParams()
   const { profil, estChef } = useSession()
@@ -37,27 +43,53 @@ export default function Materiel() {
     [],
   )
 
-  const parENo = useMemo(() => new Map(articles.map((a) => [a.e_no, a])), [articles])
-
+  const parRef = useMemo(() => new Map(articles.map((a) => [a.ref, a])), [articles])
   const besoins = useLiveQuery(() => besoinsMateriel(id), [id, mouvements.length], [])
 
   const couleurs = useMemo(() => {
     const set = new Set<string>()
-    ensembles.forEach((e) => e.variantes.forEach((v) => set.add(v.couleur)))
+    ensembles.forEach((e) => !e.sansCouleur && e.variantes.forEach((v) => set.add(v.couleur)))
     return [...set]
   }, [ensembles])
 
-  async function ajouter(libelle: string, delta = 1) {
-    const ens = ensembles.find((e) => e.libelle === libelle)
-    const variante = ens?.variantes.find((v) => v.couleur === couleur)
-    if (!variante || !profil) return
-    await ajouterMateriel(id, variante.e_no, delta, profil.id)
-    setDernier(libelle)
+  function refDe(e: Ensemble): string | undefined {
+    if (e.sansCouleur) return e.variantes[0]?.ref
+    return e.variantes.find((v) => v.couleur === couleur)?.ref
+  }
+
+  async function ajouter(e: Ensemble, signe = 1) {
+    const ref = refDe(e)
+    if (!ref || !profil) return
+    await ajouterMateriel(id, ref, signe * (e.unite === 'm' ? PAS_METRE : 1), profil.id)
+    setDernier(e.libelle)
     if (navigator.vibrate) navigator.vibrate(15)
     setTimeout(() => setDernier(null), 700)
   }
 
-  const disponibles = ensembles.filter((e) => e.variantes.some((v) => v.couleur === couleur))
+  const appareils = ensembles.filter((e) => !e.sansCouleur && refDe(e))
+  const auMetre = ensembles.filter((e) => e.sansCouleur)
+  const categoriesMetre = [...new Set(auMetre.map((e) => e.categorie))]
+
+  const Grille = ({ liste }: { liste: Ensemble[] }) => (
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+      {liste.map((e) => (
+        <button
+          key={e.libelle}
+          onClick={() => void ajouter(e)}
+          className={`min-h-[5.5rem] rounded-2xl border p-3 text-left transition-colors ${
+            dernier === e.libelle
+              ? 'border-chantier-500 bg-chantier-500/25'
+              : 'border-ardoise-200 bg-white active:bg-ardoise-100'
+          }`}
+        >
+          <span className="block text-sm leading-snug font-semibold">{e.libelle}</span>
+          <span className="mt-1 block text-xs text-ardoise-400">
+            {e.unite === 'm' ? `+${PAS_METRE} m` : e.categorie}
+          </span>
+        </button>
+      ))}
+    </div>
+  )
 
   return (
     <>
@@ -85,24 +117,18 @@ export default function Materiel() {
 
       <div className="mx-auto max-w-2xl p-4">
         <h2 className="mb-3 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
-          Favoris — 1 tap = +1
+          Appareils {couleur} — 1 tap = +1
         </h2>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-          {disponibles.map((e) => (
-            <button
-              key={e.libelle}
-              onClick={() => void ajouter(e.libelle)}
-              className={`min-h-[5.5rem] rounded-2xl border p-3 text-left transition-colors ${
-                dernier === e.libelle
-                  ? 'border-chantier-500 bg-chantier-500/25'
-                  : 'border-ardoise-200 bg-white active:bg-ardoise-100'
-              }`}
-            >
-              <span className="block text-sm leading-snug font-semibold">{e.libelle}</span>
-              <span className="mt-1 block text-xs text-ardoise-400">{e.categorie}</span>
-            </button>
-          ))}
-        </div>
+        <Grille liste={appareils} />
+
+        {categoriesMetre.map((cat) => (
+          <div key={cat}>
+            <h2 className="mt-8 mb-3 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
+              {cat} — 1 tap = +{PAS_METRE} m
+            </h2>
+            <Grille liste={auMetre.filter((e) => e.categorie === cat)} />
+          </div>
+        ))}
 
         <h2 className="mt-8 mb-3 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
           À commander {besoins.length > 0 && `· ${besoins.length} article${besoins.length > 1 ? 's' : ''}`}
@@ -118,37 +144,50 @@ export default function Materiel() {
               .slice()
               .sort((a, b) => b.derniere_demande.localeCompare(a.derniere_demande))
               .map((b) => {
-                const art = parENo.get(b.e_no)
+                const art = parRef.get(b.article_ref)
+                const pas = art?.unite === 'm' ? PAS_METRE : 1
                 return (
                   <li
-                    key={b.e_no}
+                    key={b.article_ref}
                     className="flex items-center gap-3 rounded-2xl border border-ardoise-200 bg-white p-3"
                   >
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-sm font-semibold">
-                        {art?.designation ?? 'Article inconnu'}
+                        {art?.designation ?? b.article_ref}
                       </p>
                       {/* Le numéro ELDAS : c'est LA donnée que Nathan vient chercher. */}
                       <p className="font-mono text-xs text-ardoise-400">
-                        ELDAS {b.e_no}
-                        {art?.ref_fabricant && ` · ${art.ref_fabricant}`}
+                        {art?.e_no ? (
+                          <>
+                            ELDAS {art.e_no} · {b.article_ref}
+                          </>
+                        ) : (
+                          <span className="text-chantier-600">
+                            N° ELDAS à compléter · {b.article_ref}
+                          </span>
+                        )}
                       </p>
                     </div>
                     <div className="flex shrink-0 items-center gap-1">
                       <button
-                        onClick={() => profil && void ajouterMateriel(id, b.e_no, -1, profil.id)}
+                        onClick={() =>
+                          profil && void ajouterMateriel(id, b.article_ref, -pas, profil.id)
+                        }
                         className="size-11 rounded-xl bg-ardoise-100 text-xl font-bold active:bg-ardoise-200"
-                        aria-label="Retirer un"
+                        aria-label="Retirer"
                       >
                         −
                       </button>
-                      <span className="w-10 text-center text-lg font-bold tabular-nums">
+                      <span className="w-14 text-center text-lg font-bold tabular-nums">
                         {b.quantite}
+                        {art?.unite === 'm' && <span className="text-xs font-normal"> m</span>}
                       </span>
                       <button
-                        onClick={() => profil && void ajouterMateriel(id, b.e_no, 1, profil.id)}
+                        onClick={() =>
+                          profil && void ajouterMateriel(id, b.article_ref, pas, profil.id)
+                        }
                         className="size-11 rounded-xl bg-ardoise-100 text-xl font-bold active:bg-ardoise-200"
-                        aria-label="Ajouter un"
+                        aria-label="Ajouter"
                       >
                         +
                       </button>
@@ -161,7 +200,7 @@ export default function Materiel() {
 
         {estChef && besoins.length > 0 && (
           <button
-            onClick={() => exporterCsv(besoins, parENo)}
+            onClick={() => exporterCsv(besoins, parRef)}
             className="h-tap mt-4 w-full rounded-xl bg-ardoise-900 font-semibold text-white"
           >
             Exporter la liste (CSV)
@@ -173,14 +212,17 @@ export default function Materiel() {
 }
 
 function exporterCsv(
-  besoins: { e_no: string; quantite: number }[],
-  parENo: Map<string, { designation: string; ref_fabricant?: string; couleur?: string }>,
+  besoins: { article_ref: string; quantite: number }[],
+  parRef: Map<string, { designation: string; e_no: string; couleur?: string; unite: string }>,
 ) {
   const lignes = [
-    'no_eldas;designation;couleur;reference_feller;quantite',
+    'no_eldas;designation;couleur;reference;quantite;unite',
     ...besoins.map((b) => {
-      const a = parENo.get(b.e_no)
-      return [b.e_no, a?.designation ?? '', a?.couleur ?? '', a?.ref_fabricant ?? '', b.quantite].join(';')
+      const a = parRef.get(b.article_ref)
+      return [
+        a?.e_no ?? '', a?.designation ?? '', a?.couleur ?? '',
+        b.article_ref, b.quantite, a?.unite ?? 'pce',
+      ].join(';')
     }),
   ]
   const blob = new Blob(['﻿' + lignes.join('\n')], { type: 'text/csv;charset=utf-8' })

@@ -23,7 +23,10 @@ export const ETAPES_CHANTIER = [
 // ---------------------------------------------------------------- Affaires
 
 export async function creerAffaire(
-  saisie: { type: TypeAffaire; nom: string; client?: string; adresse?: string; localite?: string; date_debut?: string },
+  saisie: {
+    type: TypeAffaire; nom: string; numero_affaire?: string
+    adresse?: string; localite?: string; date_debut?: string
+  },
   auteurId: Uuid,
 ): Promise<Uuid> {
   const id = uuid()
@@ -31,7 +34,7 @@ export async function creerAffaire(
     id,
     type: saisie.type,
     nom: saisie.nom.trim(),
-    client: saisie.client?.trim() || null,
+    numero_affaire: saisie.numero_affaire?.trim() || null,
     adresse: saisie.adresse?.trim() || null,
     localite: saisie.localite?.trim() || null,
     date_debut: saisie.date_debut || null,
@@ -113,10 +116,10 @@ export async function creerLocal(affaireId: Uuid, nom: string, niveau: string | 
  * `quantite` négative = correction.
  */
 export async function ajouterMateriel(
-  affaireId: Uuid, eNo: string, quantite: number, auteurId: Uuid, note?: string,
+  affaireId: Uuid, ref: string, quantite: number, auteurId: Uuid, note?: string,
 ) {
   const mvt: MaterielMouvement = {
-    id: uuid(), affaire_id: affaireId, e_no: eNo, quantite,
+    id: uuid(), affaire_id: affaireId, article_ref: ref, quantite,
     note: note?.trim() || null, auteur_id: auteurId,
     created_at: maintenant(), updated_at: maintenant(),
   }
@@ -128,7 +131,7 @@ export async function ajouterMateriel(
 }
 
 export interface BesoinMateriel {
-  e_no: string
+  article_ref: string
   quantite: number
   derniere_demande: string
 }
@@ -139,10 +142,11 @@ export async function besoinsMateriel(affaireId: Uuid): Promise<BesoinMateriel[]
   const cumul = new Map<string, BesoinMateriel>()
   for (const m of mvts) {
     if (m.supprime_le) continue
-    const e = cumul.get(m.e_no) ?? { e_no: m.e_no, quantite: 0, derniere_demande: m.created_at }
+    const e = cumul.get(m.article_ref)
+      ?? { article_ref: m.article_ref, quantite: 0, derniere_demande: m.created_at }
     e.quantite += m.quantite
     if (m.created_at > e.derniere_demande) e.derniere_demande = m.created_at
-    cumul.set(m.e_no, e)
+    cumul.set(m.article_ref, e)
   }
   return [...cumul.values()].filter((b) => b.quantite !== 0)
 }
@@ -167,9 +171,19 @@ export async function metreCourant(affaireId: Uuid, auteurId: Uuid): Promise<Met
   return metre
 }
 
+export interface CibleLigne {
+  poste_code?: string
+  article_ref?: string
+  /** Matériel spécial que personne n'avait prévu : on le décrit à la main. */
+  libelle_libre?: string
+  unite?: string
+  ci?: string | null
+  no_can?: string | null
+}
+
 export async function ajouterLigneMetre(
   metreId: Uuid,
-  cible: { poste_code?: string; article_e_no?: string },
+  cible: CibleLigne,
   quantite: number,
   localId: Uuid | null,
   auteurId: Uuid,
@@ -177,8 +191,13 @@ export async function ajouterLigneMetre(
   const ligne: MetreLigne = {
     id: uuid(), metre_id: metreId,
     poste_code: cible.poste_code ?? null,
-    article_e_no: cible.article_e_no ?? null,
-    local_id: localId, quantite, auteur_id: auteurId,
+    article_ref: cible.article_ref ?? null,
+    libelle_libre: cible.libelle_libre ?? null,
+    local_id: localId, quantite,
+    unite: cible.unite ?? 'pce',
+    ci: cible.ci ?? null,
+    no_can: cible.no_can ?? null,
+    auteur_id: auteurId,
     created_at: maintenant(), updated_at: maintenant(),
   }
   await db.transaction('rw', db.metre_lignes, db.sync_file, async () => {
@@ -186,6 +205,15 @@ export async function ajouterLigneMetre(
     await journaliser('metre_lignes', 'insert', ligne)
   })
   return ligne.id
+}
+
+/** Le CI ne se devine pas : c'est un choix de métreur, ligne par ligne. */
+export async function majCiLigne(id: Uuid, ci: string | null) {
+  const patch = { ci, updated_at: maintenant() }
+  await db.transaction('rw', db.metre_lignes, db.sync_file, async () => {
+    await db.metre_lignes.update(id, patch)
+    await journaliser('metre_lignes', 'update', { id, ...patch })
+  })
 }
 
 export async function majLigneMetre(id: Uuid, quantite: number) {

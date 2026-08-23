@@ -35,6 +35,8 @@ export interface Affaire extends Synchronisable {
   id: Uuid
   type: TypeAffaire
   nom: string
+  /** Numéro d'affaire de l'entreprise — remplace le champ « client » à la saisie. */
+  numero_affaire?: string | null
   client?: string | null
   adresse?: string | null
   npa?: string | null
@@ -64,30 +66,43 @@ export interface Local extends Synchronisable {
   ordre: number
 }
 
-/** Référentiel : article réel du catalogue, porteur du numéro ELDAS. */
+/**
+ * Référentiel : article réel du catalogue.
+ * La clé est `ref` (référence fabricant) et NON le numéro ELDAS, parce que les
+ * fils, câbles et canaux n'en ont pas encore : leur `e_no` reste vide et l'app
+ * les signale comme à compléter.
+ */
 export interface Article {
+  ref: string
   e_no: string
-  ref_fabricant?: string
   marque: string
   gamme?: string
   designation: string
-  nature: string
-  montage?: string
+  unite: string
   couleur?: string
-  dimension?: string
 }
 
 /** Référentiel : ce que l'ouvrier voit et clique. */
 export interface Ensemble {
   libelle: string
   categorie: string
-  montage: string
+  unite: string
+  /** Fils, câbles et canaux : pas de déclinaison de couleur, une seule variante. */
+  sansCouleur: boolean
   favori: boolean
   ordre: number
-  variantes: { couleur: string; code_couleur: string; e_no: string }[]
+  variantes: { couleur: string; ref: string }[]
 }
 
-/** Référentiel : poste de métré CAN (184 postes, repris de ~/metre-elec). */
+/**
+ * Référentiel : poste de métré. Trois provenances mélangées volontairement,
+ * parce qu'ils se cherchent tous de la même façon sur le terrain :
+ *  - les 183 postes maison repris de ~/metre-elec
+ *  - fils, câbles, canaux et postes en heures (data/postes-complements.csv)
+ *  - les 216 parties d'installation CAN, chapitres 583 à 586, qui portent un
+ *    `no_can` : ce sont elles qui remplissent la colonne « N° USIE / CAN »
+ *    de la fiche OIKEN.
+ */
 export interface Poste {
   code: string
   categorie: string
@@ -95,7 +110,17 @@ export interface Poste {
   unite: string
   schema?: string | null
   notes?: string | null
+  no_can?: string | null
   ordre: number
+}
+
+/** Référentiel : code d'installation (colonne « CI » de la fiche). */
+export interface CodeCI {
+  code: string
+  groupe: string
+  conditions: string
+  libelle: string
+  exemples: string
 }
 
 export interface Categorie {
@@ -120,7 +145,7 @@ export interface LocalType {
 export interface MaterielMouvement extends Synchronisable {
   id: Uuid
   affaire_id: Uuid
-  e_no: string
+  article_ref: string
   quantite: number
   note?: string | null
   auteur_id: Uuid
@@ -143,12 +168,21 @@ export interface Metre extends Synchronisable {
 export interface MetreLigne extends Synchronisable {
   id: Uuid
   metre_id: Uuid
-  /** Une ligne pointe soit sur un poste CAN, soit sur un article — jamais les deux. */
+  /**
+   * Une ligne a exactement une origine : un poste du référentiel, un article du
+   * catalogue, ou un libellé libre saisi sur le chantier pour du matériel
+   * spécial que personne n'avait prévu.
+   */
   poste_code?: string | null
-  article_e_no?: string | null
+  article_ref?: string | null
+  libelle_libre?: string | null
   local_id?: Uuid | null
   quantite: number
+  unite: string
+  /** Code d'installation, colonne « CI » de la fiche OIKEN. */
   ci?: string | null
+  /** Numéro USIE / CAN, recopié du poste ou saisi à la main sur une ligne libre. */
+  no_can?: string | null
   note?: string | null
   auteur_id?: Uuid | null
   created_at: string
@@ -181,6 +215,7 @@ export class BaseChantier extends Dexie {
   articles!: Table<Article, string>
   ensembles!: Table<Ensemble, string>
   postes!: Table<Poste, string>
+  codes_ci!: Table<CodeCI, string>
   categories!: Table<Categorie, string>
   locaux_types!: Table<LocalType, number>
 
@@ -188,18 +223,19 @@ export class BaseChantier extends Dexie {
 
   constructor() {
     super('app-chantier')
-    this.version(1).stores({
+    this.version(2).stores({
       profils: 'id, role',
       affaires: 'id, statut, type, updated_at',
       etapes: 'id, affaire_id, [affaire_id+ordre]',
       locaux: 'id, affaire_id, [affaire_id+ordre]',
       metres: 'id, affaire_id, statut',
-      metre_lignes: 'id, metre_id, local_id, poste_code, article_e_no',
-      materiel_mouvements: 'id, affaire_id, e_no, created_at',
+      metre_lignes: 'id, metre_id, local_id, poste_code, article_ref',
+      materiel_mouvements: 'id, affaire_id, article_ref, created_at',
 
-      articles: 'e_no, couleur, designation',
+      articles: 'ref, e_no, couleur, designation',
       ensembles: 'libelle, categorie, favori, ordre',
-      postes: 'code, categorie, ordre',
+      postes: 'code, categorie, no_can, ordre',
+      codes_ci: 'code, groupe',
       categories: 'code, ordre',
       locaux_types: '++id, famille',
 

@@ -1,0 +1,217 @@
+no_can;chapitre;designation
+583 311 001;583;Mise à terre de fondation /m
+583 311 002;583;Point de raccordement depuis
+583 312 211;583;Pontage avec
+583 312 311;583;Ligne avec prise de terre
+583 312 421;583;Ligne pour terre/équipotialité
+583 321 101;583;Point de séparation Cu AP
+583 321 102;583;Point de séparation Cu ENC
+583 321 201;583;Ligne descente paratonnerre
+583 321 202;583;Ligne descente paratonnerre
+583 321 203;583;Ligne descente paratonnerre
+583 321 301;583;Organe capteur paratonnerre
+583 321 302;583;Organe capteur paratonnerre
+583 321 401;583;Mât capteur paratonnerre
+583 321 402;583;Mât capteur paratonnerre
+583 321 501;583;Ligne capteur paratonnerre
+583 411 612;583;Ligne pour Eap (Racc)
+583 441 111;583;Ligne avec boîte de dérivation
+583 441 113;583;Ligne avec boîte de dérivation
+583 711 112;583;Ligne avec interrupteur
+583 715 113;583;Ligne pour senseur
+583 721 112;583;Ligne pour luminaire
+583 811 313;583;Ligne avec interrupteur IPX
+583 814 122;583;Ligne avec interrupteur IPX
+583 821 114;583;Ligne pour récepteur (Racc)
+583 821 121;583;Ligne pour récepteur (Racc)
+583 821 122;583;Ligne pour récepteur (Racc)
+583 821 123;583;Ligne pour récepteur (Racc)
+583 821 312;583;Ligne pour récepteur (Racc)
+583 831 113;583;Ligne de liaison (Racc)
+583 835 113;583;Ligne de liaison (Racc)
+583 841 111;583;Ligne avec prise
+583 841 211;583;Ligne avec prise CEE IPX4 230V 16A, longueur de ligne jusqu'à 5m
+583 841 212;583;Ligne avec prise CEE IPX4 230V 16A, longueur de ligne plus de 5 à 10m
+583 841 213;583;Ligne avec prise CEE IPX4 230V 16A, longueur de ligne plus de 10 à 25m
+583 841 214;583;Ligne avec prise CEE IPX4 230V 16A, longueur de ligne plus de 25 à 50m
+583 841 231;583;Ligne avec prise IPX
+583 841 313;583;Ligne avec prise
+583 841 411;583;Ligne avec prise CEE IPX4 400V 16A, longueur de ligne jusqu'à 5m
+583 841 412;583;Ligne avec prise CEE IPX4 400V 16A, longueur de ligne plus de 5 à 10m
+583 841 413;583;Ligne avec prise CEE IPX4 400V 16A, longueur de ligne plus de 10 à 25m
+583 841 414;583;Ligne avec prise CEE IPX4 400V 16A, longueur de ligne plus de 25 à 50m
+583 841 464;583;Ligne avec prise IPX
+583 871 211;583;Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne jusqu'à 5m
+583 871 212;583;Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne plus de 5 jusqu'à 10m
+583 871 213;583;Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne plus de 10 jusqu'à 15m
+583 871 221;583;Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne jusqu'à 5m
+583 871 222;583;Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne plus de 5 jusqu'à 10m
+583 871 223;583;Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne plus de 10 jusqu'à 15m
+583 871 311;583;Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne jusqu'à 5m
+583 871 312;583;Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne plus de 5 jusqu'à 10m
+583 871 313;583;Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne plus de 10 jusqu'à 15m
+583 871 321;583;Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne jusqu'à 5m
+583 871 322;583;Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne plus de 5 jusqu'à 10m
+583 871 323;583;Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne plus de 10 jusqu'à 15m
+583 911 112;583;Ligne pour appareil
+583 911 125;583;Ligne pour appareil
+583 911 212;583;Ligne pour appareil
+583 951 112;583;Ligne pour store (Racc)
+583 951 113;583;Ligne pour store (Racc)
+583 951 212;583;Ligne avec interrupteur store
+583 951 213;583;Ligne avec interrupteur store
+584 211 201;584;à 584 211
+584 211 421;584;Introduction télécom avec
+584 213 211;584;Ligne alimentation télécom
+584 213 311;584;Ligne alimentation DSL avec
+584 213 411;584;Ligne alimentation FTTx
+584 214 111;584;Ligne avec prise télécom,
+584 216 111;584;Installation dans point étoile DSL, comprenant: - 1 Router ou similaire (M+R), - 1 distributeur 5xRJ45, Mise en service non comprise à appliquer: 502111
+584 216 121;584;Installation dans point étoile FTTx, comprenant: - 1 terminal réseau (M+R), Mise en service non comprise à appliquer: 502111
+584 221 261;584;Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne jusqu'à 10m
+584 221 262;584;Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 10 à 25m
+584 221 263;584;Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 25 à 50m
+584 221 264;584;Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 50 à 75m
+584 221 265;584;Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 75 à 90m
+584 221 271;584;Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne jusqu'à 10m
+584 221 272;584;Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 10 à 25m
+584 221 273;584;Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 25 à 50m
+584 221 274;584;Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 50 à 75m
+584 221 275;584;Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 75 à 90m
+584 223 112;584;Ligne CUC avec prise dans
+584 223 171;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne jusqu'à 10m
+584 223 172;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne plus de 10 à 25m
+584 223 173;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne plus de 25 à 50m
+584 223 174;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne plus de 50 à 75m
+584 223 175;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne plus de 75 à 90m
+584 223 271;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne jusqu'à 10m
+584 223 272;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne plus de 10 à 25m
+584 223 273;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne plus de 25 à 50m
+584 223 274;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne plus de 50 à 75m
+584 223 275;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne plus de 75 à 90m
+584 223 342;584;Ligne CUC avec prise
+584 223 371;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne jusqu'à 10m
+584 223 372;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 10 à 25m
+584 223 373;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 25 à 50m
+584 223 374;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 50 à 75m
+584 223 375;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 75 à 90m
+584 223 471;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne jusqu'à 10m
+584 223 472;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 10 à 25m
+584 223 473;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 25 à 50m
+584 223 474;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 50 à 75m
+584 223 475;584;Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 75 à 90m
+584 224 112;584;Ligne alimentation FO
+584 231 115;584;Installation pour technique de
+584 232 116;584;Conduite 2x pour technique de
+584 233 122;584;Ligne prise (Link FO)
+584 412 111;584;Ligne alimentation R/TV
+584 413 101;584;Ligne R/TV avec prise,
+584 414 111;584;Inst dans point étoile R/TV
+584 911 422;584;Ligne alimentation courant
+584 931 123;584;Ligne courant faible pour app,
+584 932 123;584;Ligne courant faible pour app
+584 932 133;584;Ligne courant faible pour app
+584 933 123;584;Ligne courant faible pour app
+584 933 413;584;Ligne courant faible pour app
+584 934 123;584;Ligne courant faible pour app
+584 934 133;584;Ligne courant faible pour app
+584 934 413;584;Ligne courant faible pour app
+584 934 513;584;Ligne courant faible pour app
+584 935 133;584;Ligne courant faible avec
+584 935 413;584;Ligne courant faible avec
+585 421 111;585;Ligne avec boîte de dérivation, 3x1,5, jusqu'à 5 m
+585 421 112;585;Ligne avec boîte de dérivation, 3x1,5, plus de 5 à 10 m
+585 421 113;585;Ligne avec boîte de dérivation, 3x1,5, plus de 10 à 15 m
+585 421 121;585;Ligne avec boîte de dérivation
+585 421 122;585;Ligne avec boîte de dérivation
+585 421 123;585;Ligne avec boîte de dérivation, 5x1,5, plus de 10 à 15 m
+585 421 511;585;Ligne avec boîte de dérivation
+585 421 512;585;Ligne avec boîte de dérivation
+585 421 513;585;Ligne avec boîte de dérivation, bus, plus de 10 à 15 m
+585 422 123;585;Ligne jusqu'à 5x2,5 mm² avec regard de passage extérieur lxlxp jusqu'à 300x300x300mm et boîte de dérivation IPX7, partie extérieure dans tranchée existante, parafoudre type 1 quatre pôles pour rail DIN compris, longueur de ligne jusqu'à 15m
+585 422 125;585;Ligne jusqu'à 5x2,5 mm² avec regard de passage extérieur lxlxp jusqu'à 300x300x300mm et boîte de dérivation IPX7, partie extérieure dans tranchée existante, parafoudre type 1 quatre pôles pour rail DIN compris, longueur de ligne plus de 15 à 25m
+585 422 127;585;Ligne jusqu'à 5x2,5 mm² avec regard de passage extérieur lxlxp jusqu'à 300x300x300mm et boîte de dérivation IPX7, partie extérieure dans tranchée existante, parafoudre type 1 quatre pôles pour rail DIN compris, longueur de ligne plus de 25 à 35m
+585 611 111;585;Ligne avec interrupteur
+585 611 116;585;Ligne avec double interrupteur lumineux pour lumière et ventilateur 230V
+585 612 112;585;Ligne avec interrupteur + prise
+585 612 116;585;Ligne avec double interrupteur lumineux pour lumière et ventilateur, et prise 230V
+585 612 412;585;Ligne pour point de commande + prise
+585 613 111;585;Ligne avec prise simple
+585 613 112;585;Ligne avec prise multiple
+585 613 411;585;Ligne pour prise
+585 614 111;585;Ligne pour luminaire (point lumineux)
+585 614 151;585;Ligne pour bande lumineuse jusqu'à 5m (M+R) avec boîte de passage disposant d'un compartiment pour transfo et agrégat (M+R), Mise en service non comprise à appliquer: 502111
+585 614 311;585;Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne jusqu'à 5m, Mise en service non comprise à appliquer: 502111
+585 614 312;585;Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne plus de 5 à 10m, Mise en service non comprise à appliquer: 502111
+585 614 313;585;Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne plus de 10 à 15m, Mise en service non comprise à appliquer: 502111
+585 614 314;585;Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne plus de 15 à 20m, Mise en service non comprise à appliquer: 502111
+585 614 315;585;Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne plus de 20 à 25m, Mise en service non comprise à appliquer: 502111
+585 615 101;585;Ligne pour capteur
+585 841 111;585;Ligne avec prise depuis Eap
+585 841 311;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne jusqu'à 5m
+585 841 312;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 5 à 10m
+585 841 313;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 10 à 15m
+585 841 314;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 15 à 20m
+585 841 315;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 20 à 25m
+585 841 316;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 25 à 30m
+585 841 317;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 30 à 35m
+585 841 331;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de jusqu'à 5m
+585 841 332;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 5 à 10m
+585 841 333;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 10 à 15m
+585 841 334;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 15 à 20m
+585 841 335;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 20 à 25m
+585 841 336;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 25 à 30m
+585 841 337;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 30 à 35m
+585 841 411;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne jusqu'à 5m
+585 841 412;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 5 à 10m
+585 841 413;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 10 à 15m
+585 841 414;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 15 à 20m
+585 841 415;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 20 à 25m
+585 841 416;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 25 à 30m
+585 841 417;585;Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 30 à 35m
+585 841 431;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne jusqu'à 5m
+585 841 432;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 5 à 10m
+585 841 433;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 10 à 15m
+585 841 434;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 15 à 20m
+585 841 435;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 20 à 25m
+585 841 436;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 25 à 30m
+585 841 437;585;Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 30 à 35m
+585 931 111;585;Ligne pour moteur de store (raccordement)
+585 931 112;585;Ligne pour moteur de store (raccordement)
+586 211 421;586;Introduction télécom avec
+586 214 411;586;Ligne alimentation DSL avec
+586 214 511;586;Ligne alimentation FTTx
+586 214 617;586;Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, longueur de ligne jusqu'à 10m
+586 214 621;586;Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, longueur de ligne plus de 70 à 80m
+586 214 622;586;Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, longueur de ligne plus de 80 à 90m
+586 214 623;586;Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, longueur de ligne plus de 90 à 100m
+586 214 637;586;Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, pour tubes déjà existants, longueur de ligne jusqu'à 10m
+586 214 641;586;Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, pour tubes déjà existants, longueur de ligne plus de 70 à 80m
+586 214 642;586;Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, pour tubes déjà existants, longueur de ligne plus de 80 à 90m
+586 214 643;586;Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, pour tubes déjà existants, longueur de ligne plus de 90 à 100m
+586 214 651;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne jusqu'à 10m
+586 214 652;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne plus de 10 à 20m
+586 214 653;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne plus de 20 à 30m
+586 214 654;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne plus de 30 à 40m
+586 214 655;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne plus de 40 à 50m
+586 214 661;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne jusqu'à 10m
+586 214 662;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne plus de 10 à 20m
+586 214 663;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne plus de 20 à 30m
+586 214 664;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne plus de 30 à 40m
+586 214 665;586;Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne plus de 40 à 50m
+586 216 111;586;Installation dans point étoile DSL, comprenant: - 1 Router ou similaire (M+R), - 1 distributeur 5xRJ45, Mise en service non comprise à appliquer: 502111
+586 216 121;586;Installation dans point étoile FTTx, comprenant: - 1 terminal réseau (M+R), Mise en service non comprise à appliquer: 502111
+586 217 301;586;Tube vide jusqu'à M25 avec auxiliaire de tirage et boîte d'encastrement avec plaque de recouvrement, pour courant faible
+586 411 311;586;Ligne alimentation R/TV
+586 411 411;586;Inst dans point étoile R/TV
+586 411 511;586;Ligne avec prise R/TV
+586 412 331;586;Ligne alimentation SAT du
+586 412 511;586;Ligne avec prise SAT
+586 412 512;586;Ligne avec prise SAT
+586 412 611;586;Installation distributeur
+586 412 711;586;Inst point étoile SAT de base
+586 421 511;586;Ligne avec prise multimédia
+586 421 512;586;Ligne avec prise multimédia
+586 421 513;586;Ligne avec prise multimédia
+586 421 516;586;Ligne avec prise multimédia pour FTTx 1xLC
+586 421 526;586;Ligne avec prise multimédia pour FTTx 1xLC, pour tubes déjà existants

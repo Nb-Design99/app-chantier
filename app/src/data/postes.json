@@ -6,6 +6,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Départ protégé depuis le tableau jusqu'à la 1re boîte du circuit.",
+"no_can": null,
 "ordre": 10
 },
 {
@@ -15,6 +16,7 @@
 "unite": "pce",
 "schema": "0",
 "notes": "Forfait point: tube, fil, boîte de dérivation, boîte d'appareillage, raccordement.",
+"no_can": null,
 "ordre": 20
 },
 {
@@ -24,6 +26,7 @@
 "unite": "pce",
 "schema": "3",
 "notes": "Commandé depuis 2 positions.",
+"no_can": null,
 "ordre": 30
 },
 {
@@ -33,6 +36,7 @@
 "unite": "pce",
 "schema": "6",
 "notes": "À compter par position de commande au-delà de 2.",
+"no_can": null,
 "ordre": 40
 },
 {
@@ -42,6 +46,7 @@
 "unite": "pce",
 "schema": "5",
 "notes": "Interrupteur double / 2 circuits indépendants sur même boîte.",
+"no_can": null,
 "ordre": 50
 },
 {
@@ -51,6 +56,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Luminaire en dérivation, pas de commande supplémentaire.",
+"no_can": null,
 "ordre": 60
 },
 {
@@ -60,6 +66,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Alimentation directe, sans organe de commande.",
+"no_can": null,
 "ordre": 70
 },
 {
@@ -69,6 +76,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Point + ligne compatible variation (voir CMD-VAR pour l'appareil).",
+"no_can": null,
 "ordre": 80
 },
 {
@@ -78,6 +86,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Point + alimentation détecteur (voir CMD-DETP / CMD-DETM).",
+"no_can": null,
 "ordre": 90
 },
 {
@@ -87,6 +96,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Ligne pilotée depuis le tableau, hors appareil modulaire (voir TAB-TELE).",
+"no_can": null,
 "ordre": 100
 },
 {
@@ -96,6 +106,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Cage d'escalier, allée, sous-sol.",
+"no_can": null,
 "ordre": 110
 },
 {
@@ -105,6 +116,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Applique, hublot, projecteur en façade.",
+"no_can": null,
 "ordre": 120
 },
 {
@@ -114,6 +126,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Encastré, basse consommation.",
+"no_can": null,
 "ordre": 130
 },
 {
@@ -123,6 +136,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Un poste par driver / zone.",
+"no_can": null,
 "ordre": 140
 },
 {
@@ -132,6 +146,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Mesurer le développé réellement posé.",
+"no_can": null,
 "ordre": 150
 },
 {
@@ -141,6 +156,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Anti-panique, autonomie 1 h.",
+"no_can": null,
 "ordre": 160
 },
 {
@@ -150,6 +166,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Signalisation d'évacuation.",
+"no_can": null,
 "ordre": 170
 },
 {
@@ -159,6 +176,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Transfo / alimentation TBTS incluse dans le poste.",
+"no_can": null,
 "ordre": 180
 },
 {
@@ -168,6 +186,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Uniquement pour les longueurs anormales (> 15 m depuis la boîte).",
+"no_can": null,
 "ordre": 190
 },
 {
@@ -177,6 +196,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Départ protégé + FI.",
+"no_can": null,
 "ordre": 200
 },
 {
@@ -186,6 +206,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Circuit dédié T23.",
+"no_can": null,
 "ordre": 210
 },
 {
@@ -195,6 +216,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "2P+T 10 A, à obturateurs (SEV 1011).",
+"no_can": null,
 "ordre": 220
 },
 {
@@ -204,6 +226,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "2 x T13 sur une boîte.",
+"no_can": null,
 "ordre": 230
 },
 {
@@ -213,6 +236,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "3 x T13 sur une boîte.",
+"no_can": null,
 "ordre": 240
 },
 {
@@ -222,6 +246,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "4 x T13 / bloc.",
+"no_can": null,
 "ordre": 250
 },
 {
@@ -231,6 +256,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "2P+T 16 A, circuit dédié conseillé.",
+"no_can": null,
 "ordre": 260
 },
 {
@@ -240,6 +266,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Triphasée 10 A.",
+"no_can": null,
 "ordre": 270
 },
 {
@@ -249,6 +276,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Prise pilotée (lampadaire, sapin, etc.).",
+"no_can": null,
 "ordre": 280
 },
 {
@@ -258,6 +286,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "T13 ou T23, extérieur / local humide.",
+"no_can": null,
 "ordre": 290
 },
 {
@@ -267,6 +296,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Borne de jardin, potelet.",
+"no_can": null,
 "ordre": 300
 },
 {
@@ -276,6 +306,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Boîte encastrée dans la dalle, couvercle affleurant.",
+"no_can": null,
 "ordre": 310
 },
 {
@@ -285,6 +316,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Hauteur crédence, bloc ou individuelle.",
+"no_can": null,
 "ordre": 320
 },
 {
@@ -294,6 +326,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "A / C.",
+"no_can": null,
 "ordre": 330
 },
 {
@@ -303,6 +336,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Colonnette, goulotte de plan de travail.",
+"no_can": null,
 "ordre": 340
 },
 {
@@ -312,6 +346,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Repérage spécifique (couleur).",
+"no_can": null,
 "ordre": 350
 },
 {
@@ -321,6 +356,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Sous-évier, meuble TV, armoire.",
+"no_can": null,
 "ordre": 360
 },
 {
@@ -330,6 +366,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Départ 3L+N+PE protégé.",
+"no_can": null,
 "ordre": 370
 },
 {
@@ -339,6 +376,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Triphasée 16 A.",
+"no_can": null,
 "ordre": 380
 },
 {
@@ -348,6 +386,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "IEC 60309.",
+"no_can": null,
 "ordre": 390
 },
 {
@@ -357,6 +396,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "IEC 60309.",
+"no_can": null,
 "ordre": 400
 },
 {
@@ -366,6 +406,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "IEC 60309.",
+"no_can": null,
 "ordre": 410
 },
 {
@@ -375,6 +416,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Boîte de raccordement + câble.",
+"no_can": null,
 "ordre": 420
 },
 {
@@ -384,6 +426,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Circuit dédié.",
+"no_can": null,
 "ordre": 430
 },
 {
@@ -393,6 +436,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 440
 },
 {
@@ -402,6 +446,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 450
 },
 {
@@ -411,6 +456,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 460
 },
 {
@@ -420,6 +466,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 470
 },
 {
@@ -429,6 +476,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Y c. contacteur heures creuses si demandé.",
+"no_can": null,
 "ordre": 480
 },
 {
@@ -438,6 +486,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Y c. sectionneur de proximité.",
+"no_can": null,
 "ordre": 490
 },
 {
@@ -447,6 +496,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 500
 },
 {
@@ -456,6 +506,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 510
 },
 {
@@ -465,6 +516,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Unité int. + ext.",
+"no_can": null,
 "ordre": 520
 },
 {
@@ -474,6 +526,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 530
 },
 {
@@ -483,6 +536,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Avec sectionneur de proximité.",
+"no_can": null,
 "ordre": 540
 },
 {
@@ -492,6 +546,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 550
 },
 {
@@ -501,6 +556,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 560
 },
 {
@@ -510,6 +566,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 570
 },
 {
@@ -519,6 +576,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 580
 },
 {
@@ -528,6 +586,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Côté AC.",
+"no_can": null,
 "ordre": 590
 },
 {
@@ -537,6 +596,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Hors forfait de raccordement.",
+"no_can": null,
 "ordre": 600
 },
 {
@@ -546,6 +606,7 @@
 "unite": "pce",
 "schema": "0",
 "notes": "Simple allumage.",
+"no_can": null,
 "ordre": 610
 },
 {
@@ -555,6 +616,7 @@
 "unite": "pce",
 "schema": "1",
 "notes": null,
+"no_can": null,
 "ordre": 620
 },
 {
@@ -564,6 +626,7 @@
 "unite": "pce",
 "schema": "3",
 "notes": null,
+"no_can": null,
 "ordre": 630
 },
 {
@@ -573,6 +636,7 @@
 "unite": "pce",
 "schema": "3+3",
 "notes": null,
+"no_can": null,
 "ordre": 640
 },
 {
@@ -582,6 +646,7 @@
 "unite": "pce",
 "schema": "6",
 "notes": null,
+"no_can": null,
 "ordre": 650
 },
 {
@@ -591,6 +656,7 @@
 "unite": "pce",
 "schema": "5",
 "notes": "2 circuits indépendants.",
+"no_can": null,
 "ordre": 660
 },
 {
@@ -600,6 +666,7 @@
 "unite": "pce",
 "schema": "15",
 "notes": null,
+"no_can": null,
 "ordre": 670
 },
 {
@@ -609,6 +676,7 @@
 "unite": "pce",
 "schema": "15+15",
 "notes": null,
+"no_can": null,
 "ordre": 680
 },
 {
@@ -618,6 +686,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 690
 },
 {
@@ -627,6 +696,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Charge LED dimmable.",
+"no_can": null,
 "ordre": 700
 },
 {
@@ -636,6 +706,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "360°, encastré ou apparent.",
+"no_can": null,
 "ordre": 710
 },
 {
@@ -645,6 +716,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 720
 },
 {
@@ -654,6 +726,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 730
 },
 {
@@ -663,6 +736,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 740
 },
 {
@@ -672,6 +746,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Filaire, avec ligne vers vanne / collecteur.",
+"no_can": null,
 "ordre": 750
 },
 {
@@ -681,6 +756,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Tube de sonde inclus.",
+"no_can": null,
 "ordre": 760
 },
 {
@@ -690,6 +766,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Montée / descente.",
+"no_can": null,
 "ordre": 770
 },
 {
@@ -699,6 +776,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Bouton central + relais de groupe.",
+"no_can": null,
 "ordre": 780
 },
 {
@@ -708,6 +786,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 790
 },
 {
@@ -717,6 +796,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 800
 },
 {
@@ -726,6 +806,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 810
 },
 {
@@ -735,6 +816,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 820
 },
 {
@@ -744,6 +826,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Interrupteur ou poussoir, local humide / extérieur.",
+"no_can": null,
 "ordre": 830
 },
 {
@@ -753,6 +836,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Cadre / plaque multiple.",
+"no_can": null,
 "ordre": 840
 },
 {
@@ -762,6 +846,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Y c. câble jusqu'au répartiteur + certification.",
+"no_can": null,
 "ordre": 850
 },
 {
@@ -771,6 +856,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 860
 },
 {
@@ -780,6 +866,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 870
 },
 {
@@ -789,6 +876,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Introduction opérateur.",
+"no_can": null,
 "ordre": 880
 },
 {
@@ -798,6 +886,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Y c. alimentation 230 V.",
+"no_can": null,
 "ordre": 890
 },
 {
@@ -807,6 +896,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 900
 },
 {
@@ -816,6 +906,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 910
 },
 {
@@ -825,6 +916,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 920
 },
 {
@@ -834,6 +926,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 930
 },
 {
@@ -843,6 +936,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 940
 },
 {
@@ -852,6 +946,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 950
 },
 {
@@ -861,6 +956,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 960
 },
 {
@@ -870,6 +966,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 970
 },
 {
@@ -879,6 +976,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 980
 },
 {
@@ -888,6 +986,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 990
 },
 {
@@ -897,6 +996,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1000
 },
 {
@@ -906,6 +1006,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1010
 },
 {
@@ -915,6 +1016,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1020
 },
 {
@@ -924,6 +1026,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1030
 },
 {
@@ -933,6 +1036,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1040
 },
 {
@@ -942,6 +1046,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1050
 },
 {
@@ -951,6 +1056,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Y c. report lumineux.",
+"no_can": null,
 "ordre": 1060
 },
 {
@@ -960,6 +1066,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1070
 },
 {
@@ -969,6 +1076,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Hors forfait de prise.",
+"no_can": null,
 "ordre": 1080
 },
 {
@@ -978,6 +1086,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Tirage ultérieur par tiers.",
+"no_can": null,
 "ordre": 1090
 },
 {
@@ -987,6 +1096,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Avec self intégrée.",
+"no_can": null,
 "ordre": 1100
 },
 {
@@ -996,6 +1106,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Une pièce par ligne physique.",
+"no_can": null,
 "ordre": 1110
 },
 {
@@ -1005,6 +1116,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Développé réel, boucle comprise.",
+"no_can": null,
 "ordre": 1120
 },
 {
@@ -1014,6 +1126,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Participant.",
+"no_can": null,
 "ordre": 1130
 },
 {
@@ -1023,6 +1136,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Participant.",
+"no_can": null,
 "ordre": 1140
 },
 {
@@ -1032,6 +1146,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Participant.",
+"no_can": null,
 "ordre": 1150
 },
 {
@@ -1041,6 +1156,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Participant.",
+"no_can": null,
 "ordre": 1160
 },
 {
@@ -1050,6 +1166,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Compter le nombre de canaux utilisés.",
+"no_can": null,
 "ordre": 1170
 },
 {
@@ -1059,6 +1176,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1180
 },
 {
@@ -1068,6 +1186,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1190
 },
 {
@@ -1077,6 +1196,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1200
 },
 {
@@ -1086,6 +1206,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Reprise de contacts conventionnels.",
+"no_can": null,
 "ordre": 1210
 },
 {
@@ -1095,6 +1216,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1220
 },
 {
@@ -1104,6 +1226,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1230
 },
 {
@@ -1113,6 +1236,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1240
 },
 {
@@ -1122,6 +1246,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1250
 },
 {
@@ -1131,6 +1256,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Max. 64 participants par ligne.",
+"no_can": null,
 "ordre": 1260
 },
 {
@@ -1140,6 +1266,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1270
 },
 {
@@ -1149,6 +1276,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1280
 },
 {
@@ -1158,6 +1286,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1290
 },
 {
@@ -1167,6 +1296,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1300
 },
 {
@@ -1176,6 +1306,7 @@
 "unite": "h",
 "schema": null,
 "notes": "ETS / DALI. Reporter les heures estimées.",
+"no_can": null,
 "ordre": 1310
 },
 {
@@ -1185,6 +1316,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1320
 },
 {
@@ -1194,6 +1326,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Encastré ou apparent, nombre de rangées à préciser.",
+"no_can": null,
 "ordre": 1330
 },
 {
@@ -1203,6 +1336,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1340
 },
 {
@@ -1212,6 +1346,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1350
 },
 {
@@ -1221,6 +1356,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1360
 },
 {
@@ -1230,6 +1366,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "DDR type A.",
+"no_can": null,
 "ordre": 1370
 },
 {
@@ -1239,6 +1376,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1380
 },
 {
@@ -1248,6 +1386,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1390
 },
 {
@@ -1257,6 +1396,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1400
 },
 {
@@ -1266,6 +1406,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1410
 },
 {
@@ -1275,6 +1416,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1420
 },
 {
@@ -1284,6 +1426,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1430
 },
 {
@@ -1293,6 +1436,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1440
 },
 {
@@ -1302,6 +1446,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1450
 },
 {
@@ -1311,6 +1456,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1460
 },
 {
@@ -1320,6 +1466,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1470
 },
 {
@@ -1329,6 +1476,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Un poste par tableau.",
+"no_can": null,
 "ordre": 1480
 },
 {
@@ -1338,6 +1486,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Un poste par local / par arrivée.",
+"no_can": null,
 "ordre": 1490
 },
 {
@@ -1347,6 +1496,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1500
 },
 {
@@ -1356,6 +1506,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Longueur de boucle ou de piquet.",
+"no_can": null,
 "ordre": 1510
 },
 {
@@ -1365,6 +1516,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Selon OIBT.",
+"no_can": null,
 "ordre": 1520
 },
 {
@@ -1374,6 +1526,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1530
 },
 {
@@ -1383,6 +1536,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1540
 },
 {
@@ -1392,6 +1546,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1550
 },
 {
@@ -1401,6 +1556,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1560
 },
 {
@@ -1410,6 +1566,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1570
 },
 {
@@ -1419,6 +1576,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1580
 },
 {
@@ -1428,6 +1586,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Y c. colliers et fixations.",
+"no_can": null,
 "ordre": 1590
 },
 {
@@ -1437,6 +1596,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1600
 },
 {
@@ -1446,6 +1606,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1610
 },
 {
@@ -1455,6 +1616,7 @@
 "unite": "m",
 "schema": null,
 "notes": "Y c. fil de tirage.",
+"no_can": null,
 "ordre": 1620
 },
 {
@@ -1464,6 +1626,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1630
 },
 {
@@ -1473,6 +1636,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1640
 },
 {
@@ -1482,6 +1646,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1650
 },
 {
@@ -1491,6 +1656,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1660
 },
 {
@@ -1500,6 +1666,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "Diamètre à préciser en note.",
+"no_can": null,
 "ordre": 1670
 },
 {
@@ -1509,6 +1676,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1680
 },
 {
@@ -1518,6 +1686,7 @@
 "unite": "pce",
 "schema": null,
 "notes": "EI 30 / 60 / 90.",
+"no_can": null,
 "ordre": 1690
 },
 {
@@ -1527,6 +1696,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1700
 },
 {
@@ -1536,6 +1706,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1710
 },
 {
@@ -1545,6 +1716,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1720
 },
 {
@@ -1554,6 +1726,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1730
 },
 {
@@ -1563,6 +1736,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1740
 },
 {
@@ -1572,6 +1746,7 @@
 "unite": "m",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1750
 },
 {
@@ -1581,6 +1756,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1760
 },
 {
@@ -1590,6 +1766,7 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1770
 },
 {
@@ -1599,16 +1776,8 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
+"no_can": null,
 "ordre": 1780
-},
-{
-"categorie": "DIV",
-"code": "DIV-DEMO",
-"libelle": "Démontage installation existante",
-"unite": "pce",
-"schema": null,
-"notes": "Rénovation.",
-"ordre": 1790
 },
 {
 "categorie": "DIV",
@@ -1617,7 +1786,8 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
-"ordre": 1800
+"no_can": null,
+"ordre": 1790
 },
 {
 "categorie": "DIV",
@@ -1626,7 +1796,8 @@
 "unite": "pce",
 "schema": null,
 "notes": "Coffret, éclairage, prises.",
-"ordre": 1810
+"no_can": null,
+"ordre": 1800
 },
 {
 "categorie": "DIV",
@@ -1635,7 +1806,8 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
-"ordre": 1820
+"no_can": null,
+"ordre": 1810
 },
 {
 "categorie": "DIV",
@@ -1644,7 +1816,8 @@
 "unite": "pce",
 "schema": null,
 "notes": null,
-"ordre": 1830
+"no_can": null,
+"ordre": 1820
 },
 {
 "categorie": "DIV",
@@ -1653,6 +1826,2367 @@
 "unite": "pce",
 "schema": null,
 "notes": "Poste ouvert, décrire dans la note du comptage.",
+"no_can": null,
+"ordre": 1830
+},
+{
+"categorie": "FIL",
+"code": "FIL-1.5",
+"libelle": "Fil T 1,5 mm²",
+"unite": "m",
+"schema": null,
+"notes": "Conducteur seul, tiré en tube.",
+"no_can": null,
 "ordre": 1840
+},
+{
+"categorie": "FIL",
+"code": "FIL-2.5",
+"libelle": "Fil T 2,5 mm²",
+"unite": "m",
+"schema": null,
+"notes": "Conducteur seul, tiré en tube.",
+"no_can": null,
+"ordre": 1850
+},
+{
+"categorie": "FIL",
+"code": "FIL-4",
+"libelle": "Fil T 4 mm²",
+"unite": "m",
+"schema": null,
+"notes": "Conducteur seul, tiré en tube.",
+"no_can": null,
+"ordre": 1860
+},
+{
+"categorie": "FIL",
+"code": "FIL-6",
+"libelle": "Fil T 6 mm²",
+"unite": "m",
+"schema": null,
+"notes": "Conducteur seul, tiré en tube.",
+"no_can": null,
+"ordre": 1870
+},
+{
+"categorie": "FIL",
+"code": "FIL-10",
+"libelle": "Fil T 10 mm²",
+"unite": "m",
+"schema": null,
+"notes": "Conducteur seul, tiré en tube.",
+"no_can": null,
+"ordre": 1880
+},
+{
+"categorie": "FIL",
+"code": "FIL-16",
+"libelle": "Fil T 16 mm²",
+"unite": "m",
+"schema": null,
+"notes": "Conducteur seul, tiré en tube.",
+"no_can": null,
+"ordre": 1890
+},
+{
+"categorie": "FIL",
+"code": "CAB-2x1.5",
+"libelle": "Câble 2×1,5 mm²",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1900
+},
+{
+"categorie": "FIL",
+"code": "CAB-3x1.5",
+"libelle": "Câble 3×1,5 mm²",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1910
+},
+{
+"categorie": "FIL",
+"code": "CAB-4x1.5",
+"libelle": "Câble 4×1,5 mm²",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1920
+},
+{
+"categorie": "FIL",
+"code": "CAB-5x1.5",
+"libelle": "Câble 5×1,5 mm²",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1930
+},
+{
+"categorie": "FIL",
+"code": "CAB-3x2.5",
+"libelle": "Câble 3×2,5 mm²",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1940
+},
+{
+"categorie": "FIL",
+"code": "CAB-5x2.5",
+"libelle": "Câble 5×2,5 mm²",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1950
+},
+{
+"categorie": "TUB",
+"code": "CANAL-20x20",
+"libelle": "Canal 20×20 mm",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1960
+},
+{
+"categorie": "TUB",
+"code": "CANAL-25x25",
+"libelle": "Canal 25×25 mm",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1970
+},
+{
+"categorie": "TUB",
+"code": "CANAL-30x30",
+"libelle": "Canal 30×30 mm",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1980
+},
+{
+"categorie": "TUB",
+"code": "CANAL-40x40",
+"libelle": "Canal 40×40 mm",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 1990
+},
+{
+"categorie": "TUB",
+"code": "CANAL-40x60",
+"libelle": "Canal 40×60 mm",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 2000
+},
+{
+"categorie": "TUB",
+"code": "CANAL-60x60",
+"libelle": "Canal 60×60 mm",
+"unite": "m",
+"schema": null,
+"notes": null,
+"no_can": null,
+"ordre": 2010
+},
+{
+"categorie": "TPS",
+"code": "TPS-DEMO",
+"libelle": "Démontage d'installation existante",
+"unite": "h",
+"schema": null,
+"notes": "Compté en heures, pas en pièces.",
+"no_can": null,
+"ordre": 2020
+},
+{
+"categorie": "TPS",
+"code": "TPS-TAB",
+"libelle": "Modification de tableau",
+"unite": "h",
+"schema": null,
+"notes": "Compté en heures, pas en pièces.",
+"no_can": null,
+"ordre": 2030
+},
+{
+"categorie": "PI",
+"code": "583311001",
+"libelle": "Mise à terre de fondation /m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 311 001",
+"ordre": 2040
+},
+{
+"categorie": "PI",
+"code": "583311002",
+"libelle": "Point de raccordement depuis",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 311 002",
+"ordre": 2050
+},
+{
+"categorie": "PI",
+"code": "583312211",
+"libelle": "Pontage avec",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 312 211",
+"ordre": 2060
+},
+{
+"categorie": "PI",
+"code": "583312311",
+"libelle": "Ligne avec prise de terre",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 312 311",
+"ordre": 2070
+},
+{
+"categorie": "PI",
+"code": "583312421",
+"libelle": "Ligne pour terre/équipotialité",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 312 421",
+"ordre": 2080
+},
+{
+"categorie": "PI",
+"code": "583321101",
+"libelle": "Point de séparation Cu AP",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 101",
+"ordre": 2090
+},
+{
+"categorie": "PI",
+"code": "583321102",
+"libelle": "Point de séparation Cu ENC",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 102",
+"ordre": 2100
+},
+{
+"categorie": "PI",
+"code": "583321201",
+"libelle": "Ligne descente paratonnerre",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 201",
+"ordre": 2110
+},
+{
+"categorie": "PI",
+"code": "583321202",
+"libelle": "Ligne descente paratonnerre",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 202",
+"ordre": 2120
+},
+{
+"categorie": "PI",
+"code": "583321203",
+"libelle": "Ligne descente paratonnerre",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 203",
+"ordre": 2130
+},
+{
+"categorie": "PI",
+"code": "583321301",
+"libelle": "Organe capteur paratonnerre",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 301",
+"ordre": 2140
+},
+{
+"categorie": "PI",
+"code": "583321302",
+"libelle": "Organe capteur paratonnerre",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 302",
+"ordre": 2150
+},
+{
+"categorie": "PI",
+"code": "583321401",
+"libelle": "Mât capteur paratonnerre",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 401",
+"ordre": 2160
+},
+{
+"categorie": "PI",
+"code": "583321402",
+"libelle": "Mât capteur paratonnerre",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 402",
+"ordre": 2170
+},
+{
+"categorie": "PI",
+"code": "583321501",
+"libelle": "Ligne capteur paratonnerre",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 321 501",
+"ordre": 2180
+},
+{
+"categorie": "PI",
+"code": "583411612",
+"libelle": "Ligne pour Eap (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 411 612",
+"ordre": 2190
+},
+{
+"categorie": "PI",
+"code": "583441111",
+"libelle": "Ligne avec boîte de dérivation",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 441 111",
+"ordre": 2200
+},
+{
+"categorie": "PI",
+"code": "583441113",
+"libelle": "Ligne avec boîte de dérivation",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 441 113",
+"ordre": 2210
+},
+{
+"categorie": "PI",
+"code": "583711112",
+"libelle": "Ligne avec interrupteur",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 711 112",
+"ordre": 2220
+},
+{
+"categorie": "PI",
+"code": "583715113",
+"libelle": "Ligne pour senseur",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 715 113",
+"ordre": 2230
+},
+{
+"categorie": "PI",
+"code": "583721112",
+"libelle": "Ligne pour luminaire",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 721 112",
+"ordre": 2240
+},
+{
+"categorie": "PI",
+"code": "583811313",
+"libelle": "Ligne avec interrupteur IPX",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 811 313",
+"ordre": 2250
+},
+{
+"categorie": "PI",
+"code": "583814122",
+"libelle": "Ligne avec interrupteur IPX",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 814 122",
+"ordre": 2260
+},
+{
+"categorie": "PI",
+"code": "583821114",
+"libelle": "Ligne pour récepteur (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 821 114",
+"ordre": 2270
+},
+{
+"categorie": "PI",
+"code": "583821121",
+"libelle": "Ligne pour récepteur (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 821 121",
+"ordre": 2280
+},
+{
+"categorie": "PI",
+"code": "583821122",
+"libelle": "Ligne pour récepteur (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 821 122",
+"ordre": 2290
+},
+{
+"categorie": "PI",
+"code": "583821123",
+"libelle": "Ligne pour récepteur (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 821 123",
+"ordre": 2300
+},
+{
+"categorie": "PI",
+"code": "583821312",
+"libelle": "Ligne pour récepteur (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 821 312",
+"ordre": 2310
+},
+{
+"categorie": "PI",
+"code": "583831113",
+"libelle": "Ligne de liaison (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 831 113",
+"ordre": 2320
+},
+{
+"categorie": "PI",
+"code": "583835113",
+"libelle": "Ligne de liaison (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 835 113",
+"ordre": 2330
+},
+{
+"categorie": "PI",
+"code": "583841111",
+"libelle": "Ligne avec prise",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 111",
+"ordre": 2340
+},
+{
+"categorie": "PI",
+"code": "583841211",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, longueur de ligne jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 211",
+"ordre": 2350
+},
+{
+"categorie": "PI",
+"code": "583841212",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, longueur de ligne plus de 5 à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 212",
+"ordre": 2360
+},
+{
+"categorie": "PI",
+"code": "583841213",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, longueur de ligne plus de 10 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 213",
+"ordre": 2370
+},
+{
+"categorie": "PI",
+"code": "583841214",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, longueur de ligne plus de 25 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 214",
+"ordre": 2380
+},
+{
+"categorie": "PI",
+"code": "583841231",
+"libelle": "Ligne avec prise IPX",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 231",
+"ordre": 2390
+},
+{
+"categorie": "PI",
+"code": "583841313",
+"libelle": "Ligne avec prise",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 313",
+"ordre": 2400
+},
+{
+"categorie": "PI",
+"code": "583841411",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, longueur de ligne jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 411",
+"ordre": 2410
+},
+{
+"categorie": "PI",
+"code": "583841412",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, longueur de ligne plus de 5 à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 412",
+"ordre": 2420
+},
+{
+"categorie": "PI",
+"code": "583841413",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, longueur de ligne plus de 10 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 413",
+"ordre": 2430
+},
+{
+"categorie": "PI",
+"code": "583841414",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, longueur de ligne plus de 25 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 414",
+"ordre": 2440
+},
+{
+"categorie": "PI",
+"code": "583841464",
+"libelle": "Ligne avec prise IPX",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 841 464",
+"ordre": 2450
+},
+{
+"categorie": "PI",
+"code": "583871211",
+"libelle": "Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 211",
+"ordre": 2460
+},
+{
+"categorie": "PI",
+"code": "583871212",
+"libelle": "Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne plus de 5 jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 212",
+"ordre": 2470
+},
+{
+"categorie": "PI",
+"code": "583871213",
+"libelle": "Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne plus de 10 jusqu'à 15m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 213",
+"ordre": 2480
+},
+{
+"categorie": "PI",
+"code": "583871221",
+"libelle": "Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 221",
+"ordre": 2490
+},
+{
+"categorie": "PI",
+"code": "583871222",
+"libelle": "Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne plus de 5 jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 222",
+"ordre": 2500
+},
+{
+"categorie": "PI",
+"code": "583871223",
+"libelle": "Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîte de passage avec couvercle, d'un seul côté, longueur de ligne plus de 10 jusqu'à 15m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 223",
+"ordre": 2510
+},
+{
+"categorie": "PI",
+"code": "583871311",
+"libelle": "Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 311",
+"ordre": 2520
+},
+{
+"categorie": "PI",
+"code": "583871312",
+"libelle": "Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne plus de 5 jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 312",
+"ordre": 2530
+},
+{
+"categorie": "PI",
+"code": "583871313",
+"libelle": "Tube vide 2x M50 et 2x M40 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne plus de 10 jusqu'à 15m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 313",
+"ordre": 2540
+},
+{
+"categorie": "PI",
+"code": "583871321",
+"libelle": "Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 321",
+"ordre": 2550
+},
+{
+"categorie": "PI",
+"code": "583871322",
+"libelle": "Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne plus de 5 jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 322",
+"ordre": 2560
+},
+{
+"categorie": "PI",
+"code": "583871323",
+"libelle": "Tube vide 2x M63 et 2x M50 avec auxiliaire de tirage et boîtes de passage avec couvercles, des deux côté, longueur de ligne plus de 10 jusqu'à 15m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 871 323",
+"ordre": 2570
+},
+{
+"categorie": "PI",
+"code": "583911112",
+"libelle": "Ligne pour appareil",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 911 112",
+"ordre": 2580
+},
+{
+"categorie": "PI",
+"code": "583911125",
+"libelle": "Ligne pour appareil",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 911 125",
+"ordre": 2590
+},
+{
+"categorie": "PI",
+"code": "583911212",
+"libelle": "Ligne pour appareil",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 911 212",
+"ordre": 2600
+},
+{
+"categorie": "PI",
+"code": "583951112",
+"libelle": "Ligne pour store (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 951 112",
+"ordre": 2610
+},
+{
+"categorie": "PI",
+"code": "583951113",
+"libelle": "Ligne pour store (Racc)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 951 113",
+"ordre": 2620
+},
+{
+"categorie": "PI",
+"code": "583951212",
+"libelle": "Ligne avec interrupteur store",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 951 212",
+"ordre": 2630
+},
+{
+"categorie": "PI",
+"code": "583951213",
+"libelle": "Ligne avec interrupteur store",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 583",
+"no_can": "583 951 213",
+"ordre": 2640
+},
+{
+"categorie": "PI",
+"code": "584211201",
+"libelle": "à 584 211",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 211 201",
+"ordre": 2650
+},
+{
+"categorie": "PI",
+"code": "584211421",
+"libelle": "Introduction télécom avec",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 211 421",
+"ordre": 2660
+},
+{
+"categorie": "PI",
+"code": "584213211",
+"libelle": "Ligne alimentation télécom",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 213 211",
+"ordre": 2670
+},
+{
+"categorie": "PI",
+"code": "584213311",
+"libelle": "Ligne alimentation DSL avec",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 213 311",
+"ordre": 2680
+},
+{
+"categorie": "PI",
+"code": "584213411",
+"libelle": "Ligne alimentation FTTx",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 213 411",
+"ordre": 2690
+},
+{
+"categorie": "PI",
+"code": "584214111",
+"libelle": "Ligne avec prise télécom,",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 214 111",
+"ordre": 2700
+},
+{
+"categorie": "PI",
+"code": "584216111",
+"libelle": "Installation dans point étoile DSL, comprenant: - 1 Router ou similaire (M+R), - 1 distributeur 5xRJ45, Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 216 111",
+"ordre": 2710
+},
+{
+"categorie": "PI",
+"code": "584216121",
+"libelle": "Installation dans point étoile FTTx, comprenant: - 1 terminal réseau (M+R), Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 216 121",
+"ordre": 2720
+},
+{
+"categorie": "PI",
+"code": "584221261",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 261",
+"ordre": 2730
+},
+{
+"categorie": "PI",
+"code": "584221262",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 10 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 262",
+"ordre": 2740
+},
+{
+"categorie": "PI",
+"code": "584221263",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 25 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 263",
+"ordre": 2750
+},
+{
+"categorie": "PI",
+"code": "584221264",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 50 à 75m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 264",
+"ordre": 2760
+},
+{
+"categorie": "PI",
+"code": "584221265",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe FA (câbles Cat 8, modules Cat 8.1) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 75 à 90m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 265",
+"ordre": 2770
+},
+{
+"categorie": "PI",
+"code": "584221271",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 271",
+"ordre": 2780
+},
+{
+"categorie": "PI",
+"code": "584221272",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 10 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 272",
+"ordre": 2790
+},
+{
+"categorie": "PI",
+"code": "584221273",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 25 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 273",
+"ordre": 2800
+},
+{
+"categorie": "PI",
+"code": "584221274",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 50 à 75m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 274",
+"ordre": 2810
+},
+{
+"categorie": "PI",
+"code": "584221275",
+"libelle": "Lignes de compensation blindées comprenant 8 Link classe EA (câbles Cat 7A, modules Cat 6A) pour CUC, mesure de qualité et documen- tation comprises, longueur de ligne plus de 75 à 90m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 221 275",
+"ordre": 2820
+},
+{
+"categorie": "PI",
+"code": "584223112",
+"libelle": "Ligne CUC avec prise dans",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 112",
+"ordre": 2830
+},
+{
+"categorie": "PI",
+"code": "584223171",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 171",
+"ordre": 2840
+},
+{
+"categorie": "PI",
+"code": "584223172",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne plus de 10 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 172",
+"ordre": 2850
+},
+{
+"categorie": "PI",
+"code": "584223173",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne plus de 25 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 173",
+"ordre": 2860
+},
+{
+"categorie": "PI",
+"code": "584223174",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne plus de 50 à 75m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 174",
+"ordre": 2870
+},
+{
+"categorie": "PI",
+"code": "584223175",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal d'allège, mesure de qualité et documentation comprises, longueur de ligne plus de 75 à 90m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 175",
+"ordre": 2880
+},
+{
+"categorie": "PI",
+"code": "584223271",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 271",
+"ordre": 2890
+},
+{
+"categorie": "PI",
+"code": "584223272",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne plus de 10 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 272",
+"ordre": 2900
+},
+{
+"categorie": "PI",
+"code": "584223273",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne plus de 25 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 273",
+"ordre": 2910
+},
+{
+"categorie": "PI",
+"code": "584223274",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne plus de 50 à 75m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 274",
+"ordre": 2920
+},
+{
+"categorie": "PI",
+"code": "584223275",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC dans canal de sol ou faux-plancher, mesure de qualité et docu- mentation comprises, longueur de ligne plus de 75 à 90m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 275",
+"ordre": 2930
+},
+{
+"categorie": "PI",
+"code": "584223342",
+"libelle": "Ligne CUC avec prise",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 342",
+"ordre": 2940
+},
+{
+"categorie": "PI",
+"code": "584223371",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 371",
+"ordre": 2950
+},
+{
+"categorie": "PI",
+"code": "584223372",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 10 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 372",
+"ordre": 2960
+},
+{
+"categorie": "PI",
+"code": "584223373",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 25 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 373",
+"ordre": 2970
+},
+{
+"categorie": "PI",
+"code": "584223374",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 50 à 75m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 374",
+"ordre": 2980
+},
+{
+"categorie": "PI",
+"code": "584223375",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 75 à 90m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 375",
+"ordre": 2990
+},
+{
+"categorie": "PI",
+"code": "584223471",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 471",
+"ordre": 3000
+},
+{
+"categorie": "PI",
+"code": "584223472",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 10 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 472",
+"ordre": 3010
+},
+{
+"categorie": "PI",
+"code": "584223473",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 25 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 473",
+"ordre": 3020
+},
+{
+"categorie": "PI",
+"code": "584223474",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 50 à 75m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 474",
+"ordre": 3030
+},
+{
+"categorie": "PI",
+"code": "584223475",
+"libelle": "Ligne blindée classe EA (câble Cat 7A) avec prise Cat 6A IPX1 pour CUC, mesure de qualité et documentation comprises, longueur de ligne plus de 75 à 90m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 223 475",
+"ordre": 3040
+},
+{
+"categorie": "PI",
+"code": "584224112",
+"libelle": "Ligne alimentation FO",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 224 112",
+"ordre": 3050
+},
+{
+"categorie": "PI",
+"code": "584231115",
+"libelle": "Installation pour technique de",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 231 115",
+"ordre": 3060
+},
+{
+"categorie": "PI",
+"code": "584232116",
+"libelle": "Conduite 2x pour technique de",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 232 116",
+"ordre": 3070
+},
+{
+"categorie": "PI",
+"code": "584233122",
+"libelle": "Ligne prise (Link FO)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 233 122",
+"ordre": 3080
+},
+{
+"categorie": "PI",
+"code": "584412111",
+"libelle": "Ligne alimentation R/TV",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 412 111",
+"ordre": 3090
+},
+{
+"categorie": "PI",
+"code": "584413101",
+"libelle": "Ligne R/TV avec prise,",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 413 101",
+"ordre": 3100
+},
+{
+"categorie": "PI",
+"code": "584414111",
+"libelle": "Inst dans point étoile R/TV",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 414 111",
+"ordre": 3110
+},
+{
+"categorie": "PI",
+"code": "584911422",
+"libelle": "Ligne alimentation courant",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 911 422",
+"ordre": 3120
+},
+{
+"categorie": "PI",
+"code": "584931123",
+"libelle": "Ligne courant faible pour app,",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 931 123",
+"ordre": 3130
+},
+{
+"categorie": "PI",
+"code": "584932123",
+"libelle": "Ligne courant faible pour app",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 932 123",
+"ordre": 3140
+},
+{
+"categorie": "PI",
+"code": "584932133",
+"libelle": "Ligne courant faible pour app",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 932 133",
+"ordre": 3150
+},
+{
+"categorie": "PI",
+"code": "584933123",
+"libelle": "Ligne courant faible pour app",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 933 123",
+"ordre": 3160
+},
+{
+"categorie": "PI",
+"code": "584933413",
+"libelle": "Ligne courant faible pour app",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 933 413",
+"ordre": 3170
+},
+{
+"categorie": "PI",
+"code": "584934123",
+"libelle": "Ligne courant faible pour app",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 934 123",
+"ordre": 3180
+},
+{
+"categorie": "PI",
+"code": "584934133",
+"libelle": "Ligne courant faible pour app",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 934 133",
+"ordre": 3190
+},
+{
+"categorie": "PI",
+"code": "584934413",
+"libelle": "Ligne courant faible pour app",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 934 413",
+"ordre": 3200
+},
+{
+"categorie": "PI",
+"code": "584934513",
+"libelle": "Ligne courant faible pour app",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 934 513",
+"ordre": 3210
+},
+{
+"categorie": "PI",
+"code": "584935133",
+"libelle": "Ligne courant faible avec",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 935 133",
+"ordre": 3220
+},
+{
+"categorie": "PI",
+"code": "584935413",
+"libelle": "Ligne courant faible avec",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 584",
+"no_can": "584 935 413",
+"ordre": 3230
+},
+{
+"categorie": "PI",
+"code": "585421111",
+"libelle": "Ligne avec boîte de dérivation, 3x1,5, jusqu'à 5 m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 421 111",
+"ordre": 3240
+},
+{
+"categorie": "PI",
+"code": "585421112",
+"libelle": "Ligne avec boîte de dérivation, 3x1,5, plus de 5 à 10 m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 421 112",
+"ordre": 3250
+},
+{
+"categorie": "PI",
+"code": "585421113",
+"libelle": "Ligne avec boîte de dérivation, 3x1,5, plus de 10 à 15 m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 421 113",
+"ordre": 3260
+},
+{
+"categorie": "PI",
+"code": "585421121",
+"libelle": "Ligne avec boîte de dérivation",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 421 121",
+"ordre": 3270
+},
+{
+"categorie": "PI",
+"code": "585421122",
+"libelle": "Ligne avec boîte de dérivation",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 421 122",
+"ordre": 3280
+},
+{
+"categorie": "PI",
+"code": "585421123",
+"libelle": "Ligne avec boîte de dérivation, 5x1,5, plus de 10 à 15 m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 421 123",
+"ordre": 3290
+},
+{
+"categorie": "PI",
+"code": "585421511",
+"libelle": "Ligne avec boîte de dérivation",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 421 511",
+"ordre": 3300
+},
+{
+"categorie": "PI",
+"code": "585421512",
+"libelle": "Ligne avec boîte de dérivation",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 421 512",
+"ordre": 3310
+},
+{
+"categorie": "PI",
+"code": "585421513",
+"libelle": "Ligne avec boîte de dérivation, bus, plus de 10 à 15 m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 421 513",
+"ordre": 3320
+},
+{
+"categorie": "PI",
+"code": "585422123",
+"libelle": "Ligne jusqu'à 5x2,5 mm² avec regard de passage extérieur lxlxp jusqu'à 300x300x300mm et boîte de dérivation IPX7, partie extérieure dans tranchée existante, parafoudre type 1 quatre pôles pour rail DIN compris, longueur de ligne jusqu'à 15m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 422 123",
+"ordre": 3330
+},
+{
+"categorie": "PI",
+"code": "585422125",
+"libelle": "Ligne jusqu'à 5x2,5 mm² avec regard de passage extérieur lxlxp jusqu'à 300x300x300mm et boîte de dérivation IPX7, partie extérieure dans tranchée existante, parafoudre type 1 quatre pôles pour rail DIN compris, longueur de ligne plus de 15 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 422 125",
+"ordre": 3340
+},
+{
+"categorie": "PI",
+"code": "585422127",
+"libelle": "Ligne jusqu'à 5x2,5 mm² avec regard de passage extérieur lxlxp jusqu'à 300x300x300mm et boîte de dérivation IPX7, partie extérieure dans tranchée existante, parafoudre type 1 quatre pôles pour rail DIN compris, longueur de ligne plus de 25 à 35m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 422 127",
+"ordre": 3350
+},
+{
+"categorie": "PI",
+"code": "585611111",
+"libelle": "Ligne avec interrupteur",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 611 111",
+"ordre": 3360
+},
+{
+"categorie": "PI",
+"code": "585611116",
+"libelle": "Ligne avec double interrupteur lumineux pour lumière et ventilateur 230V",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 611 116",
+"ordre": 3370
+},
+{
+"categorie": "PI",
+"code": "585612112",
+"libelle": "Ligne avec interrupteur + prise",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 612 112",
+"ordre": 3380
+},
+{
+"categorie": "PI",
+"code": "585612116",
+"libelle": "Ligne avec double interrupteur lumineux pour lumière et ventilateur, et prise 230V",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 612 116",
+"ordre": 3390
+},
+{
+"categorie": "PI",
+"code": "585612412",
+"libelle": "Ligne pour point de commande + prise",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 612 412",
+"ordre": 3400
+},
+{
+"categorie": "PI",
+"code": "585613111",
+"libelle": "Ligne avec prise simple",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 613 111",
+"ordre": 3410
+},
+{
+"categorie": "PI",
+"code": "585613112",
+"libelle": "Ligne avec prise multiple",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 613 112",
+"ordre": 3420
+},
+{
+"categorie": "PI",
+"code": "585613411",
+"libelle": "Ligne pour prise",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 613 411",
+"ordre": 3430
+},
+{
+"categorie": "PI",
+"code": "585614111",
+"libelle": "Ligne pour luminaire (point lumineux)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 614 111",
+"ordre": 3440
+},
+{
+"categorie": "PI",
+"code": "585614151",
+"libelle": "Ligne pour bande lumineuse jusqu'à 5m (M+R) avec boîte de passage disposant d'un compartiment pour transfo et agrégat (M+R), Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 614 151",
+"ordre": 3450
+},
+{
+"categorie": "PI",
+"code": "585614311",
+"libelle": "Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne jusqu'à 5m, Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 614 311",
+"ordre": 3460
+},
+{
+"categorie": "PI",
+"code": "585614312",
+"libelle": "Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne plus de 5 à 10m, Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 614 312",
+"ordre": 3470
+},
+{
+"categorie": "PI",
+"code": "585614313",
+"libelle": "Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne plus de 10 à 15m, Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 614 313",
+"ordre": 3480
+},
+{
+"categorie": "PI",
+"code": "585614314",
+"libelle": "Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne plus de 15 à 20m, Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 614 314",
+"ordre": 3490
+},
+{
+"categorie": "PI",
+"code": "585614315",
+"libelle": "Ligne pour luminaire extérieur (Racc) (luminaire de chemin, de jardin ou borne), dans tranchée existante, longueur de ligne plus de 20 à 25m, Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 614 315",
+"ordre": 3500
+},
+{
+"categorie": "PI",
+"code": "585615101",
+"libelle": "Ligne pour capteur",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 615 101",
+"ordre": 3510
+},
+{
+"categorie": "PI",
+"code": "585841111",
+"libelle": "Ligne avec prise depuis Eap",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 111",
+"ordre": 3520
+},
+{
+"categorie": "PI",
+"code": "585841311",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 311",
+"ordre": 3530
+},
+{
+"categorie": "PI",
+"code": "585841312",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 5 à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 312",
+"ordre": 3540
+},
+{
+"categorie": "PI",
+"code": "585841313",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 10 à 15m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 313",
+"ordre": 3550
+},
+{
+"categorie": "PI",
+"code": "585841314",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 15 à 20m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 314",
+"ordre": 3560
+},
+{
+"categorie": "PI",
+"code": "585841315",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 20 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 315",
+"ordre": 3570
+},
+{
+"categorie": "PI",
+"code": "585841316",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 25 à 30m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 316",
+"ordre": 3580
+},
+{
+"categorie": "PI",
+"code": "585841317",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, longueur de ligne plus de 30 à 35m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 317",
+"ordre": 3590
+},
+{
+"categorie": "PI",
+"code": "585841331",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 331",
+"ordre": 3600
+},
+{
+"categorie": "PI",
+"code": "585841332",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 5 à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 332",
+"ordre": 3610
+},
+{
+"categorie": "PI",
+"code": "585841333",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 10 à 15m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 333",
+"ordre": 3620
+},
+{
+"categorie": "PI",
+"code": "585841334",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 15 à 20m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 334",
+"ordre": 3630
+},
+{
+"categorie": "PI",
+"code": "585841335",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 20 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 335",
+"ordre": 3640
+},
+{
+"categorie": "PI",
+"code": "585841336",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 25 à 30m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 336",
+"ordre": 3650
+},
+{
+"categorie": "PI",
+"code": "585841337",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, longueur de plus de 30 à 35m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 337",
+"ordre": 3660
+},
+{
+"categorie": "PI",
+"code": "585841411",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 411",
+"ordre": 3670
+},
+{
+"categorie": "PI",
+"code": "585841412",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 5 à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 412",
+"ordre": 3680
+},
+{
+"categorie": "PI",
+"code": "585841413",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 10 à 15m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 413",
+"ordre": 3690
+},
+{
+"categorie": "PI",
+"code": "585841414",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 15 à 20m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 414",
+"ordre": 3700
+},
+{
+"categorie": "PI",
+"code": "585841415",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 20 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 415",
+"ordre": 3710
+},
+{
+"categorie": "PI",
+"code": "585841416",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 25 à 30m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 416",
+"ordre": 3720
+},
+{
+"categorie": "PI",
+"code": "585841417",
+"libelle": "Ligne avec prise CEE IPX4 230V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de plus de 30 à 35m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 417",
+"ordre": 3730
+},
+{
+"categorie": "PI",
+"code": "585841431",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne jusqu'à 5m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 431",
+"ordre": 3740
+},
+{
+"categorie": "PI",
+"code": "585841432",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 5 à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 432",
+"ordre": 3750
+},
+{
+"categorie": "PI",
+"code": "585841433",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 10 à 15m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 433",
+"ordre": 3760
+},
+{
+"categorie": "PI",
+"code": "585841434",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 15 à 20m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 434",
+"ordre": 3770
+},
+{
+"categorie": "PI",
+"code": "585841435",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 20 à 25m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 435",
+"ordre": 3780
+},
+{
+"categorie": "PI",
+"code": "585841436",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 25 à 30m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 436",
+"ordre": 3790
+},
+{
+"categorie": "PI",
+"code": "585841437",
+"libelle": "Ligne avec prise CEE IPX4 400V 16A, depuis ensemble d'appareillage, pour tubes déjà existants, longueur de ligne plus de 30 à 35m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 841 437",
+"ordre": 3800
+},
+{
+"categorie": "PI",
+"code": "585931111",
+"libelle": "Ligne pour moteur de store (raccordement)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 931 111",
+"ordre": 3810
+},
+{
+"categorie": "PI",
+"code": "585931112",
+"libelle": "Ligne pour moteur de store (raccordement)",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 585",
+"no_can": "585 931 112",
+"ordre": 3820
+},
+{
+"categorie": "PI",
+"code": "586211421",
+"libelle": "Introduction télécom avec",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 211 421",
+"ordre": 3830
+},
+{
+"categorie": "PI",
+"code": "586214411",
+"libelle": "Ligne alimentation DSL avec",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 411",
+"ordre": 3840
+},
+{
+"categorie": "PI",
+"code": "586214511",
+"libelle": "Ligne alimentation FTTx",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 511",
+"ordre": 3850
+},
+{
+"categorie": "PI",
+"code": "586214617",
+"libelle": "Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 617",
+"ordre": 3860
+},
+{
+"categorie": "PI",
+"code": "586214621",
+"libelle": "Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, longueur de ligne plus de 70 à 80m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 621",
+"ordre": 3870
+},
+{
+"categorie": "PI",
+"code": "586214622",
+"libelle": "Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, longueur de ligne plus de 80 à 90m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 622",
+"ordre": 3880
+},
+{
+"categorie": "PI",
+"code": "586214623",
+"libelle": "Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, longueur de ligne plus de 90 à 100m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 623",
+"ordre": 3890
+},
+{
+"categorie": "PI",
+"code": "586214637",
+"libelle": "Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, pour tubes déjà existants, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 637",
+"ordre": 3900
+},
+{
+"categorie": "PI",
+"code": "586214641",
+"libelle": "Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, pour tubes déjà existants, longueur de ligne plus de 70 à 80m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 641",
+"ordre": 3910
+},
+{
+"categorie": "PI",
+"code": "586214642",
+"libelle": "Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, pour tubes déjà existants, longueur de ligne plus de 80 à 90m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 642",
+"ordre": 3920
+},
+{
+"categorie": "PI",
+"code": "586214643",
+"libelle": "Ligne d'alimentation avec 4 fibres (dont 2 de réserve) avec prise pour FTTx dans point étoile, préconfectionnée côté prise, pour tubes déjà existants, longueur de ligne plus de 90 à 100m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 643",
+"ordre": 3930
+},
+{
+"categorie": "PI",
+"code": "586214651",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 651",
+"ordre": 3940
+},
+{
+"categorie": "PI",
+"code": "586214652",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne plus de 10 à 20m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 652",
+"ordre": 3950
+},
+{
+"categorie": "PI",
+"code": "586214653",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne plus de 20 à 30m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 653",
+"ordre": 3960
+},
+{
+"categorie": "PI",
+"code": "586214654",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne plus de 30 à 40m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 654",
+"ordre": 3970
+},
+{
+"categorie": "PI",
+"code": "586214655",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, longueur de ligne plus de 40 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 655",
+"ordre": 3980
+},
+{
+"categorie": "PI",
+"code": "586214661",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne jusqu'à 10m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 661",
+"ordre": 3990
+},
+{
+"categorie": "PI",
+"code": "586214662",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne plus de 10 à 20m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 662",
+"ordre": 4000
+},
+{
+"categorie": "PI",
+"code": "586214663",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne plus de 20 à 30m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 663",
+"ordre": 4010
+},
+{
+"categorie": "PI",
+"code": "586214664",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne plus de 30 à 40m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 664",
+"ordre": 4020
+},
+{
+"categorie": "PI",
+"code": "586214665",
+"libelle": "Ligne d'alimentation avec 1 fibre avec prise pour FTTx dans point étoile, préconfec- tionnée des deux côtés, pour tubes déjà existants, longueur de ligne plus de 40 à 50m",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 214 665",
+"ordre": 4030
+},
+{
+"categorie": "PI",
+"code": "586216111",
+"libelle": "Installation dans point étoile DSL, comprenant: - 1 Router ou similaire (M+R), - 1 distributeur 5xRJ45, Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 216 111",
+"ordre": 4040
+},
+{
+"categorie": "PI",
+"code": "586216121",
+"libelle": "Installation dans point étoile FTTx, comprenant: - 1 terminal réseau (M+R), Mise en service non comprise à appliquer: 502111",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 216 121",
+"ordre": 4050
+},
+{
+"categorie": "PI",
+"code": "586217301",
+"libelle": "Tube vide jusqu'à M25 avec auxiliaire de tirage et boîte d'encastrement avec plaque de recouvrement, pour courant faible",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 217 301",
+"ordre": 4060
+},
+{
+"categorie": "PI",
+"code": "586411311",
+"libelle": "Ligne alimentation R/TV",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 411 311",
+"ordre": 4070
+},
+{
+"categorie": "PI",
+"code": "586411411",
+"libelle": "Inst dans point étoile R/TV",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 411 411",
+"ordre": 4080
+},
+{
+"categorie": "PI",
+"code": "586411511",
+"libelle": "Ligne avec prise R/TV",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 411 511",
+"ordre": 4090
+},
+{
+"categorie": "PI",
+"code": "586412331",
+"libelle": "Ligne alimentation SAT du",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 412 331",
+"ordre": 4100
+},
+{
+"categorie": "PI",
+"code": "586412511",
+"libelle": "Ligne avec prise SAT",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 412 511",
+"ordre": 4110
+},
+{
+"categorie": "PI",
+"code": "586412512",
+"libelle": "Ligne avec prise SAT",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 412 512",
+"ordre": 4120
+},
+{
+"categorie": "PI",
+"code": "586412611",
+"libelle": "Installation distributeur",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 412 611",
+"ordre": 4130
+},
+{
+"categorie": "PI",
+"code": "586412711",
+"libelle": "Inst point étoile SAT de base",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 412 711",
+"ordre": 4140
+},
+{
+"categorie": "PI",
+"code": "586421511",
+"libelle": "Ligne avec prise multimédia",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 421 511",
+"ordre": 4150
+},
+{
+"categorie": "PI",
+"code": "586421512",
+"libelle": "Ligne avec prise multimédia",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 421 512",
+"ordre": 4160
+},
+{
+"categorie": "PI",
+"code": "586421513",
+"libelle": "Ligne avec prise multimédia",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 421 513",
+"ordre": 4170
+},
+{
+"categorie": "PI",
+"code": "586421516",
+"libelle": "Ligne avec prise multimédia pour FTTx 1xLC",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 421 516",
+"ordre": 4180
+},
+{
+"categorie": "PI",
+"code": "586421526",
+"libelle": "Ligne avec prise multimédia pour FTTx 1xLC, pour tubes déjà existants",
+"unite": "pce",
+"schema": null,
+"notes": "Chapitre CAN 586",
+"no_can": "586 421 526",
+"ordre": 4190
 }
 ]

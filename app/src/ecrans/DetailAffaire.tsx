@@ -97,7 +97,8 @@ export default function DetailAffaire() {
       <div className="mx-auto max-w-2xl p-4">
         <h1 className="text-xl font-bold">{affaire.nom}</h1>
         <p className="mb-5 text-sm text-ardoise-600">
-          {[affaire.client, affaire.localite].filter(Boolean).join(' · ') || '—'}
+          {[affaire.numero_affaire && `N° ${affaire.numero_affaire}`, affaire.localite]
+            .filter(Boolean).join(' · ') || '—'}
         </p>
 
         {etapes.length === 0 ? (
