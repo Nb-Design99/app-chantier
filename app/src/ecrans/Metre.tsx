@@ -1,0 +1,201 @@
+import { useEffect, useMemo, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { useLiveQuery } from 'dexie-react-hooks'
+import { db, type Metre, type Uuid } from '../db/schema'
+import { ajouterLigneMetre, creerLocal, majLigneMetre, metreCourant, validerMetre } from '../db/repo'
+import { useSession } from '../lib/session'
+import { Onglets } from '../App'
+
+export default function MetreEcran() {
+  const { id = '' } = useParams()
+  const { profil, estChef } = useSession()
+  const [metre, setMetre] = useState<Metre | null>(null)
+  const [localActif, setLocalActif] = useState<Uuid | null>(null)
+  const [recherche, setRecherche] = useState('')
+  const [nouveauLocal, setNouveauLocal] = useState('')
+
+  useEffect(() => {
+    if (profil) void metreCourant(id, profil.id).then(setMetre)
+  }, [id, profil])
+
+  const locaux = useLiveQuery(
+    async () => {
+      const l = await db.locaux.where('affaire_id').equals(id).toArray()
+      return l.filter((x) => !x.supprime_le).sort((a, b) => a.ordre - b.ordre)
+    },
+    [id],
+    [],
+  )
+  const postes = useLiveQuery(async () => db.postes.toArray(), [], [])
+  const lignes = useLiveQuery(
+    async () => {
+      if (!metre) return []
+      const l = await db.metre_lignes.where('metre_id').equals(metre.id).toArray()
+      return l.filter((x) => !x.supprime_le)
+    },
+    [metre?.id],
+    [],
+  )
+  const parCode = useMemo(() => new Map(postes.map((p) => [p.code, p])), [postes])
+
+  useEffect(() => {
+    if (!localActif && locaux.length > 0) setLocalActif(locaux[0].id)
+  }, [locaux, localActif])
+
+  const resultats = useMemo(() => {
+    const q = recherche.trim().toLowerCase()
+    if (q.length < 2) return []
+    return postes
+      .filter((p) => p.libelle.toLowerCase().includes(q) || p.code.toLowerCase().includes(q))
+      .slice(0, 8)
+  }, [recherche, postes])
+
+  // Le chef relit le métré trié alphabétiquement (exigence du cahier des charges).
+  const lignesTriees = useMemo(() => {
+    const enrichies = lignes.map((l) => ({
+      ...l,
+      libelle: l.poste_code ? (parCode.get(l.poste_code)?.libelle ?? l.poste_code) : (l.article_e_no ?? ''),
+      local: locaux.find((x) => x.id === l.local_id)?.nom ?? '—',
+    }))
+    return estChef
+      ? enrichies.sort((a, b) => a.libelle.localeCompare(b.libelle, 'fr'))
+      : enrichies.sort((a, b) => b.created_at.localeCompare(a.created_at))
+  }, [lignes, parCode, locaux, estChef])
+
+  const fige = metre ? metre.statut !== 'brouillon' : false
+
+  return (
+    <>
+      <Onglets id={id} actif="metre" />
+      <div className="mx-auto max-w-2xl p-4">
+        {/* --- locaux : le métré est découpé par local (décision du 21.08) --- */}
+        <div className="mb-4 flex flex-wrap gap-2">
+          {locaux.map((l) => (
+            <button
+              key={l.id}
+              onClick={() => setLocalActif(l.id)}
+              className={`rounded-full px-4 py-2 text-sm font-semibold ${
+                localActif === l.id ? 'bg-ardoise-900 text-white' : 'bg-ardoise-100 text-ardoise-600'
+              }`}
+            >
+              {l.niveau ? `${l.niveau} · ` : ''}
+              {l.nom}
+            </button>
+          ))}
+        </div>
+
+        <form
+          className="mb-5 flex gap-2"
+          onSubmit={async (e) => {
+            e.preventDefault()
+            if (!nouveauLocal.trim()) return
+            const nid = await creerLocal(id, nouveauLocal, null)
+            setNouveauLocal('')
+            setLocalActif(nid)
+          }}
+        >
+          <input
+            value={nouveauLocal}
+            onChange={(e) => setNouveauLocal(e.target.value)}
+            placeholder="Ajouter un local — ex. Cuisine"
+            className="h-tap flex-1 rounded-xl border border-ardoise-200 px-4"
+          />
+          <button className="h-tap shrink-0 rounded-xl bg-ardoise-100 px-5 font-semibold">+</button>
+        </form>
+
+        {fige ? (
+          <p className="mb-4 rounded-2xl bg-chantier-500/20 p-4 text-center text-sm font-medium">
+            Métré {metre?.statut === 'valide' ? 'validé' : 'transmis au bureau'} — figé.
+          </p>
+        ) : (
+          <>
+            <input
+              value={recherche}
+              onChange={(e) => setRecherche(e.target.value)}
+              placeholder="Chercher un poste — ex. va-et-vient, prise, T13"
+              className="h-tap mb-2 w-full rounded-xl border border-ardoise-200 px-4"
+            />
+            {resultats.length > 0 && (
+              <ul className="mb-5 space-y-1">
+                {resultats.map((p) => (
+                  <li key={p.code}>
+                    <button
+                      onClick={async () => {
+                        if (!metre || !profil) return
+                        await ajouterLigneMetre(metre.id, { poste_code: p.code }, 1, localActif, profil.id)
+                        setRecherche('')
+                      }}
+                      className="w-full rounded-xl border border-ardoise-200 bg-white p-3 text-left active:bg-ardoise-100"
+                    >
+                      <span className="text-sm font-semibold">{p.libelle}</span>
+                      <span className="ml-2 font-mono text-xs text-ardoise-400">{p.code}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </>
+        )}
+
+        <h2 className="mb-3 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
+          {lignesTriees.length} ligne{lignesTriees.length > 1 ? 's' : ''}
+          {estChef && lignesTriees.length > 1 && ' · tri alphabétique'}
+        </h2>
+
+        {lignesTriees.length === 0 ? (
+          <p className="rounded-2xl border border-dashed border-ardoise-200 p-6 text-center text-sm text-ardoise-400">
+            Métré vide. Choisis un local, puis cherche un poste.
+          </p>
+        ) : (
+          <ul className="space-y-2">
+            {lignesTriees.map((l) => (
+              <li
+                key={l.id}
+                className="flex items-center gap-3 rounded-2xl border border-ardoise-200 bg-white p-3"
+              >
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm font-semibold">{l.libelle}</p>
+                  <p className="text-xs text-ardoise-400">
+                    {l.local} · {l.poste_code ?? l.article_e_no}
+                  </p>
+                </div>
+                {!fige && (
+                  <div className="flex shrink-0 items-center gap-1">
+                    <button
+                      onClick={() => void majLigneMetre(l.id, l.quantite - 1)}
+                      className="size-11 rounded-xl bg-ardoise-100 text-xl font-bold"
+                      aria-label="Retirer un"
+                    >
+                      −
+                    </button>
+                    <span className="w-10 text-center text-lg font-bold tabular-nums">{l.quantite}</span>
+                    <button
+                      onClick={() => void majLigneMetre(l.id, l.quantite + 1)}
+                      className="size-11 rounded-xl bg-ardoise-100 text-xl font-bold"
+                      aria-label="Ajouter un"
+                    >
+                      +
+                    </button>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {estChef && metre && !fige && lignesTriees.length > 0 && (
+          <button
+            onClick={async () => {
+              if (!profil) return
+              await validerMetre(metre.id, profil.id)
+              setMetre({ ...metre, statut: 'valide' })
+            }}
+            className="h-tap mt-4 w-full rounded-xl bg-ardoise-900 font-semibold text-white"
+          >
+            Valider le métré
+          </button>
+        )}
+      </div>
+    </>
+  )
+}

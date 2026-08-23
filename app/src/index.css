@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+/*
+ * Thème pensé pour le chantier : fort contraste (lecture en plein soleil),
+ * cibles tactiles ≥ 56 px (gants, mains sales), pas de fioriture.
+ */
+@theme {
+  --color-ardoise-50: #f6f7f9;
+  --color-ardoise-100: #eceef2;
+  --color-ardoise-200: #d5d9e2;
+  --color-ardoise-400: #8b93a7;
+  --color-ardoise-600: #4a5163;
+  --color-ardoise-800: #262b38;
+  --color-ardoise-900: #161a23;
+
+  --color-chantier-500: #f59e0b;
+  --color-chantier-600: #d97706;
+
+  --spacing-tap: 3.5rem; /* 56 px : la hauteur minimale d'une cible tactile */
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-ardoise-50);
+  color: var(--color-ardoise-900);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: contain;
+}
+
+/* Empêche le zoom iOS au focus d'un champ : jamais moins de 16 px. */
+input,
+select,
+textarea,
+button {
+  font-size: max(1rem, 16px);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--color-ardoise-900);
+    color: var(--color-ardoise-50);
+  }
+}

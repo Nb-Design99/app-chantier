@@ -1,0 +1,821 @@
+[
+{
+"libelle": "Prise T13",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 0,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "639113000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "639113950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "639113010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "639113030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "639113040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "639113890"
+}
+]
+},
+{
+"libelle": "Prise T13 avec shutter",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 10,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "639123000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "639123950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "639123010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "639123030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "639123040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "639123890"
+}
+]
+},
+{
+"libelle": "Prise 2×T13",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 20,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "657114000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "657114950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "657114010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "657114030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "657114040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "657114890"
+}
+]
+},
+{
+"libelle": "Prise 2×T13 avec shutter",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 30,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "657124000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "657124950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "657124010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "657124030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "657124040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "657124890"
+}
+]
+},
+{
+"libelle": "Prise 2×T13 dont 1 commutée",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 40,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "657134000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "657134950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "657134010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "657134030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "657134040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "657134890"
+}
+]
+},
+{
+"libelle": "Prise 3×T13",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 50,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "657115000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "657115950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "657115010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "657115030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "657115040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "657115890"
+}
+]
+},
+{
+"libelle": "Prise 3×T13 avec shutter",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 60,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "657125000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "657125950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "657125010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "657125030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "657125040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "657125890"
+}
+]
+},
+{
+"libelle": "Prise 3×T13 dont 1 commutée",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 70,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "657135000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "657135950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "657135010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "657135030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "657135040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "657135890"
+}
+]
+},
+{
+"libelle": "Prise T23 16A (bornes enfichables)",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 80,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "639600000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "639600950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "639600010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "639600030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "639600040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "639600890"
+}
+]
+},
+{
+"libelle": "Prise T23 16A (bornes à vis)",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 90,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "639601000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "639601950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "639601010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "639601030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "639601040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "639601890"
+}
+]
+},
+{
+"libelle": "Prise T15",
+"categorie": "Prises",
+"montage": "encastre",
+"favori": true,
+"ordre": 100,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "641300000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "641300950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "641300010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "641300030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "641300040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "641300890"
+}
+]
+},
+{
+"libelle": "Interrupteur 3/1P + prise T13",
+"categorie": "Combinaisons",
+"montage": "encastre",
+"favori": true,
+"ordre": 110,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "755143000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "755143950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "755143010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "755143030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "755143040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "755143890"
+}
+]
+},
+{
+"libelle": "Interrupteur schéma 1 (double)",
+"categorie": "Interrupteurs",
+"montage": "encastre",
+"favori": true,
+"ordre": 120,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "226111000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "226111950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "226111010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "226111030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "226111040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "226111890"
+}
+]
+},
+{
+"libelle": "Interrupteur schéma 3 (va-et-vient)",
+"categorie": "Interrupteurs",
+"montage": "encastre",
+"favori": true,
+"ordre": 130,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "226311000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "226311950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "226311010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "226311030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "226311040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "226311890"
+}
+]
+},
+{
+"libelle": "Interrupteur schéma 6 (croisement)",
+"categorie": "Interrupteurs",
+"montage": "encastre",
+"favori": true,
+"ordre": 140,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "226601000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "226601950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "226601010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "226601030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "226601040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "226601890"
+}
+]
+},
+{
+"libelle": "Interrupteur schéma 3/2 (double VV)",
+"categorie": "Interrupteurs",
+"montage": "encastre",
+"favori": true,
+"ordre": 150,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "226321000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "226321950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "226321010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "226321030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "226321040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "226321890"
+}
+]
+},
+{
+"libelle": "Poussoir A-R",
+"categorie": "Poussoirs",
+"montage": "encastre",
+"favori": true,
+"ordre": 160,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "554521000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "554521950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "554521010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "554521030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "554521040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "554521890"
+}
+]
+},
+{
+"libelle": "Poussoir 2× A-R / 1P",
+"categorie": "Poussoirs",
+"montage": "encastre",
+"favori": true,
+"ordre": 170,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "554621000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "554621950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "554621010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "554621030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "554621040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "554621890"
+}
+]
+},
+{
+"libelle": "Poussoir A-R (schéma 9)",
+"categorie": "Poussoirs",
+"montage": "encastre",
+"favori": true,
+"ordre": 180,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "554551000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "554551950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "554551010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "554551030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "554551040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "554551890"
+}
+]
+},
+{
+"libelle": "Plaque d'obturation",
+"categorie": "Obturation",
+"montage": "encastre",
+"favori": true,
+"ordre": 190,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "378006000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "378006950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "378006010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "378006030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "378006040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "378006890"
+}
+]
+},
+{
+"libelle": "Obturateur sans vis centrale",
+"categorie": "Obturation",
+"montage": "encastre",
+"favori": true,
+"ordre": 200,
+"variantes": [
+{
+"couleur": "blanc",
+"code_couleur": "61",
+"e_no": "378406000"
+},
+{
+"couleur": "noir",
+"code_couleur": "60",
+"e_no": "378406950"
+},
+{
+"couleur": "crema",
+"code_couleur": "35",
+"e_no": "378406010"
+},
+{
+"couleur": "gris clair",
+"code_couleur": "65",
+"e_no": "378406030"
+},
+{
+"couleur": "gris foncé",
+"code_couleur": "67",
+"e_no": "378406040"
+},
+{
+"couleur": "coffee",
+"code_couleur": "57",
+"e_no": "378406890"
+}
+]
+}
+]

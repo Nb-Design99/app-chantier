@@ -1,0 +1,1658 @@
+[
+{
+"categorie": "ECL",
+"code": "ECL-DEP",
+"libelle": "Départ tableau, circuit éclairage",
+"unite": "pce",
+"schema": null,
+"notes": "Départ protégé depuis le tableau jusqu'à la 1re boîte du circuit.",
+"ordre": 10
+},
+{
+"categorie": "ECL",
+"code": "ECL-SA",
+"libelle": "Point lumineux, simple allumage",
+"unite": "pce",
+"schema": "0",
+"notes": "Forfait point: tube, fil, boîte de dérivation, boîte d'appareillage, raccordement.",
+"ordre": 20
+},
+{
+"categorie": "ECL",
+"code": "ECL-VV",
+"libelle": "Point lumineux, va-et-vient",
+"unite": "pce",
+"schema": "3",
+"notes": "Commandé depuis 2 positions.",
+"ordre": 30
+},
+{
+"categorie": "ECL",
+"code": "ECL-CR",
+"libelle": "Point lumineux, croisement (par position suppl.)",
+"unite": "pce",
+"schema": "6",
+"notes": "À compter par position de commande au-delà de 2.",
+"ordre": 40
+},
+{
+"categorie": "ECL",
+"code": "ECL-GR",
+"libelle": "Point lumineux, commande de groupe",
+"unite": "pce",
+"schema": "5",
+"notes": "Interrupteur double / 2 circuits indépendants sur même boîte.",
+"ordre": 50
+},
+{
+"categorie": "ECL",
+"code": "ECL-DBL",
+"libelle": "Point lumineux suppl. sur même commande",
+"unite": "pce",
+"schema": null,
+"notes": "Luminaire en dérivation, pas de commande supplémentaire.",
+"ordre": 60
+},
+{
+"categorie": "ECL",
+"code": "ECL-PERM",
+"libelle": "Point lumineux permanent (non commandé)",
+"unite": "pce",
+"schema": null,
+"notes": "Alimentation directe, sans organe de commande.",
+"ordre": 70
+},
+{
+"categorie": "ECL",
+"code": "ECL-VAR",
+"libelle": "Point lumineux sur variateur",
+"unite": "pce",
+"schema": null,
+"notes": "Point + ligne compatible variation (voir CMD-VAR pour l'appareil).",
+"ordre": 80
+},
+{
+"categorie": "ECL",
+"code": "ECL-DET",
+"libelle": "Point lumineux commandé par détecteur",
+"unite": "pce",
+"schema": null,
+"notes": "Point + alimentation détecteur (voir CMD-DETP / CMD-DETM).",
+"ordre": 90
+},
+{
+"categorie": "ECL",
+"code": "ECL-CC",
+"libelle": "Ligne de commande centralisée (télérupteur / contacteur)",
+"unite": "pce",
+"schema": null,
+"notes": "Ligne pilotée depuis le tableau, hors appareil modulaire (voir TAB-TELE).",
+"ordre": 100
+},
+{
+"categorie": "ECL",
+"code": "ECL-MIN",
+"libelle": "Point lumineux sur minuterie d'escalier",
+"unite": "pce",
+"schema": null,
+"notes": "Cage d'escalier, allée, sous-sol.",
+"ordre": 110
+},
+{
+"categorie": "ECL",
+"code": "ECL-EXT",
+"libelle": "Point lumineux extérieur / façade (IP44 min.)",
+"unite": "pce",
+"schema": null,
+"notes": "Applique, hublot, projecteur en façade.",
+"ordre": 120
+},
+{
+"categorie": "ECL",
+"code": "ECL-BAL",
+"libelle": "Spot de balisage / marche d'escalier",
+"unite": "pce",
+"schema": null,
+"notes": "Encastré, basse consommation.",
+"ordre": 130
+},
+{
+"categorie": "ECL",
+"code": "ECL-RUB",
+"libelle": "Alimentation ruban LED (driver + raccordement)",
+"unite": "pce",
+"schema": null,
+"notes": "Un poste par driver / zone.",
+"ordre": 140
+},
+{
+"categorie": "ECL",
+"code": "ECL-RUB-M",
+"libelle": "Ruban LED (longueur posée)",
+"unite": "m",
+"schema": null,
+"notes": "Mesurer le développé réellement posé.",
+"ordre": 150
+},
+{
+"categorie": "ECL",
+"code": "ECL-SEC",
+"libelle": "Bloc d'éclairage de secours autonome",
+"unite": "pce",
+"schema": null,
+"notes": "Anti-panique, autonomie 1 h.",
+"ordre": 160
+},
+{
+"categorie": "ECL",
+"code": "ECL-SEC-P",
+"libelle": "Bloc de secours avec pictogramme (issue)",
+"unite": "pce",
+"schema": null,
+"notes": "Signalisation d'évacuation.",
+"ordre": 170
+},
+{
+"categorie": "ECL",
+"code": "ECL-TC",
+"libelle": "Point lumineux très basse tension (TBTS)",
+"unite": "pce",
+"schema": null,
+"notes": "Transfo / alimentation TBTS incluse dans le poste.",
+"ordre": 180
+},
+{
+"categorie": "ECL",
+"code": "ECL-CABLE",
+"libelle": "Câble éclairage suppl. (hors forfait point)",
+"unite": "m",
+"schema": null,
+"notes": "Uniquement pour les longueurs anormales (> 15 m depuis la boîte).",
+"ordre": 190
+},
+{
+"categorie": "PRI",
+"code": "PRI-DEP",
+"libelle": "Départ tableau, circuit prises 10/13 A",
+"unite": "pce",
+"schema": null,
+"notes": "Départ protégé + FI.",
+"ordre": 200
+},
+{
+"categorie": "PRI",
+"code": "PRI-DEP16",
+"libelle": "Départ tableau, circuit prises 16 A",
+"unite": "pce",
+"schema": null,
+"notes": "Circuit dédié T23.",
+"ordre": 210
+},
+{
+"categorie": "PRI",
+"code": "PRI-T13-1",
+"libelle": "Prise T13 simple",
+"unite": "pce",
+"schema": null,
+"notes": "2P+T 10 A, à obturateurs (SEV 1011).",
+"ordre": 220
+},
+{
+"categorie": "PRI",
+"code": "PRI-T13-2",
+"libelle": "Prise T13 double",
+"unite": "pce",
+"schema": null,
+"notes": "2 x T13 sur une boîte.",
+"ordre": 230
+},
+{
+"categorie": "PRI",
+"code": "PRI-T13-3",
+"libelle": "Prise T13 triple",
+"unite": "pce",
+"schema": null,
+"notes": "3 x T13 sur une boîte.",
+"ordre": 240
+},
+{
+"categorie": "PRI",
+"code": "PRI-T13-4",
+"libelle": "Prise T13 quadruple",
+"unite": "pce",
+"schema": null,
+"notes": "4 x T13 / bloc.",
+"ordre": 250
+},
+{
+"categorie": "PRI",
+"code": "PRI-T23",
+"libelle": "Prise T23 16 A",
+"unite": "pce",
+"schema": null,
+"notes": "2P+T 16 A, circuit dédié conseillé.",
+"ordre": 260
+},
+{
+"categorie": "PRI",
+"code": "PRI-T15",
+"libelle": "Prise T15 (3L+N+PE 10 A)",
+"unite": "pce",
+"schema": null,
+"notes": "Triphasée 10 A.",
+"ordre": 270
+},
+{
+"categorie": "PRI",
+"code": "PRI-CDE",
+"libelle": "Prise commandée par interrupteur",
+"unite": "pce",
+"schema": null,
+"notes": "Prise pilotée (lampadaire, sapin, etc.).",
+"ordre": 280
+},
+{
+"categorie": "PRI",
+"code": "PRI-IP55",
+"libelle": "Prise étanche IP55",
+"unite": "pce",
+"schema": null,
+"notes": "T13 ou T23, extérieur / local humide.",
+"ordre": 290
+},
+{
+"categorie": "PRI",
+"code": "PRI-EXT",
+"libelle": "Prise extérieure sur socle ou borne",
+"unite": "pce",
+"schema": null,
+"notes": "Borne de jardin, potelet.",
+"ordre": 300
+},
+{
+"categorie": "PRI",
+"code": "PRI-SOL",
+"libelle": "Prise / boîte de sol",
+"unite": "pce",
+"schema": null,
+"notes": "Boîte encastrée dans la dalle, couvercle affleurant.",
+"ordre": 310
+},
+{
+"categorie": "PRI",
+"code": "PRI-PLAN",
+"libelle": "Prise plan de travail cuisine",
+"unite": "pce",
+"schema": null,
+"notes": "Hauteur crédence, bloc ou individuelle.",
+"ordre": 320
+},
+{
+"categorie": "PRI",
+"code": "PRI-USB",
+"libelle": "Prise avec chargeur USB intégré",
+"unite": "pce",
+"schema": null,
+"notes": "A / C.",
+"ordre": 330
+},
+{
+"categorie": "PRI",
+"code": "PRI-COL",
+"libelle": "Colonne / goulotte d'alimentation",
+"unite": "m",
+"schema": null,
+"notes": "Colonnette, goulotte de plan de travail.",
+"ordre": 340
+},
+{
+"categorie": "PRI",
+"code": "PRI-SEC",
+"libelle": "Prise sur circuit secouru / onduleur",
+"unite": "pce",
+"schema": null,
+"notes": "Repérage spécifique (couleur).",
+"ordre": 350
+},
+{
+"categorie": "PRI",
+"code": "PRI-MEUB",
+"libelle": "Prise dans meuble / niche (encastrée)",
+"unite": "pce",
+"schema": null,
+"notes": "Sous-évier, meuble TV, armoire.",
+"ordre": 360
+},
+{
+"categorie": "FOR",
+"code": "FOR-DEP",
+"libelle": "Départ tableau, circuit force triphasé",
+"unite": "pce",
+"schema": null,
+"notes": "Départ 3L+N+PE protégé.",
+"ordre": 370
+},
+{
+"categorie": "FOR",
+"code": "FOR-T25",
+"libelle": "Prise T25 (3L+N+PE 16 A)",
+"unite": "pce",
+"schema": null,
+"notes": "Triphasée 16 A.",
+"ordre": 380
+},
+{
+"categorie": "FOR",
+"code": "FOR-CEE16",
+"libelle": "Prise CEE 16 A 5P (IP44)",
+"unite": "pce",
+"schema": null,
+"notes": "IEC 60309.",
+"ordre": 390
+},
+{
+"categorie": "FOR",
+"code": "FOR-CEE32",
+"libelle": "Prise CEE 32 A 5P",
+"unite": "pce",
+"schema": null,
+"notes": "IEC 60309.",
+"ordre": 400
+},
+{
+"categorie": "FOR",
+"code": "FOR-CEE63",
+"libelle": "Prise CEE 63 A 5P",
+"unite": "pce",
+"schema": null,
+"notes": "IEC 60309.",
+"ordre": 410
+},
+{
+"categorie": "FOR",
+"code": "FOR-CUIS",
+"libelle": "Alimentation cuisinière / four (raccordement fixe)",
+"unite": "pce",
+"schema": null,
+"notes": "Boîte de raccordement + câble.",
+"ordre": 420
+},
+{
+"categorie": "FOR",
+"code": "FOR-PLAQ",
+"libelle": "Alimentation plaque de cuisson (induction)",
+"unite": "pce",
+"schema": null,
+"notes": "Circuit dédié.",
+"ordre": 430
+},
+{
+"categorie": "FOR",
+"code": "FOR-HOTTE",
+"libelle": "Alimentation hotte de cuisine",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 440
+},
+{
+"categorie": "FOR",
+"code": "FOR-LV",
+"libelle": "Alimentation lave-vaisselle",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 450
+},
+{
+"categorie": "FOR",
+"code": "FOR-LL",
+"libelle": "Alimentation lave-linge",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 460
+},
+{
+"categorie": "FOR",
+"code": "FOR-SL",
+"libelle": "Alimentation sèche-linge",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 470
+},
+{
+"categorie": "FOR",
+"code": "FOR-BOIL",
+"libelle": "Alimentation boiler / chauffe-eau + commande",
+"unite": "pce",
+"schema": null,
+"notes": "Y c. contacteur heures creuses si demandé.",
+"ordre": 480
+},
+{
+"categorie": "FOR",
+"code": "FOR-PAC",
+"libelle": "Alimentation pompe à chaleur",
+"unite": "pce",
+"schema": null,
+"notes": "Y c. sectionneur de proximité.",
+"ordre": 490
+},
+{
+"categorie": "FOR",
+"code": "FOR-CHAUF",
+"libelle": "Alimentation chaudière / circulateur",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 500
+},
+{
+"categorie": "FOR",
+"code": "FOR-VENT",
+"libelle": "Alimentation ventilation / CMV",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 510
+},
+{
+"categorie": "FOR",
+"code": "FOR-CLIM",
+"libelle": "Alimentation climatisation / split",
+"unite": "pce",
+"schema": null,
+"notes": "Unité int. + ext.",
+"ordre": 520
+},
+{
+"categorie": "FOR",
+"code": "FOR-SECH",
+"libelle": "Alimentation sèche-serviettes",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 530
+},
+{
+"categorie": "FOR",
+"code": "FOR-MOT",
+"libelle": "Alimentation moteur / machine",
+"unite": "pce",
+"schema": null,
+"notes": "Avec sectionneur de proximité.",
+"ordre": 540
+},
+{
+"categorie": "FOR",
+"code": "FOR-ASC",
+"libelle": "Alimentation ascenseur / monte-charge",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 550
+},
+{
+"categorie": "FOR",
+"code": "FOR-PORT",
+"libelle": "Alimentation porte de garage / portail",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 560
+},
+{
+"categorie": "FOR",
+"code": "FOR-EV",
+"libelle": "Borne de recharge VE (pose + raccordement)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 570
+},
+{
+"categorie": "FOR",
+"code": "FOR-EV-GEST",
+"libelle": "Gestionnaire de charge / délestage",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 580
+},
+{
+"categorie": "FOR",
+"code": "FOR-PV",
+"libelle": "Raccordement onduleur photovoltaïque",
+"unite": "pce",
+"schema": null,
+"notes": "Côté AC.",
+"ordre": 590
+},
+{
+"categorie": "FOR",
+"code": "FOR-CABLE",
+"libelle": "Câble force suppl. (section > 5x2,5 mm2)",
+"unite": "m",
+"schema": null,
+"notes": "Hors forfait de raccordement.",
+"ordre": 600
+},
+{
+"categorie": "CMD",
+"code": "CMD-INT0",
+"libelle": "Interrupteur unipolaire",
+"unite": "pce",
+"schema": "0",
+"notes": "Simple allumage.",
+"ordre": 610
+},
+{
+"categorie": "CMD",
+"code": "CMD-INT1",
+"libelle": "Interrupteur bipolaire",
+"unite": "pce",
+"schema": "1",
+"notes": null,
+"ordre": 620
+},
+{
+"categorie": "CMD",
+"code": "CMD-VV",
+"libelle": "Interrupteur va-et-vient",
+"unite": "pce",
+"schema": "3",
+"notes": null,
+"ordre": 630
+},
+{
+"categorie": "CMD",
+"code": "CMD-VV2",
+"libelle": "Double va-et-vient",
+"unite": "pce",
+"schema": "3+3",
+"notes": null,
+"ordre": 640
+},
+{
+"categorie": "CMD",
+"code": "CMD-CR",
+"libelle": "Interrupteur de croisement",
+"unite": "pce",
+"schema": "6",
+"notes": null,
+"ordre": 650
+},
+{
+"categorie": "CMD",
+"code": "CMD-GR",
+"libelle": "Interrupteur de groupe (double)",
+"unite": "pce",
+"schema": "5",
+"notes": "2 circuits indépendants.",
+"ordre": 660
+},
+{
+"categorie": "CMD",
+"code": "CMD-POU",
+"libelle": "Poussoir",
+"unite": "pce",
+"schema": "15",
+"notes": null,
+"ordre": 670
+},
+{
+"categorie": "CMD",
+"code": "CMD-POU2",
+"libelle": "Double poussoir",
+"unite": "pce",
+"schema": "15+15",
+"notes": null,
+"ordre": 680
+},
+{
+"categorie": "CMD",
+"code": "CMD-VAR",
+"libelle": "Variateur rotatif / tactile",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 690
+},
+{
+"categorie": "CMD",
+"code": "CMD-VAR-LED",
+"libelle": "Variateur LED / universel",
+"unite": "pce",
+"schema": null,
+"notes": "Charge LED dimmable.",
+"ordre": 700
+},
+{
+"categorie": "CMD",
+"code": "CMD-DETP",
+"libelle": "Détecteur de présence (plafond)",
+"unite": "pce",
+"schema": null,
+"notes": "360°, encastré ou apparent.",
+"ordre": 710
+},
+{
+"categorie": "CMD",
+"code": "CMD-DETM",
+"libelle": "Détecteur de mouvement (mural / extérieur)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 720
+},
+{
+"categorie": "CMD",
+"code": "CMD-CRE",
+"libelle": "Interrupteur crépusculaire + sonde",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 730
+},
+{
+"categorie": "CMD",
+"code": "CMD-HOR",
+"libelle": "Horloge / minuterie murale",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 740
+},
+{
+"categorie": "CMD",
+"code": "CMD-THER",
+"libelle": "Thermostat d'ambiance",
+"unite": "pce",
+"schema": null,
+"notes": "Filaire, avec ligne vers vanne / collecteur.",
+"ordre": 750
+},
+{
+"categorie": "CMD",
+"code": "CMD-SOND",
+"libelle": "Sonde de sol (chauffage électrique)",
+"unite": "pce",
+"schema": null,
+"notes": "Tube de sonde inclus.",
+"ordre": 760
+},
+{
+"categorie": "CMD",
+"code": "CMD-STORE",
+"libelle": "Commande de store / volet (bouton TC)",
+"unite": "pce",
+"schema": null,
+"notes": "Montée / descente.",
+"ordre": 770
+},
+{
+"categorie": "CMD",
+"code": "CMD-STORE-G",
+"libelle": "Commande de store groupée / centralisation",
+"unite": "pce",
+"schema": null,
+"notes": "Bouton central + relais de groupe.",
+"ordre": 780
+},
+{
+"categorie": "CMD",
+"code": "CMD-MOT-ST",
+"libelle": "Raccordement moteur de store / volet",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 790
+},
+{
+"categorie": "CMD",
+"code": "CMD-TIR",
+"libelle": "Interrupteur à tirette (salle de bains)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 800
+},
+{
+"categorie": "CMD",
+"code": "CMD-CLE",
+"libelle": "Interrupteur à clé",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 810
+},
+{
+"categorie": "CMD",
+"code": "CMD-URG",
+"libelle": "Arrêt d'urgence / coup de poing",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 820
+},
+{
+"categorie": "CMD",
+"code": "CMD-IP55",
+"libelle": "Commande étanche IP55",
+"unite": "pce",
+"schema": null,
+"notes": "Interrupteur ou poussoir, local humide / extérieur.",
+"ordre": 830
+},
+{
+"categorie": "CMD",
+"code": "CMD-BOITE",
+"libelle": "Boîte d'appareillage suppl. (par poste)",
+"unite": "pce",
+"schema": null,
+"notes": "Cadre / plaque multiple.",
+"ordre": 840
+},
+{
+"categorie": "CF",
+"code": "CF-RJ45-1",
+"libelle": "Prise RJ45 simple (Cat. 6/6A)",
+"unite": "pce",
+"schema": null,
+"notes": "Y c. câble jusqu'au répartiteur + certification.",
+"ordre": 850
+},
+{
+"categorie": "CF",
+"code": "CF-RJ45-2",
+"libelle": "Prise RJ45 double",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 860
+},
+{
+"categorie": "CF",
+"code": "CF-TV",
+"libelle": "Prise TV / R-TV-SAT (coaxial)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 870
+},
+{
+"categorie": "CF",
+"code": "CF-FO",
+"libelle": "Prise optique OTO / fibre",
+"unite": "pce",
+"schema": null,
+"notes": "Introduction opérateur.",
+"ordre": 880
+},
+{
+"categorie": "CF",
+"code": "CF-BAIE",
+"libelle": "Coffret / baie de communication (UCS)",
+"unite": "pce",
+"schema": null,
+"notes": "Y c. alimentation 230 V.",
+"ordre": 890
+},
+{
+"categorie": "CF",
+"code": "CF-PATCH",
+"libelle": "Panneau de brassage / patch",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 900
+},
+{
+"categorie": "CF",
+"code": "CF-WIFI",
+"libelle": "Point d'accès WiFi (RJ45 + PoE)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 910
+},
+{
+"categorie": "CF",
+"code": "CF-SONN",
+"libelle": "Sonnette (bouton + ronfleur + transfo)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 920
+},
+{
+"categorie": "CF",
+"code": "CF-INTER",
+"libelle": "Interphone audio, poste intérieur",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 930
+},
+{
+"categorie": "CF",
+"code": "CF-VIDEO",
+"libelle": "Vidéophone, poste intérieur",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 940
+},
+{
+"categorie": "CF",
+"code": "CF-PLAT",
+"libelle": "Platine de rue interphone / vidéophone",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 950
+},
+{
+"categorie": "CF",
+"code": "CF-GACHE",
+"libelle": "Gâche électrique / ouvre-porte",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 960
+},
+{
+"categorie": "CF",
+"code": "CF-BADGE",
+"libelle": "Lecteur de badge / clavier codé",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 970
+},
+{
+"categorie": "CF",
+"code": "CF-ALARM-C",
+"libelle": "Centrale d'alarme intrusion",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 980
+},
+{
+"categorie": "CF",
+"code": "CF-ALARM-D",
+"libelle": "Détecteur intrusion (IR / contact de feuillure)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 990
+},
+{
+"categorie": "CF",
+"code": "CF-ALARM-S",
+"libelle": "Sirène intérieure / extérieure",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1000
+},
+{
+"categorie": "CF",
+"code": "CF-DAF",
+"libelle": "Détecteur de fumée (autonome ou raccordé)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1010
+},
+{
+"categorie": "CF",
+"code": "CF-DAF-C",
+"libelle": "Centrale de détection incendie",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1020
+},
+{
+"categorie": "CF",
+"code": "CF-CO",
+"libelle": "Détecteur CO / gaz",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1030
+},
+{
+"categorie": "CF",
+"code": "CF-CAM",
+"libelle": "Caméra de vidéosurveillance",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1040
+},
+{
+"categorie": "CF",
+"code": "CF-HP",
+"libelle": "Haut-parleur / sonorisation",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1050
+},
+{
+"categorie": "CF",
+"code": "CF-APPEL",
+"libelle": "Bouton d'appel (WC PMR / infirmerie)",
+"unite": "pce",
+"schema": null,
+"notes": "Y c. report lumineux.",
+"ordre": 1060
+},
+{
+"categorie": "CF",
+"code": "CF-ANT",
+"libelle": "Antenne / amplificateur de tête",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1070
+},
+{
+"categorie": "CF",
+"code": "CF-CABLE",
+"libelle": "Câble courant faible suppl.",
+"unite": "m",
+"schema": null,
+"notes": "Hors forfait de prise.",
+"ordre": 1080
+},
+{
+"categorie": "CF",
+"code": "CF-TUBE",
+"libelle": "Tube vide courant faible (réservation)",
+"unite": "m",
+"schema": null,
+"notes": "Tirage ultérieur par tiers.",
+"ordre": 1090
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-AL",
+"libelle": "Alimentation KNX 640 / 1280 mA",
+"unite": "pce",
+"schema": null,
+"notes": "Avec self intégrée.",
+"ordre": 1100
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-LIG",
+"libelle": "Coupleur de ligne / de zone KNX",
+"unite": "pce",
+"schema": null,
+"notes": "Une pièce par ligne physique.",
+"ordre": 1110
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-CAB",
+"libelle": "Câble bus KNX (2x2x0,8)",
+"unite": "m",
+"schema": null,
+"notes": "Développé réel, boucle comprise.",
+"ordre": 1120
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-BP",
+"libelle": "Bouton-poussoir KNX 1 à 4 touches",
+"unite": "pce",
+"schema": null,
+"notes": "Participant.",
+"ordre": 1130
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-BP8",
+"libelle": "Bouton-poussoir KNX 6-8 touches / avec écran",
+"unite": "pce",
+"schema": null,
+"notes": "Participant.",
+"ordre": 1140
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-DET",
+"libelle": "Détecteur de présence KNX",
+"unite": "pce",
+"schema": null,
+"notes": "Participant.",
+"ordre": 1150
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-THER",
+"libelle": "Thermostat / sonde d'ambiance KNX",
+"unite": "pce",
+"schema": null,
+"notes": "Participant.",
+"ordre": 1160
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-ACT-C",
+"libelle": "Actionneur de commutation (par canal)",
+"unite": "pce",
+"schema": null,
+"notes": "Compter le nombre de canaux utilisés.",
+"ordre": 1170
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-ACT-V",
+"libelle": "Actionneur de variation (par canal)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1180
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-ACT-S",
+"libelle": "Actionneur store / volet (par canal)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1190
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-ACT-CH",
+"libelle": "Actionneur chauffage / vanne (par canal)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1200
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-BIN",
+"libelle": "Entrée binaire (par canal)",
+"unite": "pce",
+"schema": null,
+"notes": "Reprise de contacts conventionnels.",
+"ordre": 1210
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-MET",
+"libelle": "Compteur d'énergie KNX",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1220
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-IP",
+"libelle": "Interface / routeur IP KNX",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1230
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-VIS",
+"libelle": "Serveur de visualisation / domotique",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1240
+},
+{
+"categorie": "BUS",
+"code": "BUS-KNX-METEO",
+"libelle": "Station météo",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1250
+},
+{
+"categorie": "BUS",
+"code": "BUS-DALI-AL",
+"libelle": "Alimentation / passerelle DALI (par ligne)",
+"unite": "pce",
+"schema": null,
+"notes": "Max. 64 participants par ligne.",
+"ordre": 1260
+},
+{
+"categorie": "BUS",
+"code": "BUS-DALI-DRV",
+"libelle": "Driver DALI (par luminaire)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1270
+},
+{
+"categorie": "BUS",
+"code": "BUS-DALI-PART",
+"libelle": "Participant DALI (adressage inclus)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1280
+},
+{
+"categorie": "BUS",
+"code": "BUS-DALI-DET",
+"libelle": "Capteur / détecteur DALI",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1290
+},
+{
+"categorie": "BUS",
+"code": "BUS-DALI-CAB",
+"libelle": "Câble de commande DALI",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1300
+},
+{
+"categorie": "BUS",
+"code": "BUS-MES",
+"libelle": "Programmation et mise en service",
+"unite": "h",
+"schema": null,
+"notes": "ETS / DALI. Reporter les heures estimées.",
+"ordre": 1310
+},
+{
+"categorie": "TAB",
+"code": "TAB-COF-PRI",
+"libelle": "Tableau principal / colonne montante",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1320
+},
+{
+"categorie": "TAB",
+"code": "TAB-COF",
+"libelle": "Tableau d'appartement / de logement",
+"unite": "pce",
+"schema": null,
+"notes": "Encastré ou apparent, nombre de rangées à préciser.",
+"ordre": 1330
+},
+{
+"categorie": "TAB",
+"code": "TAB-COF-DIV",
+"libelle": "Coffret divisionnaire",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1340
+},
+{
+"categorie": "TAB",
+"code": "TAB-DISJ1",
+"libelle": "Disjoncteur LS 1P+N (10 / 13 / 16 A)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1350
+},
+{
+"categorie": "TAB",
+"code": "TAB-DISJ3",
+"libelle": "Disjoncteur LS 3P+N",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1360
+},
+{
+"categorie": "TAB",
+"code": "TAB-FI",
+"libelle": "Disjoncteur différentiel FI 30 mA",
+"unite": "pce",
+"schema": null,
+"notes": "DDR type A.",
+"ordre": 1370
+},
+{
+"categorie": "TAB",
+"code": "TAB-FILS",
+"libelle": "Disjoncteur différentiel combiné FI/LS",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1380
+},
+{
+"categorie": "TAB",
+"code": "TAB-AFDD",
+"libelle": "Détecteur d'arc AFDD",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1390
+},
+{
+"categorie": "TAB",
+"code": "TAB-PARA",
+"libelle": "Parafoudre / protection surtension (SPD)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1400
+},
+{
+"categorie": "TAB",
+"code": "TAB-INT-P",
+"libelle": "Interrupteur principal / sectionneur",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1410
+},
+{
+"categorie": "TAB",
+"code": "TAB-CONT",
+"libelle": "Contacteur / relais de puissance",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1420
+},
+{
+"categorie": "TAB",
+"code": "TAB-TELE",
+"libelle": "Télérupteur modulaire",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1430
+},
+{
+"categorie": "TAB",
+"code": "TAB-MIN",
+"libelle": "Minuterie d'escalier modulaire",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1440
+},
+{
+"categorie": "TAB",
+"code": "TAB-HOR",
+"libelle": "Horloge programmable modulaire",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1450
+},
+{
+"categorie": "TAB",
+"code": "TAB-COMPT",
+"libelle": "Compteur d'énergie / borne de comptage",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1460
+},
+{
+"categorie": "TAB",
+"code": "TAB-BORN",
+"libelle": "Bornier, rail, accessoires de tableau",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1470
+},
+{
+"categorie": "TAB",
+"code": "TAB-ETIQ",
+"libelle": "Étiquetage + schéma de tableau",
+"unite": "pce",
+"schema": null,
+"notes": "Un poste par tableau.",
+"ordre": 1480
+},
+{
+"categorie": "TAB",
+"code": "TAB-LEP",
+"libelle": "Liaison équipotentielle locale (SDB, eau, gaz, chauffage)",
+"unite": "pce",
+"schema": null,
+"notes": "Un poste par local / par arrivée.",
+"ordre": 1490
+},
+{
+"categorie": "TAB",
+"code": "TAB-BOR-PE",
+"libelle": "Barrette / borne principale de terre",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1500
+},
+{
+"categorie": "TAB",
+"code": "TAB-TERRE",
+"libelle": "Prise de terre (fond de fouille / piquet)",
+"unite": "m",
+"schema": null,
+"notes": "Longueur de boucle ou de piquet.",
+"ordre": 1510
+},
+{
+"categorie": "TAB",
+"code": "TAB-CTRL",
+"libelle": "Contrôle final + rapport de sécurité (RS)",
+"unite": "pce",
+"schema": null,
+"notes": "Selon OIBT.",
+"ordre": 1520
+},
+{
+"categorie": "TUB",
+"code": "TUB-M16",
+"libelle": "Tube encastré M16",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1530
+},
+{
+"categorie": "TUB",
+"code": "TUB-M20",
+"libelle": "Tube encastré M20",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1540
+},
+{
+"categorie": "TUB",
+"code": "TUB-M25",
+"libelle": "Tube encastré M25",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1550
+},
+{
+"categorie": "TUB",
+"code": "TUB-M32",
+"libelle": "Tube encastré M32",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1560
+},
+{
+"categorie": "TUB",
+"code": "TUB-M40",
+"libelle": "Tube encastré M40 et plus",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1570
+},
+{
+"categorie": "TUB",
+"code": "TUB-SOL",
+"libelle": "Tube en dalle / sous chape",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1580
+},
+{
+"categorie": "TUB",
+"code": "TUB-APP",
+"libelle": "Tube apparent rigide",
+"unite": "m",
+"schema": null,
+"notes": "Y c. colliers et fixations.",
+"ordre": 1590
+},
+{
+"categorie": "TUB",
+"code": "TUB-CANAL",
+"libelle": "Canal / goulotte apparente",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1600
+},
+{
+"categorie": "TUB",
+"code": "TUB-CHEM",
+"libelle": "Chemin de câbles / échelle à câbles",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1610
+},
+{
+"categorie": "TUB",
+"code": "TUB-FOUR",
+"libelle": "Fourreau enterré (KRSW / annelé)",
+"unite": "m",
+"schema": null,
+"notes": "Y c. fil de tirage.",
+"ordre": 1620
+},
+{
+"categorie": "TUB",
+"code": "TUB-BOITE",
+"libelle": "Boîte d'encastrement (1 à 3 postes)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1630
+},
+{
+"categorie": "TUB",
+"code": "TUB-BOITE-D",
+"libelle": "Boîte de dérivation (encastrée ou apparente)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1640
+},
+{
+"categorie": "TUB",
+"code": "TUB-BOITE-SOL",
+"libelle": "Boîte de sol",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1650
+},
+{
+"categorie": "TUB",
+"code": "TUB-RES",
+"libelle": "Réservation dalle / mur",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1660
+},
+{
+"categorie": "TUB",
+"code": "TUB-CAROT",
+"libelle": "Carottage béton",
+"unite": "pce",
+"schema": null,
+"notes": "Diamètre à préciser en note.",
+"ordre": 1670
+},
+{
+"categorie": "TUB",
+"code": "TUB-SAIGN",
+"libelle": "Saignée dans maçonnerie",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1680
+},
+{
+"categorie": "TUB",
+"code": "TUB-COUPE",
+"libelle": "Rebouchage coupe-feu de traversée",
+"unite": "pce",
+"schema": null,
+"notes": "EI 30 / 60 / 90.",
+"ordre": 1690
+},
+{
+"categorie": "TUB",
+"code": "TUB-FIL",
+"libelle": "Fil / câble en tube (hors forfait point)",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1700
+},
+{
+"categorie": "TUB",
+"code": "TUB-CABLE-TT",
+"libelle": "Câble plat TT apparent",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1710
+},
+{
+"categorie": "APP",
+"code": "APP-LUM-P",
+"libelle": "Pose luminaire plafonnier (fourni par MO)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1720
+},
+{
+"categorie": "APP",
+"code": "APP-LUM-M",
+"libelle": "Pose applique murale",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1730
+},
+{
+"categorie": "APP",
+"code": "APP-SPOT",
+"libelle": "Pose spot encastré (y c. percement)",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1740
+},
+{
+"categorie": "APP",
+"code": "APP-REGL",
+"libelle": "Pose réglette / ligne continue",
+"unite": "m",
+"schema": null,
+"notes": null,
+"ordre": 1750
+},
+{
+"categorie": "APP",
+"code": "APP-PROJ",
+"libelle": "Pose projecteur extérieur",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1760
+},
+{
+"categorie": "APP",
+"code": "APP-VENT",
+"libelle": "Pose ventilateur / extracteur",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1770
+},
+{
+"categorie": "APP",
+"code": "APP-MIR",
+"libelle": "Raccordement miroir / meuble lumineux",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1780
+},
+{
+"categorie": "DIV",
+"code": "DIV-DEMO",
+"libelle": "Démontage installation existante",
+"unite": "pce",
+"schema": null,
+"notes": "Rénovation.",
+"ordre": 1790
+},
+{
+"categorie": "DIV",
+"code": "DIV-REP",
+"libelle": "Reprise / modification d'un point existant",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1800
+},
+{
+"categorie": "DIV",
+"code": "DIV-PROV",
+"libelle": "Installation de chantier provisoire",
+"unite": "pce",
+"schema": null,
+"notes": "Coffret, éclairage, prises.",
+"ordre": 1810
+},
+{
+"categorie": "DIV",
+"code": "DIV-MES",
+"libelle": "Mesures et contrôles NIBT",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1820
+},
+{
+"categorie": "DIV",
+"code": "DIV-DOC",
+"libelle": "Schémas / dossier de révision",
+"unite": "pce",
+"schema": null,
+"notes": null,
+"ordre": 1830
+},
+{
+"categorie": "DIV",
+"code": "DIV-DIV",
+"libelle": "Divers (à préciser en note)",
+"unite": "pce",
+"schema": null,
+"notes": "Poste ouvert, décrire dans la note du comptage.",
+"ordre": 1840
+}
+]

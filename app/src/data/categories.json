@@ -1,0 +1,62 @@
+[
+{
+"code": "ECL",
+"libelle": "Éclairage",
+"ordre": 1,
+"couleur": "#f59e0b"
+},
+{
+"code": "PRI",
+"libelle": "Prises",
+"ordre": 2,
+"couleur": "#3b82f6"
+},
+{
+"code": "FOR",
+"libelle": "Force",
+"ordre": 3,
+"couleur": "#ef4444"
+},
+{
+"code": "CMD",
+"libelle": "Commandes",
+"ordre": 4,
+"couleur": "#8b5cf6"
+},
+{
+"code": "CF",
+"libelle": "Courant faible",
+"ordre": 5,
+"couleur": "#10b981"
+},
+{
+"code": "BUS",
+"libelle": "KNX / DALI",
+"ordre": 6,
+"couleur": "#06b6d4"
+},
+{
+"code": "TAB",
+"libelle": "Tableau & protection",
+"ordre": 7,
+"couleur": "#64748b"
+},
+{
+"code": "TUB",
+"libelle": "Tubes, canaux & réservations",
+"ordre": 8,
+"couleur": "#a16207"
+},
+{
+"code": "APP",
+"libelle": "Appareils & luminaires",
+"ordre": 9,
+"couleur": "#ec4899"
+},
+{
+"code": "DIV",
+"libelle": "Divers & chantier",
+"ordre": 10,
+"couleur": "#78716c"
+}
+]

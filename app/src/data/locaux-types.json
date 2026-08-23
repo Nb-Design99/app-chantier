@@ -1,0 +1,237 @@
+[
+{
+"famille": "LOGEMENT",
+"nom": "Entrée / Hall",
+"ordre": 1
+},
+{
+"famille": "LOGEMENT",
+"nom": "Séjour",
+"ordre": 2
+},
+{
+"famille": "LOGEMENT",
+"nom": "Salle à manger",
+"ordre": 3
+},
+{
+"famille": "LOGEMENT",
+"nom": "Cuisine",
+"ordre": 4
+},
+{
+"famille": "LOGEMENT",
+"nom": "Ch. 1",
+"ordre": 5
+},
+{
+"famille": "LOGEMENT",
+"nom": "Ch. 2",
+"ordre": 6
+},
+{
+"famille": "LOGEMENT",
+"nom": "Ch. 3",
+"ordre": 7
+},
+{
+"famille": "LOGEMENT",
+"nom": "Ch. 4",
+"ordre": 8
+},
+{
+"famille": "LOGEMENT",
+"nom": "Salle de bains",
+"ordre": 9
+},
+{
+"famille": "LOGEMENT",
+"nom": "Douche",
+"ordre": 10
+},
+{
+"famille": "LOGEMENT",
+"nom": "WC",
+"ordre": 11
+},
+{
+"famille": "LOGEMENT",
+"nom": "Réduit",
+"ordre": 12
+},
+{
+"famille": "LOGEMENT",
+"nom": "Buanderie",
+"ordre": 13
+},
+{
+"famille": "LOGEMENT",
+"nom": "Dressing",
+"ordre": 14
+},
+{
+"famille": "LOGEMENT",
+"nom": "Bureau",
+"ordre": 15
+},
+{
+"famille": "LOGEMENT",
+"nom": "Balcon / Terrasse",
+"ordre": 16
+},
+{
+"famille": "LOGEMENT",
+"nom": "Escalier / Palier",
+"ordre": 17
+},
+{
+"famille": "LOGEMENT",
+"nom": "Combles",
+"ordre": 18
+},
+{
+"famille": "LOGEMENT",
+"nom": "Cave",
+"ordre": 19
+},
+{
+"famille": "LOGEMENT",
+"nom": "Garage",
+"ordre": 20
+},
+{
+"famille": "LOGEMENT",
+"nom": "Local technique",
+"ordre": 21
+},
+{
+"famille": "LOGEMENT",
+"nom": "Extérieur / Façade",
+"ordre": 22
+},
+{
+"famille": "LOGEMENT",
+"nom": "Tableau / Colonne",
+"ordre": 23
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Réception / Accueil",
+"ordre": 1
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Bureau individuel",
+"ordre": 2
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Bureau paysager",
+"ordre": 3
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Salle de réunion",
+"ordre": 4
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Couloir / Dégagement",
+"ordre": 5
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Cafétéria / Cuisine",
+"ordre": 6
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Sanitaires H",
+"ordre": 7
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Sanitaires F",
+"ordre": 8
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Local nettoyage",
+"ordre": 9
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Archives / Dépôt",
+"ordre": 10
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Local IT / Serveur",
+"ordre": 11
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Local technique",
+"ordre": 12
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Escalier / Palier",
+"ordre": 13
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Parking",
+"ordre": 14
+},
+{
+"famille": "TERTIAIRE",
+"nom": "Extérieur / Façade",
+"ordre": 15
+},
+{
+"famille": "INDUSTRIEL",
+"nom": "Atelier",
+"ordre": 1
+},
+{
+"famille": "INDUSTRIEL",
+"nom": "Hall de production",
+"ordre": 2
+},
+{
+"famille": "INDUSTRIEL",
+"nom": "Dépôt / Stock",
+"ordre": 3
+},
+{
+"famille": "INDUSTRIEL",
+"nom": "Quai de chargement",
+"ordre": 4
+},
+{
+"famille": "INDUSTRIEL",
+"nom": "Vestiaires",
+"ordre": 5
+},
+{
+"famille": "INDUSTRIEL",
+"nom": "Local compresseur",
+"ordre": 6
+},
+{
+"famille": "INDUSTRIEL",
+"nom": "Local technique",
+"ordre": 7
+},
+{
+"famille": "INDUSTRIEL",
+"nom": "Bureau atelier",
+"ordre": 8
+},
+{
+"famille": "INDUSTRIEL",
+"nom": "Extérieur / Cour",
+"ordre": 9
+}
+]
