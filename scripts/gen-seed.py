@@ -143,6 +143,10 @@ def charger_catalogue():
         ref = r['fnr_complet']
         articles[ref] = {
             'ref': ref, 'e_no': r['e_no_complet'], 'marque': 'Feller', 'gamme': 'EDIZIOdue',
+            # `libelle` = le nom court affiché dans l'écran Matériel. Il est repris
+            # ici pour que le métré retrouve l'article avec les mots que l'ouvrier
+            # a sous les yeux, et pas seulement avec la désignation constructeur.
+            'libelle': '%s %s' % (libelle, couleur),
             'designation': r['designation_complet'], 'unite': 'pce', 'couleur': couleur,
         }
         e['variantes'].append({'couleur': couleur, 'ref': ref})
@@ -161,7 +165,7 @@ def charger_catalogue():
         ordre += 10
         articles[code] = {
             'ref': code, 'e_no': '', 'marque': 'Générique', 'gamme': '',
-            'designation': libelle, 'unite': unite, 'couleur': '',
+            'libelle': libelle, 'designation': libelle, 'unite': unite, 'couleur': '',
         }
         ensembles[libelle] = {
             'libelle': libelle,
@@ -172,6 +176,33 @@ def charger_catalogue():
         }
 
     return list(ensembles.values()), list(articles.values())
+
+
+def charger_catalogue_complet():
+    """
+    Tout l'assortiment EDIZIOdue, pour la barre de recherche de l'écran Matériel.
+
+    Les favoris couvrent le quotidien ; le reste — apparent, étanche, thermostats,
+    sonneries, cadres, combinaisons 1+1 — se trouve en tapant deux mots. C'est
+    plus sûr que de deviner une liste à la main, et ça évite d'oublier une
+    référence que Nathan pose trois fois par an.
+    """
+    src = os.path.join(DONNEES, 'feller-ediziodue-complet.csv')
+    couleurs = {
+        '61': 'blanc', '60': 'noir', '35': 'crema',
+        '65': 'gris clair', '67': 'gris foncé', '57': 'coffee',
+    }
+    articles = []
+    for r in csv.DictReader(io.open(src, encoding='utf-8-sig'), delimiter=';'):
+        couleur = couleurs.get(r['code_couleur'])
+        if not couleur or not r['e_no']:
+            continue
+        articles.append({
+            'ref': r['fnr'], 'e_no': r['e_no'],
+            'designation': r['designation'], 'couleur': couleur,
+        })
+    articles.sort(key=lambda a: a['designation'])
+    return articles
 
 
 def main():
@@ -202,6 +233,7 @@ def main():
     ecrire('codes-ci', codes_ci)
     ecrire('ensembles', ensembles)
     ecrire('articles', articles)
+    ecrire('catalogue', charger_catalogue_complet())
 
     par_cat = {}
     for p in postes:

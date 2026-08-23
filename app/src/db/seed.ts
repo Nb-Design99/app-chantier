@@ -5,6 +5,7 @@ import locauxTypes from '../data/locaux-types.json'
 import ensembles from '../data/ensembles.json'
 import articles from '../data/articles.json'
 import codesCi from '../data/codes-ci.json'
+import catalogue from '../data/catalogue.json'
 
 /**
  * Chargement des référentiels dans la base locale.
@@ -26,6 +27,13 @@ export async function chargerReferentiels() {
       await db.postes.bulkPut(postes as never)
       await db.codes_ci.bulkPut(codesCi as never)
       await db.ensembles.bulkPut(ensembles as never)
+      // Le catalogue complet d'abord, les 144 articles des favoris ensuite :
+      // ces derniers portent un libellé court plus lisible, ils doivent gagner.
+      await db.articles.bulkPut(
+        (catalogue as { ref: string; e_no: string; designation: string; couleur: string }[]).map(
+          (a) => ({ ...a, marque: 'Feller', gamme: 'EDIZIOdue', libelle: a.designation, unite: 'pce' }),
+        ) as never,
+      )
       await db.articles.bulkPut(articles as never)
       if ((await db.locaux_types.count()) === 0) {
         await db.locaux_types.bulkAdd(locauxTypes as never)

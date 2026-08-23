@@ -17,10 +17,17 @@ export default function MetreEcran() {
   const [recherche, setRecherche] = useState('')
   const [nouveauLocal, setNouveauLocal] = useState('')
   const [ligneLibre, setLigneLibre] = useState({ ouvert: false, libelle: '', no_can: '', unite: 'pce' })
+  // Dans un même chantier, presque toutes les lignes partagent le même CI :
+  // on le choisit une fois et les nouvelles lignes en héritent.
+  const [ciParDefaut, setCiParDefaut] = useState('')
 
   useEffect(() => {
     if (profil) void metreCourant(id, profil.id).then(setMetre)
   }, [id, profil])
+
+  useEffect(() => {
+    setCiParDefaut(localStorage.getItem(`ci-defaut-${id}`) ?? '')
+  }, [id])
 
   const affaire = useLiveQuery(() => db.affaires.get(id), [id])
   const locaux = useLiveQuery(
@@ -51,19 +58,41 @@ export default function MetreEcran() {
     if (!localActif && locaux.length > 0) setLocalActif(locaux[0].id)
   }, [locaux, localActif])
 
-  // 419 postes : la recherche est le seul accès raisonnable sur un téléphone.
+  /**
+   * Recherche unifiée : les 419 postes de métré ET les articles du catalogue.
+   * Un métré se fait aussi avec le matériel posé — l'ouvrier ne doit pas avoir
+   * à savoir si « prise T13 » est un poste ou un article pour la trouver.
+   */
   const resultats = useMemo(() => {
     const q = recherche.trim().toLowerCase()
     if (q.length < 2) return []
-    return postes
+    const dePostes = postes
       .filter(
         (p) =>
           p.libelle.toLowerCase().includes(q) ||
           p.code.toLowerCase().includes(q) ||
           (p.no_can ?? '').includes(q),
       )
-      .slice(0, 10)
-  }, [recherche, postes])
+      .map((p) => ({
+        cle: 'poste:' + p.code, libelle: p.libelle, detail: p.no_can ?? p.code,
+        unite: p.unite, source: 'poste' as const, ref: p.code, no_can: p.no_can ?? null,
+      }))
+    const dArticles = articles
+      .filter(
+        (a) =>
+          a.libelle.toLowerCase().includes(q) ||
+          a.designation.toLowerCase().includes(q) ||
+          a.ref.toLowerCase().includes(q) ||
+          a.e_no.includes(q),
+      )
+      .map((a) => ({
+        cle: 'article:' + a.ref,
+        libelle: a.libelle,
+        detail: a.e_no ? 'ELDAS ' + a.e_no : a.ref,
+        unite: a.unite, source: 'article' as const, ref: a.ref, no_can: null,
+      }))
+    return [...dePostes, ...dArticles].slice(0, 12)
+  }, [recherche, postes, articles])
 
   const lignesEnrichies = useMemo(() => {
     const enrichies = lignes.map((l) => {
@@ -71,7 +100,7 @@ export default function MetreEcran() {
       const article = l.article_ref ? parRef.get(l.article_ref) : undefined
       return {
         ...l,
-        libelle: l.libelle_libre ?? poste?.libelle ?? article?.designation ?? l.poste_code ?? '—',
+        libelle: l.libelle_libre ?? poste?.libelle ?? article?.libelle ?? l.poste_code ?? '—',
         no_can_affiche: l.no_can ?? poste?.no_can ?? '',
         local: locaux.find((x) => x.id === l.local_id)?.nom ?? '—',
       }
@@ -85,12 +114,19 @@ export default function MetreEcran() {
 
   const fige = metre ? metre.statut !== 'brouillon' : false
 
-  async function ajouterPoste(code: string) {
+  async function ajouterResultat(r: {
+    source: 'poste' | 'article'; ref: string; unite: string; no_can: string | null
+  }) {
     if (!metre || !profil) return
-    const p = parCode.get(code)
     await ajouterLigneMetre(
       metre.id,
-      { poste_code: code, unite: p?.unite ?? 'pce', no_can: p?.no_can ?? null },
+      {
+        poste_code: r.source === 'poste' ? r.ref : undefined,
+        article_ref: r.source === 'article' ? r.ref : undefined,
+        unite: r.unite,
+        no_can: r.no_can,
+        ci: ciParDefaut || null,
+      },
       1, localActif, profil.id,
     )
     setRecherche('')
@@ -104,6 +140,7 @@ export default function MetreEcran() {
         libelle_libre: ligneLibre.libelle.trim(),
         no_can: ligneLibre.no_can.trim() || null,
         unite: ligneLibre.unite,
+        ci: ciParDefaut || null,
       },
       1, localActif, profil.id,
     )
@@ -149,6 +186,32 @@ export default function MetreEcran() {
           <button className="h-tap shrink-0 rounded-xl bg-ardoise-100 px-5 font-semibold">+</button>
         </form>
 
+        {!fige && (
+          <div className="mb-3 rounded-2xl border border-ardoise-200 bg-white p-3">
+            <label className="text-xs font-semibold tracking-wide text-ardoise-400 uppercase">
+              Code d'installation par défaut
+            </label>
+            <select
+              value={ciParDefaut}
+              onChange={(e) => {
+                setCiParDefaut(e.target.value)
+                localStorage.setItem(`ci-defaut-${id}`, e.target.value)
+              }}
+              className="h-tap mt-1 w-full rounded-xl border border-ardoise-200 px-3"
+            >
+              <option value="">— aucun, à choisir ligne par ligne —</option>
+              {codesCi.map((c) => (
+                <option key={c.code} value={c.code}>
+                  CI {c.code} · {c.libelle}
+                </option>
+              ))}
+            </select>
+            <p className="mt-1 text-xs text-ardoise-400">
+              Appliqué aux nouvelles lignes. Chaque ligne reste modifiable ensuite.
+            </p>
+          </div>
+        )}
+
         {fige ? (
           <p className="mb-4 rounded-2xl bg-chantier-500/20 p-4 text-center text-sm font-medium">
             Métré {metre?.statut === 'valide' ? 'validé' : 'transmis au bureau'} — figé.
@@ -164,14 +227,14 @@ export default function MetreEcran() {
             {resultats.length > 0 && (
               <ul className="mb-3 space-y-1">
                 {resultats.map((p) => (
-                  <li key={p.code}>
+                  <li key={p.cle}>
                     <button
-                      onClick={() => void ajouterPoste(p.code)}
+                      onClick={() => void ajouterResultat(p)}
                       className="w-full rounded-xl border border-ardoise-200 bg-white p-3 text-left active:bg-ardoise-100"
                     >
                       <span className="text-sm font-semibold">{p.libelle}</span>
                       <span className="ml-2 font-mono text-xs text-ardoise-400">
-                        {p.no_can ?? p.code} · {p.unite}
+                        {p.detail} · {p.unite}
                       </span>
                     </button>
                   </li>
@@ -262,10 +325,25 @@ export default function MetreEcran() {
                       >
                         −
                       </button>
-                      <span className="w-14 text-center text-lg font-bold tabular-nums">
-                        {l.quantite}
-                        {l.unite !== 'pce' && <span className="text-xs font-normal"> {l.unite}</span>}
-                      </span>
+                      <label className="relative w-20 shrink-0">
+                        <input
+                          type="number"
+                          inputMode="decimal"
+                          step="any"
+                          value={l.quantite}
+                          onChange={(e) => {
+                            const v = Number(e.target.value)
+                            if (!Number.isNaN(v)) void majLigneMetre(l.id, v)
+                          }}
+                          className="h-11 w-full rounded-xl bg-ardoise-100 pr-6 text-center text-lg font-bold tabular-nums"
+                          aria-label="Quantité"
+                        />
+                        {l.unite !== 'pce' && (
+                          <span className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 text-xs text-ardoise-400">
+                            {l.unite}
+                          </span>
+                        )}
+                      </label>
                       <button
                         onClick={() => void majLigneMetre(l.id, l.quantite + 1)}
                         className="size-11 rounded-xl bg-ardoise-100 text-xl font-bold"

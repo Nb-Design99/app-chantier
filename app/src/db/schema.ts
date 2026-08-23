@@ -77,6 +77,8 @@ export interface Article {
   e_no: string
   marque: string
   gamme?: string
+  /** Nom court, celui de la grille Matériel — c'est par là que l'ouvrier cherche. */
+  libelle: string
   designation: string
   unite: string
   couleur?: string
@@ -257,6 +259,12 @@ export class BaseChantier extends Dexie {
       articles: 'ref, e_no, couleur, designation',
       postes: 'code, categorie, no_can, ordre',
       codes_ci: 'code, groupe',
+    })
+
+    // v4 : index sur le libellé court, ajouté quand la recherche du métré a dû
+    // retrouver un article avec les mots de l'écran Matériel.
+    this.version(4).stores({
+      articles: 'ref, e_no, couleur, libelle, designation',
     })
   }
 }

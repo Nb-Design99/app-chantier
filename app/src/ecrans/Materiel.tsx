@@ -25,6 +25,7 @@ export default function Materiel() {
   const { profil, estChef } = useSession()
   const [couleur, setCouleur] = useState<string>('blanc')
   const [dernier, setDernier] = useState<string | null>(null)
+  const [recherche, setRecherche] = useState('')
 
   const cleCouleur = `couleur-affaire-${id}`
   useEffect(() => {
@@ -65,6 +66,33 @@ export default function Materiel() {
     if (navigator.vibrate) navigator.vibrate(15)
     setTimeout(() => setDernier(null), 700)
   }
+
+  /**
+   * Recherche sur TOUT l'assortiment EDIZIOdue (≈10 700 références), pas
+   * seulement sur les favoris : apparent, étanche, thermostats, sonneries,
+   * cadres, combinaisons 1+1… tout est là, il suffit de taper deux mots.
+   * La couleur choisie en haut filtre les résultats.
+   */
+  const resultats = useMemo(() => {
+    const q = recherche.trim().toLowerCase()
+    if (q.length < 2) return []
+    // Feller écrit « ENC » et « AP », pas « encastré » et « apparent ».
+    // On traduit les mots du chantier vers ceux du catalogue.
+    const SYNONYMES: Record<string, string> = {
+      apparent: 'ap', saillie: 'ap',
+      encastre: 'enc', 'encastré': 'enc',
+      inter: 'interrupteur', interrupteur: 'interrupteur',
+      sch: 'schéma', vierge: 'obturation', obturateur: 'obturation',
+    }
+    const mots = q.split(/\s+/).map((m) => SYNONYMES[m] ?? m)
+    return articles
+      .filter((a) => {
+        if (a.couleur && a.couleur !== couleur) return false
+        const foin = (a.designation + ' ' + a.ref + ' ' + a.e_no).toLowerCase()
+        return mots.every((m) => foin.includes(m))
+      })
+      .slice(0, 25)
+  }, [recherche, articles, couleur])
 
   const appareils = ensembles.filter((e) => !e.sansCouleur && refDe(e))
   const auMetre = ensembles.filter((e) => e.sansCouleur)
@@ -116,8 +144,50 @@ export default function Materiel() {
       </div>
 
       <div className="mx-auto max-w-2xl p-4">
+        <input
+          value={recherche}
+          onChange={(e) => setRecherche(e.target.value)}
+          placeholder="Chercher — sch 3, T13, apparent, thermostat, cadre…"
+          className="h-tap mb-3 w-full rounded-xl border border-ardoise-200 px-4"
+        />
+
+        {recherche.trim().length >= 2 && (
+          <div className="mb-6">
+            <h2 className="mb-2 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
+              {resultats.length === 25 ? '25+ résultats' : `${resultats.length} résultat${resultats.length > 1 ? 's' : ''}`}
+              {' '}· {couleur}
+            </h2>
+            {resultats.length === 0 ? (
+              <p className="rounded-2xl border border-dashed border-ardoise-200 p-4 text-center text-sm text-ardoise-400">
+                Rien trouvé en {couleur}. Essaie d'autres mots, ou change de couleur.
+              </p>
+            ) : (
+              <ul className="space-y-1">
+                {resultats.map((a) => (
+                  <li key={a.ref}>
+                    <button
+                      onClick={() => {
+                        if (!profil) return
+                        void ajouterMateriel(id, a.ref, 1, profil.id)
+                        if (navigator.vibrate) navigator.vibrate(15)
+                        setRecherche('')
+                      }}
+                      className="w-full rounded-xl border border-ardoise-200 bg-white p-3 text-left active:bg-ardoise-100"
+                    >
+                      <span className="block text-sm font-semibold">{a.designation}</span>
+                      <span className="font-mono text-xs text-ardoise-400">
+                        {a.e_no ? `ELDAS ${a.e_no}` : 'sans n° ELDAS'} · {a.ref}
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
+
         <h2 className="mb-3 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
-          Appareils {couleur} — 1 tap = +1
+          Favoris {couleur} — 1 tap = +1
         </h2>
         <Grille liste={appareils} />
 
@@ -178,10 +248,28 @@ export default function Materiel() {
                       >
                         −
                       </button>
-                      <span className="w-14 text-center text-lg font-bold tabular-nums">
-                        {b.quantite}
-                        {art?.unite === 'm' && <span className="text-xs font-normal"> m</span>}
-                      </span>
+                      {/* Saisie directe : personne ne tape 12 fois pour 120 m. */}
+                      <label className="relative w-20 shrink-0">
+                        <input
+                          type="number"
+                          inputMode="decimal"
+                          step="any"
+                          value={b.quantite}
+                          onChange={(e) => {
+                            const v = Number(e.target.value)
+                            if (profil && !Number.isNaN(v)) {
+                              void ajouterMateriel(id, b.article_ref, v - b.quantite, profil.id)
+                            }
+                          }}
+                          className="h-11 w-full rounded-xl bg-ardoise-100 pr-6 text-center text-lg font-bold tabular-nums"
+                          aria-label="Quantité"
+                        />
+                        {art?.unite === 'm' && (
+                          <span className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 text-xs text-ardoise-400">
+                            m
+                          </span>
+                        )}
+                      </label>
                       <button
                         onClick={() =>
                           profil && void ajouterMateriel(id, b.article_ref, pas, profil.id)
