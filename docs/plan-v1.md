@@ -204,3 +204,32 @@ il faut décider ce qui est mis en cache (proposition : toutes les affaires acti
    1 ligne, avec son **numéro ELDAS®**. La liste est pour Nathan, pas pour le
    grossiste.
 4. ~~Feu vert Node.js~~ **Donné le 21.08.**
+
+---
+
+## 8. Lancer l'app depuis le Bureau (23.08.2026)
+
+Raccourci **Chantier** sur le Bureau → `Chantier.vbs` → deux choses :
+
+1. démarre `scripts/serveur-local.py` (port 5199, sans fenêtre noire) s'il ne
+   tourne pas déjà ; il sert `app/dist`, la version compilée
+2. ouvre Chrome en mode `--app` : fenêtre dédiée, sans onglets ni barre d'adresse
+
+Le serveur reste en tâche de fond jusqu'à l'extinction du PC. Relancer le
+raccourci ne crée pas de doublon (le port occupé est détecté).
+
+**Après chaque modification du code**, recompiler, sinon le raccourci sert
+l'ancienne version :
+
+```
+npm run build --prefix app
+```
+
+Le serveur renvoie `index.html` sur toute adresse inconnue (sinon `/affaire/xxx`
+donnerait un 404 au rechargement) et force `no-cache` sur `index.html` et le
+service worker, sans quoi une mise à jour n'arriverait jamais à l'écran.
+
+⚠️ **Non vérifié : l'enregistrement du service worker.** Le navigateur intégré
+que j'utilise pour tester le refuse. L'app fonctionne sans, tant que le serveur
+local tourne — mais le vrai hors ligne (téléphone, sous-sol) reste à éprouver au
+moment de l'hébergement.
