@@ -8,6 +8,7 @@ import {
 import { useSession } from '../lib/session'
 import { Onglets } from '../App'
 import { exporterPourOiken } from '../lib/export-oiken'
+import { correspond, motsCles } from '../lib/recherche'
 
 export default function MetreEcran() {
   const { id = '' } = useParams()
@@ -64,27 +65,16 @@ export default function MetreEcran() {
    * à savoir si « prise T13 » est un poste ou un article pour la trouver.
    */
   const resultats = useMemo(() => {
-    const q = recherche.trim().toLowerCase()
-    if (q.length < 2) return []
+    const mots = motsCles(recherche)
+    if (mots.join('').length < 2) return []
     const dePostes = postes
-      .filter(
-        (p) =>
-          p.libelle.toLowerCase().includes(q) ||
-          p.code.toLowerCase().includes(q) ||
-          (p.no_can ?? '').includes(q),
-      )
+      .filter((p) => correspond(p.libelle + ' ' + p.code + ' ' + (p.no_can ?? ''), mots))
       .map((p) => ({
         cle: 'poste:' + p.code, libelle: p.libelle, detail: p.no_can ?? p.code,
         unite: p.unite, source: 'poste' as const, ref: p.code, no_can: p.no_can ?? null,
       }))
     const dArticles = articles
-      .filter(
-        (a) =>
-          a.libelle.toLowerCase().includes(q) ||
-          a.designation.toLowerCase().includes(q) ||
-          a.ref.toLowerCase().includes(q) ||
-          a.e_no.includes(q),
-      )
+      .filter((a) => correspond(a.libelle + ' ' + a.designation + ' ' + a.ref + ' ' + a.e_no + ' ' + (a.mots ?? ''), mots))
       .map((a) => ({
         cle: 'article:' + a.ref,
         libelle: a.libelle,

@@ -1,182 +1,86 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { db, type Ensemble } from '../db/schema'
+import { db } from '../db/schema'
 import { ajouterMateriel, besoinsMateriel } from '../db/repo'
 import { useSession } from '../lib/session'
+import { correspond, motsCles } from '../lib/recherche'
 import { Onglets } from '../App'
 
 /**
- * L'écran le plus contraint du cahier des charges : « saisie en moins de
- * 3 clics, l'ouvrier a les mains sales et 30 secondes ».
+ * Écran matériel : une barre de recherche sur tout l'assortiment, et la liste
+ * de ce qui a été demandé. Rien d'autre.
  *
- * Le pari : la couleur ne change quasiment jamais dans une même affaire. On la
- * choisit une fois (elle est mémorisée par affaire), et ajouter un article
- * devient UN SEUL tap sur la grille de favoris.
- *
- * Les fils, câbles et canaux n'ont pas de couleur et se comptent au mètre : ils
- * sont dans une section à part, et un tap ajoute PAS_METRE mètres d'un coup —
- * personne ne tape 40 fois pour 40 mètres.
+ * Les grilles de favoris ont été retirées le 23.08 : avec 10 350 références
+ * cherchables, une liste figée de 20 tuiles masquait le reste et imposait de
+ * choisir une couleur avant même de savoir ce qu'on cherchait.
  */
 const PAS_METRE = 10
 
 export default function Materiel() {
   const { id = '' } = useParams()
   const { profil, estChef } = useSession()
-  const [couleur, setCouleur] = useState<string>('blanc')
-  const [dernier, setDernier] = useState<string | null>(null)
   const [recherche, setRecherche] = useState('')
 
-  const cleCouleur = `couleur-affaire-${id}`
-  useEffect(() => {
-    setCouleur(localStorage.getItem(cleCouleur) ?? 'blanc')
-  }, [cleCouleur])
-
-  const ensembles = useLiveQuery(
-    async () => (await db.ensembles.toArray()).sort((a, b) => a.ordre - b.ordre),
-    [],
-    [],
-  )
   const articles = useLiveQuery(async () => db.articles.toArray(), [], [])
   const mouvements = useLiveQuery(
     () => db.materiel_mouvements.where('affaire_id').equals(id).toArray(),
     [id],
     [],
   )
-
   const parRef = useMemo(() => new Map(articles.map((a) => [a.ref, a])), [articles])
   const besoins = useLiveQuery(() => besoinsMateriel(id), [id, mouvements.length], [])
 
-  const couleurs = useMemo(() => {
-    const set = new Set<string>()
-    ensembles.forEach((e) => !e.sansCouleur && e.variantes.forEach((v) => set.add(v.couleur)))
-    return [...set]
-  }, [ensembles])
-
-  function refDe(e: Ensemble): string | undefined {
-    if (e.sansCouleur) return e.variantes[0]?.ref
-    return e.variantes.find((v) => v.couleur === couleur)?.ref
-  }
-
-  async function ajouter(e: Ensemble, signe = 1) {
-    const ref = refDe(e)
-    if (!ref || !profil) return
-    await ajouterMateriel(id, ref, signe * (e.unite === 'm' ? PAS_METRE : 1), profil.id)
-    setDernier(e.libelle)
-    if (navigator.vibrate) navigator.vibrate(15)
-    setTimeout(() => setDernier(null), 700)
-  }
-
-  /**
-   * Recherche sur TOUT l'assortiment EDIZIOdue (≈10 700 références), pas
-   * seulement sur les favoris : apparent, étanche, thermostats, sonneries,
-   * cadres, combinaisons 1+1… tout est là, il suffit de taper deux mots.
-   * La couleur choisie en haut filtre les résultats.
-   */
   const resultats = useMemo(() => {
-    const q = recherche.trim().toLowerCase()
-    if (q.length < 2) return []
-    // Feller écrit « ENC » et « AP », pas « encastré » et « apparent ».
-    // On traduit les mots du chantier vers ceux du catalogue.
-    const SYNONYMES: Record<string, string> = {
-      apparent: 'ap', saillie: 'ap',
-      encastre: 'enc', 'encastré': 'enc',
-      inter: 'interrupteur', interrupteur: 'interrupteur',
-      sch: 'schéma', vierge: 'obturation', obturateur: 'obturation',
-    }
-    const mots = q.split(/\s+/).map((m) => SYNONYMES[m] ?? m)
+    const mots = motsCles(recherche)
+    if (mots.join('').length < 2) return []
     return articles
-      .filter((a) => {
-        if (a.couleur && a.couleur !== couleur) return false
-        const foin = (a.designation + ' ' + a.ref + ' ' + a.e_no).toLowerCase()
-        return mots.every((m) => foin.includes(m))
-      })
-      .slice(0, 25)
-  }, [recherche, articles, couleur])
+      .filter((a) => correspond(a.designation + ' ' + a.libelle + ' ' + a.ref + ' ' + a.e_no + ' ' + (a.mots ?? ''), mots))
+      .slice(0, 30)
+  }, [recherche, articles])
 
-  const appareils = ensembles.filter((e) => !e.sansCouleur && refDe(e))
-  const auMetre = ensembles.filter((e) => e.sansCouleur)
-  const categoriesMetre = [...new Set(auMetre.map((e) => e.categorie))]
-
-  const Grille = ({ liste }: { liste: Ensemble[] }) => (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-      {liste.map((e) => (
-        <button
-          key={e.libelle}
-          onClick={() => void ajouter(e)}
-          className={`min-h-[5.5rem] rounded-2xl border p-3 text-left transition-colors ${
-            dernier === e.libelle
-              ? 'border-chantier-500 bg-chantier-500/25'
-              : 'border-ardoise-200 bg-white active:bg-ardoise-100'
-          }`}
-        >
-          <span className="block text-sm leading-snug font-semibold">{e.libelle}</span>
-          <span className="mt-1 block text-xs text-ardoise-400">
-            {e.unite === 'm' ? `+${PAS_METRE} m` : e.categorie}
-          </span>
-        </button>
-      ))}
-    </div>
-  )
+  async function ajouter(ref: string, unite: string) {
+    if (!profil) return
+    await ajouterMateriel(id, ref, unite === 'm' ? PAS_METRE : 1, profil.id)
+    if (navigator.vibrate) navigator.vibrate(15)
+    setRecherche('')
+  }
 
   return (
     <>
       <Onglets id={id} actif="materiel" />
 
-      {/* La couleur se choisit une fois pour l'affaire — d'où le « 1 tap » ensuite. */}
-      <div className="sticky top-[49px] z-10 border-b border-ardoise-200 bg-white px-4 py-2">
-        <div className="flex gap-2 overflow-x-auto pb-1">
-          {couleurs.map((c) => (
-            <button
-              key={c}
-              onClick={() => {
-                setCouleur(c)
-                localStorage.setItem(cleCouleur, c)
-              }}
-              className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold ${
-                couleur === c ? 'bg-ardoise-900 text-white' : 'bg-ardoise-100 text-ardoise-600'
-              }`}
-            >
-              {c}
-            </button>
-          ))}
-        </div>
-      </div>
-
       <div className="mx-auto max-w-2xl p-4">
         <input
           value={recherche}
           onChange={(e) => setRecherche(e.target.value)}
-          placeholder="Chercher — sch 3, T13, apparent, thermostat, cadre…"
+          placeholder="Chercher — 3xT13 blanc, sch 3, cable 3x1.5, thermostat…"
           className="h-tap mb-3 w-full rounded-xl border border-ardoise-200 px-4"
         />
 
         {recherche.trim().length >= 2 && (
           <div className="mb-6">
             <h2 className="mb-2 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
-              {resultats.length === 25 ? '25+ résultats' : `${resultats.length} résultat${resultats.length > 1 ? 's' : ''}`}
-              {' '}· {couleur}
+              {resultats.length === 30
+                ? '30+ résultats'
+                : resultats.length + ' résultat' + (resultats.length > 1 ? 's' : '')}
             </h2>
             {resultats.length === 0 ? (
               <p className="rounded-2xl border border-dashed border-ardoise-200 p-4 text-center text-sm text-ardoise-400">
-                Rien trouvé en {couleur}. Essaie d'autres mots, ou change de couleur.
+                Rien trouvé. Essaie moins de mots, ou la référence.
               </p>
             ) : (
               <ul className="space-y-1">
                 {resultats.map((a) => (
                   <li key={a.ref}>
                     <button
-                      onClick={() => {
-                        if (!profil) return
-                        void ajouterMateriel(id, a.ref, 1, profil.id)
-                        if (navigator.vibrate) navigator.vibrate(15)
-                        setRecherche('')
-                      }}
+                      onClick={() => void ajouter(a.ref, a.unite)}
                       className="w-full rounded-xl border border-ardoise-200 bg-white p-3 text-left active:bg-ardoise-100"
                     >
                       <span className="block text-sm font-semibold">{a.designation}</span>
                       <span className="font-mono text-xs text-ardoise-400">
-                        {a.e_no ? `ELDAS ${a.e_no}` : 'sans n° ELDAS'} · {a.ref}
+                        {a.e_no ? 'ELDAS ' + a.e_no : 'sans n° ELDAS'} · {a.ref}
+                        {a.unite === 'm' && ' · +' + PAS_METRE + ' m'}
                       </span>
                     </button>
                   </li>
@@ -187,26 +91,13 @@ export default function Materiel() {
         )}
 
         <h2 className="mb-3 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
-          Favoris {couleur} — 1 tap = +1
-        </h2>
-        <Grille liste={appareils} />
-
-        {categoriesMetre.map((cat) => (
-          <div key={cat}>
-            <h2 className="mt-8 mb-3 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
-              {cat} — 1 tap = +{PAS_METRE} m
-            </h2>
-            <Grille liste={auMetre.filter((e) => e.categorie === cat)} />
-          </div>
-        ))}
-
-        <h2 className="mt-8 mb-3 text-sm font-semibold tracking-wide text-ardoise-400 uppercase">
-          À commander {besoins.length > 0 && `· ${besoins.length} article${besoins.length > 1 ? 's' : ''}`}
+          À commander
+          {besoins.length > 0 && ' · ' + besoins.length + ' article' + (besoins.length > 1 ? 's' : '')}
         </h2>
 
         {besoins.length === 0 ? (
           <p className="rounded-2xl border border-dashed border-ardoise-200 p-6 text-center text-sm text-ardoise-400">
-            Rien demandé pour l'instant.
+            Rien demandé pour l'instant. Cherche un article ci-dessus.
           </p>
         ) : (
           <ul className="space-y-2">
@@ -228,9 +119,7 @@ export default function Materiel() {
                       {/* Le numéro ELDAS : c'est LA donnée que Nathan vient chercher. */}
                       <p className="font-mono text-xs text-ardoise-400">
                         {art?.e_no ? (
-                          <>
-                            ELDAS {art.e_no} · {b.article_ref}
-                          </>
+                          <>ELDAS {art.e_no} · {b.article_ref}</>
                         ) : (
                           <span className="text-chantier-600">
                             N° ELDAS à compléter · {b.article_ref}
@@ -308,8 +197,12 @@ function exporterCsv(
     ...besoins.map((b) => {
       const a = parRef.get(b.article_ref)
       return [
-        a?.e_no ?? '', a?.designation ?? '', a?.couleur ?? '',
-        b.article_ref, b.quantite, a?.unite ?? 'pce',
+        a?.e_no ?? '',
+        a?.designation ?? '',
+        a?.couleur ?? '',
+        b.article_ref,
+        b.quantite,
+        a?.unite ?? 'pce',
       ].join(';')
     }),
   ]

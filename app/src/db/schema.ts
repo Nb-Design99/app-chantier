@@ -80,6 +80,8 @@ export interface Article {
   /** Nom court, celui de la grille Matériel — c'est par là que l'ouvrier cherche. */
   libelle: string
   designation: string
+  /** Mots-clés dérivés : « sch3 », « sch6 »… lus dans la notation Feller « 3/1L ». */
+  mots?: string
   unite: string
   couleur?: string
 }
@@ -191,6 +193,29 @@ export interface MetreLigne extends Synchronisable {
 }
 
 /**
+ * Tâche de planning : un travail à faire, un jour donné, sur une affaire.
+ *
+ * Le « report automatique au lendemain » du cahier des charges n'est PAS un
+ * traitement nocturne qui décale les dates : c'est l'affichage qui remonte
+ * toute tâche non faite dont la date est passée. Rien à faire tourner, rien
+ * qui se déclenche mal quand le téléphone est resté trois jours hors ligne,
+ * et aucun conflit de synchro sur un champ date que deux appareils
+ * décaleraient chacun de leur côté.
+ */
+export interface Tache extends Synchronisable {
+  id: Uuid
+  affaire_id: Uuid
+  /** Jour prévu, au format AAAA-MM-JJ. */
+  jour: string
+  libelle: string
+  faite: boolean
+  date_faite?: string | null
+  assigne_a?: Uuid | null
+  cree_par?: Uuid | null
+  created_at: string
+}
+
+/**
  * File d'attente de synchro. Chaque écriture locale y dépose une opération ;
  * le module de synchro les rejoue dans l'ordre à la reconnexion, puis les
  * supprime. L'id de l'opération sert de clé d'idempotence côté serveur.
@@ -213,6 +238,7 @@ export class BaseChantier extends Dexie {
   metres!: Table<Metre, Uuid>
   metre_lignes!: Table<MetreLigne, Uuid>
   materiel_mouvements!: Table<MaterielMouvement, Uuid>
+  taches!: Table<Tache, Uuid>
 
   articles!: Table<Article, string>
   ensembles!: Table<Ensemble, string>
@@ -265,6 +291,11 @@ export class BaseChantier extends Dexie {
     // retrouver un article avec les mots de l'écran Matériel.
     this.version(4).stores({
       articles: 'ref, e_no, couleur, libelle, designation',
+    })
+
+    // v5 : planning
+    this.version(5).stores({
+      taches: 'id, affaire_id, jour, faite, [jour+faite]',
     })
   }
 }

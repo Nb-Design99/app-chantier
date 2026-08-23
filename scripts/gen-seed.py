@@ -15,6 +15,7 @@ Relancer :  python scripts/gen-seed.py
 """
 import csv
 import io
+import re
 import json
 import os
 
@@ -26,15 +27,14 @@ SORTIE = os.path.join(RACINE, 'app', 'src', 'data')
 # Les libellés du CSV Feller sont sans accents (contrainte d'export) et suivent
 # la désignation constructeur. Ce sont eux que l'ouvrier lit sur son téléphone :
 # ils passent ici en notation « schéma », la seule qui parle sur le chantier.
+# ⚠️ Écrire « x » et jamais « × » (le signe multiplication typographique) :
+# personne ne le tape au clavier, et la recherche ne trouvait rien.
 LIBELLES = {
     'Prise T13 simple': 'Prise T13',
-    'Prise T13 simple avec shutter': 'Prise T13 avec shutter',
-    'Prise 2xT13': 'Prise 2×T13',
-    'Prise 2xT13 avec shutter': 'Prise 2×T13 avec shutter',
-    'Prise 2xT13 dont 1 commutee': 'Prise 2×T13 dont 1 commutée',
-    'Prise 3xT13': 'Prise 3×T13',
-    'Prise 3xT13 avec shutter': 'Prise 3×T13 avec shutter',
-    'Prise 3xT13 dont 1 commutee': 'Prise 3×T13 dont 1 commutée',
+    'Prise 2xT13': 'Prise 2xT13',
+    'Prise 2xT13 dont 1 commutee': 'Prise 2xT13 dont 1 commutee',
+    'Prise 3xT13': 'Prise 3xT13',
+    'Prise 3xT13 dont 1 commutee': 'Prise 3xT13 dont 1 commutee',
     'Prise T23 16A bornes enfichables': 'Prise T23 16A (bornes enfichables)',
     'Prise T23 16A bornes a vis': 'Prise T23 16A (bornes à vis)',
     'Prise T15': 'Prise T15',
@@ -44,7 +44,7 @@ LIBELLES = {
     'Interrupteur schema 6 (croisement)': 'Inter. sch. 6',
     'Interrupteur schema 3/2 (double va-et-vient)': 'Inter. sch. 3/2',
     'Poussoir A-R simple': 'Poussoir A-R',
-    'Poussoir 2x A-R / 1P': 'Poussoir 2× A-R',
+    'Poussoir 2x A-R / 1P': 'Poussoir 2x A-R',
     'Poussoir A-R (schema 9)': 'Poussoir A-R (sch. 9)',
     'Plaque d obturation 88x88': "Plaque d'obturation",
     'Obturateur sans vis centrale': 'Obturateur',
@@ -130,6 +130,9 @@ def charger_catalogue():
 
     ensembles, articles = {}, {}
     for r in rows:
+        # Nathan ne pose pas de prises à shutter : elles sortent du référentiel.
+        if 'shutter' in r['ensemble'].lower():
+            continue
         libelle = LIBELLES.get(r['ensemble'], r['ensemble'])
         couleur = COULEURS.get(r['couleur'], r['couleur'])
         e = ensembles.setdefault(libelle, {
@@ -151,7 +154,7 @@ def charger_catalogue():
         }
         e['variantes'].append({'couleur': couleur, 'ref': ref})
 
-    inconnus = {r['ensemble'] for r in rows} - set(LIBELLES)
+    inconnus = {r['ensemble'] for r in rows if 'shutter' not in r['ensemble'].lower()} - set(LIBELLES)
     if inconnus:
         print('  ATTENTION, libelles Feller sans traduction :', sorted(inconnus))
 
@@ -192,14 +195,24 @@ def charger_catalogue_complet():
         '61': 'blanc', '60': 'noir', '35': 'crema',
         '65': 'gris clair', '67': 'gris foncé', '57': 'coffee',
     }
+    # Feller note ses interrupteurs « 3/1L », « 6/1L », « 1/3+3/1P ». Sur le
+    # chantier on dit « sch 3 », « sch 6 », « sch 3+3 ». On ajoute donc un mot-clé
+    # « schN » lu directement dans la désignation — pas une devinette, une
+    # transcription de la notation constructeur.
+    schema = re.compile(r'(?<![0-9/])([0-9])/[0-9]')
+
     articles = []
     for r in csv.DictReader(io.open(src, encoding='utf-8-sig'), delimiter=';'):
         couleur = couleurs.get(r['code_couleur'])
         if not couleur or not r['e_no']:
             continue
+        if 'shutter' in r['designation'].lower():
+            continue
+        mots = ' '.join('sch' + m for m in schema.findall(r['designation']))
         articles.append({
             'ref': r['fnr'], 'e_no': r['e_no'],
             'designation': r['designation'], 'couleur': couleur,
+            'mots': mots,
         })
     articles.sort(key=lambda a: a['designation'])
     return articles

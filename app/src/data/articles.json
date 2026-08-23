@@ -60,71 +60,11 @@
 "couleur": "coffee"
 },
 {
-"ref": "87003.FMI.K.61",
-"e_no": "639123000",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise T13 avec shutter blanc",
-"designation": "Prise ENC EDIZIOdue T13 blanc avec shutter",
-"unite": "pce",
-"couleur": "blanc"
-},
-{
-"ref": "87003.FMI.K.60",
-"e_no": "639123950",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise T13 avec shutter noir",
-"designation": "Prise ENC EDIZIOdue T13 noir avec shutter",
-"unite": "pce",
-"couleur": "noir"
-},
-{
-"ref": "87003.FMI.K.35",
-"e_no": "639123010",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise T13 avec shutter crema",
-"designation": "Prise ENC EDIZIOdue T13 crema avec shutter",
-"unite": "pce",
-"couleur": "crema"
-},
-{
-"ref": "87003.FMI.K.65",
-"e_no": "639123030",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise T13 avec shutter gris clair",
-"designation": "Prise ENC EDIZIOdue T13 gris clair, avec shutter",
-"unite": "pce",
-"couleur": "gris clair"
-},
-{
-"ref": "87003.FMI.K.67",
-"e_no": "639123040",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise T13 avec shutter gris foncé",
-"designation": "Prise ENC EDIZIOdue T13 gris foncé avec shutter",
-"unite": "pce",
-"couleur": "gris foncé"
-},
-{
-"ref": "87003.FMI.K.57",
-"e_no": "639123890",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise T13 avec shutter coffee",
-"designation": "Prise ENC EDIZIOdue T13 coffee avec shutter",
-"unite": "pce",
-"couleur": "coffee"
-},
-{
 "ref": "87203.FMI.61",
 "e_no": "657114000",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 blanc",
+"libelle": "Prise 2xT13 blanc",
 "designation": "Prise ENC EDIZIOdue 2×T13 blanc",
 "unite": "pce",
 "couleur": "blanc"
@@ -134,7 +74,7 @@
 "e_no": "657114950",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 noir",
+"libelle": "Prise 2xT13 noir",
 "designation": "Prise ENC EDIZIOdue 2×T13 noir",
 "unite": "pce",
 "couleur": "noir"
@@ -144,7 +84,7 @@
 "e_no": "657114010",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 crema",
+"libelle": "Prise 2xT13 crema",
 "designation": "Prise ENC EDIZIOdue 2×T13 crema",
 "unite": "pce",
 "couleur": "crema"
@@ -154,7 +94,7 @@
 "e_no": "657114030",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 gris clair",
+"libelle": "Prise 2xT13 gris clair",
 "designation": "Prise ENC EDIZIOdue 2×T13 gris clair",
 "unite": "pce",
 "couleur": "gris clair"
@@ -164,7 +104,7 @@
 "e_no": "657114040",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 gris foncé",
+"libelle": "Prise 2xT13 gris foncé",
 "designation": "Prise ENC EDIZIOdue 2×T13 gris foncé",
 "unite": "pce",
 "couleur": "gris foncé"
@@ -174,68 +114,8 @@
 "e_no": "657114890",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 coffee",
+"libelle": "Prise 2xT13 coffee",
 "designation": "Prise ENC EDIZIOdue 2×T13 coffee",
-"unite": "pce",
-"couleur": "coffee"
-},
-{
-"ref": "87203.FMI.K.61",
-"e_no": "657124000",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 avec shutter blanc",
-"designation": "Prise ENC EDIZIOdue 2×T13 blanc avec shutter",
-"unite": "pce",
-"couleur": "blanc"
-},
-{
-"ref": "87203.FMI.K.60",
-"e_no": "657124950",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 avec shutter noir",
-"designation": "Prise ENC EDIZIOdue 2×T13 noir avec shutter",
-"unite": "pce",
-"couleur": "noir"
-},
-{
-"ref": "87203.FMI.K.35",
-"e_no": "657124010",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 avec shutter crema",
-"designation": "Prise ENC EDIZIOdue 2×T13 crema, avec shutter",
-"unite": "pce",
-"couleur": "crema"
-},
-{
-"ref": "87203.FMI.K.65",
-"e_no": "657124030",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 avec shutter gris clair",
-"designation": "Prise ENC EDIZIOdue 2×T13 gris clair, avec shutter",
-"unite": "pce",
-"couleur": "gris clair"
-},
-{
-"ref": "87203.FMI.K.67",
-"e_no": "657124040",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 avec shutter gris foncé",
-"designation": "Prise ENC EDIZIOdue 2×T13 gris foncé avec shutter",
-"unite": "pce",
-"couleur": "gris foncé"
-},
-{
-"ref": "87203.FMI.K.57",
-"e_no": "657124890",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 avec shutter coffee",
-"designation": "Prise ENC EDIZIOdue 2×T13 coffee avec shutter",
 "unite": "pce",
 "couleur": "coffee"
 },
@@ -244,7 +124,7 @@
 "e_no": "657134000",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 dont 1 commutée blanc",
+"libelle": "Prise 2xT13 dont 1 commutee blanc",
 "designation": "Prise ENC EDIZIOdue 2×T13 blanc 1×S",
 "unite": "pce",
 "couleur": "blanc"
@@ -254,7 +134,7 @@
 "e_no": "657134950",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 dont 1 commutée noir",
+"libelle": "Prise 2xT13 dont 1 commutee noir",
 "designation": "Prise ENC EDIZIOdue 2×T13 noir 1×S",
 "unite": "pce",
 "couleur": "noir"
@@ -264,7 +144,7 @@
 "e_no": "657134010",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 dont 1 commutée crema",
+"libelle": "Prise 2xT13 dont 1 commutee crema",
 "designation": "Prise ENC EDIZIOdue 2×T13 crema 1×S",
 "unite": "pce",
 "couleur": "crema"
@@ -274,7 +154,7 @@
 "e_no": "657134030",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 dont 1 commutée gris clair",
+"libelle": "Prise 2xT13 dont 1 commutee gris clair",
 "designation": "Prise ENC EDIZIOdue 2×T13 gris clair, 1×S",
 "unite": "pce",
 "couleur": "gris clair"
@@ -284,7 +164,7 @@
 "e_no": "657134040",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 dont 1 commutée gris foncé",
+"libelle": "Prise 2xT13 dont 1 commutee gris foncé",
 "designation": "Prise ENC EDIZIOdue 2×T13 gris foncé, 1×S",
 "unite": "pce",
 "couleur": "gris foncé"
@@ -294,7 +174,7 @@
 "e_no": "657134890",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 2×T13 dont 1 commutée coffee",
+"libelle": "Prise 2xT13 dont 1 commutee coffee",
 "designation": "Prise ENC EDIZIOdue 2×T13 coffee 1×S",
 "unite": "pce",
 "couleur": "coffee"
@@ -304,7 +184,7 @@
 "e_no": "657115000",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 blanc",
+"libelle": "Prise 3xT13 blanc",
 "designation": "Prise ENC EDIZIOdue 3×T13 blanc",
 "unite": "pce",
 "couleur": "blanc"
@@ -314,7 +194,7 @@
 "e_no": "657115950",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 noir",
+"libelle": "Prise 3xT13 noir",
 "designation": "Prise ENC EDIZIOdue 3×T13 noir 88×88×40mm",
 "unite": "pce",
 "couleur": "noir"
@@ -324,7 +204,7 @@
 "e_no": "657115010",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 crema",
+"libelle": "Prise 3xT13 crema",
 "designation": "Prise ENC EDIZIOdue 3×T13 crema",
 "unite": "pce",
 "couleur": "crema"
@@ -334,7 +214,7 @@
 "e_no": "657115030",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 gris clair",
+"libelle": "Prise 3xT13 gris clair",
 "designation": "Prise ENC EDIZIOdue 3×T13 gris clair",
 "unite": "pce",
 "couleur": "gris clair"
@@ -344,7 +224,7 @@
 "e_no": "657115040",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 gris foncé",
+"libelle": "Prise 3xT13 gris foncé",
 "designation": "Prise ENC EDIZIOdue 3×T13 gris foncé",
 "unite": "pce",
 "couleur": "gris foncé"
@@ -354,68 +234,8 @@
 "e_no": "657115890",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 coffee",
+"libelle": "Prise 3xT13 coffee",
 "designation": "Prise ENC EDIZIOdue 3×T13 coffee",
-"unite": "pce",
-"couleur": "coffee"
-},
-{
-"ref": "87303.FMI.K.61",
-"e_no": "657125000",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 avec shutter blanc",
-"designation": "Prise ENC EDIZIOdue 3×T13 blanc avec shutter",
-"unite": "pce",
-"couleur": "blanc"
-},
-{
-"ref": "87303.FMI.K.60",
-"e_no": "657125950",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 avec shutter noir",
-"designation": "Prise ENC EDIZIOdue 3×T13 noir avec shutter",
-"unite": "pce",
-"couleur": "noir"
-},
-{
-"ref": "87303.FMI.K.35",
-"e_no": "657125010",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 avec shutter crema",
-"designation": "Prise ENC EDIZIOdue 3×T13 crema, avec shutter",
-"unite": "pce",
-"couleur": "crema"
-},
-{
-"ref": "87303.FMI.K.65",
-"e_no": "657125030",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 avec shutter gris clair",
-"designation": "Prise ENC EDIZIOdue 3×T13 gris clair, avec shutter",
-"unite": "pce",
-"couleur": "gris clair"
-},
-{
-"ref": "87303.FMI.K.67",
-"e_no": "657125040",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 avec shutter gris foncé",
-"designation": "Prise ENC EDIZIOdue 3×T13 gris foncé avec shutter",
-"unite": "pce",
-"couleur": "gris foncé"
-},
-{
-"ref": "87303.FMI.K.57",
-"e_no": "657125890",
-"marque": "Feller",
-"gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 avec shutter coffee",
-"designation": "Prise ENC EDIZIOdue 3×T13 coffee avec shutter",
 "unite": "pce",
 "couleur": "coffee"
 },
@@ -424,7 +244,7 @@
 "e_no": "657135000",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 dont 1 commutée blanc",
+"libelle": "Prise 3xT13 dont 1 commutee blanc",
 "designation": "Prise ENC EDIZIOdue 3×T13 blanc 1×S",
 "unite": "pce",
 "couleur": "blanc"
@@ -434,7 +254,7 @@
 "e_no": "657135950",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 dont 1 commutée noir",
+"libelle": "Prise 3xT13 dont 1 commutee noir",
 "designation": "Prise ENC EDIZIOdue 3×T13 noir 1×S",
 "unite": "pce",
 "couleur": "noir"
@@ -444,7 +264,7 @@
 "e_no": "657135010",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 dont 1 commutée crema",
+"libelle": "Prise 3xT13 dont 1 commutee crema",
 "designation": "Prise ENC EDIZIOdue 3×T13 crema 1×S",
 "unite": "pce",
 "couleur": "crema"
@@ -454,7 +274,7 @@
 "e_no": "657135030",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 dont 1 commutée gris clair",
+"libelle": "Prise 3xT13 dont 1 commutee gris clair",
 "designation": "Prise ENC EDIZIOdue 3×T13 gris clair, 1×S",
 "unite": "pce",
 "couleur": "gris clair"
@@ -464,7 +284,7 @@
 "e_no": "657135040",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 dont 1 commutée gris foncé",
+"libelle": "Prise 3xT13 dont 1 commutee gris foncé",
 "designation": "Prise ENC EDIZIOdue 3×T13 gris foncé, 1×S",
 "unite": "pce",
 "couleur": "gris foncé"
@@ -474,7 +294,7 @@
 "e_no": "657135890",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Prise 3×T13 dont 1 commutée coffee",
+"libelle": "Prise 3xT13 dont 1 commutee coffee",
 "designation": "Prise ENC EDIZIOdue 3×T13 coffee 1×S",
 "unite": "pce",
 "couleur": "coffee"
@@ -1024,7 +844,7 @@
 "e_no": "554621000",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Poussoir 2× A-R blanc",
+"libelle": "Poussoir 2x A-R blanc",
 "designation": "Poussoir ENC EDIZIOdue 2×A-R/1P blanc",
 "unite": "pce",
 "couleur": "blanc"
@@ -1034,7 +854,7 @@
 "e_no": "554621950",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Poussoir 2× A-R noir",
+"libelle": "Poussoir 2x A-R noir",
 "designation": "Poussoir ENC EDIZIOdue 2×A-R/1P noir",
 "unite": "pce",
 "couleur": "noir"
@@ -1044,7 +864,7 @@
 "e_no": "554621010",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Poussoir 2× A-R crema",
+"libelle": "Poussoir 2x A-R crema",
 "designation": "Poussoir ENC EDIZIOdue 2×A-R/1P crema",
 "unite": "pce",
 "couleur": "crema"
@@ -1054,7 +874,7 @@
 "e_no": "554621030",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Poussoir 2× A-R gris clair",
+"libelle": "Poussoir 2x A-R gris clair",
 "designation": "Poussoir ENC EDIZIOdue 2×A-R/1P gris clair",
 "unite": "pce",
 "couleur": "gris clair"
@@ -1064,7 +884,7 @@
 "e_no": "554621040",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Poussoir 2× A-R gris foncé",
+"libelle": "Poussoir 2x A-R gris foncé",
 "designation": "Poussoir ENC EDIZIOdue 2×A-R/1P gris foncé",
 "unite": "pce",
 "couleur": "gris foncé"
@@ -1074,7 +894,7 @@
 "e_no": "554621890",
 "marque": "Feller",
 "gamme": "EDIZIOdue",
-"libelle": "Poussoir 2× A-R coffee",
+"libelle": "Poussoir 2x A-R coffee",
 "designation": "Poussoir ENC EDIZIOdue 2×A-R/1P coffee",
 "unite": "pce",
 "couleur": "coffee"

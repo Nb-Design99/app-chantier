@@ -273,6 +273,32 @@ create view public.materiel_export as
   group by 1, 2, 3, 4, 5, 6, 7, 9;
 
 -- =====================================================================
+-- 5 bis. PLANNING
+-- =====================================================================
+-- Le « report automatique au lendemain » ne décale aucune date : l'app affiche
+-- dans la journée toute tâche non faite dont le jour est passé. Pas de tâche
+-- planifiée côté serveur, donc rien qui se déclenche de travers quand un
+-- téléphone revient après trois jours hors ligne.
+create table public.taches (
+  id          uuid primary key,
+  affaire_id  uuid not null references public.affaires(id) on delete cascade,
+  jour        date not null,
+  libelle     text not null,
+  faite       boolean not null default false,
+  date_faite  timestamptz,
+  assigne_a   uuid references public.profils(id),
+  cree_par    uuid references public.profils(id),
+  created_at  timestamptz not null default now(),
+  updated_at  timestamptz not null default now(),
+  supprime_le timestamptz
+);
+create index taches_jour_idx on public.taches (jour, faite) where supprime_le is null;
+create index taches_affaire_idx on public.taches (affaire_id, jour);
+create index taches_sync_idx on public.taches (updated_at);
+create trigger t_taches_touch before update on public.taches
+  for each row execute function public.touch_updated_at();
+
+-- =====================================================================
 -- 6. MÉTRÉS
 -- =====================================================================
 -- Codes d'installation (CI) — source USIE 21.10.96, colonne « CI » de la fiche.
@@ -473,6 +499,9 @@ create policy affectations_ecriture on public.affectations for all
 
 -- Tables filles : accès hérité de l'affaire
 create policy etapes_acces on public.etapes for all to authenticated
+  using (public.acces_affaire(affaire_id)) with check (public.acces_affaire(affaire_id));
+
+create policy taches_acces on public.taches for all to authenticated
   using (public.acces_affaire(affaire_id)) with check (public.acces_affaire(affaire_id));
 
 create policy locaux_acces on public.locaux for all to authenticated

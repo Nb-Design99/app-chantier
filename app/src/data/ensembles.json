@@ -34,46 +34,12 @@
 ]
 },
 {
-"libelle": "Prise T13 avec shutter",
+"libelle": "Prise 2xT13",
 "categorie": "Prises",
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
 "ordre": 10,
-"variantes": [
-{
-"couleur": "blanc",
-"ref": "87003.FMI.K.61"
-},
-{
-"couleur": "noir",
-"ref": "87003.FMI.K.60"
-},
-{
-"couleur": "crema",
-"ref": "87003.FMI.K.35"
-},
-{
-"couleur": "gris clair",
-"ref": "87003.FMI.K.65"
-},
-{
-"couleur": "gris foncé",
-"ref": "87003.FMI.K.67"
-},
-{
-"couleur": "coffee",
-"ref": "87003.FMI.K.57"
-}
-]
-},
-{
-"libelle": "Prise 2×T13",
-"categorie": "Prises",
-"unite": "pce",
-"sansCouleur": false,
-"favori": true,
-"ordre": 20,
 "variantes": [
 {
 "couleur": "blanc",
@@ -102,46 +68,12 @@
 ]
 },
 {
-"libelle": "Prise 2×T13 avec shutter",
+"libelle": "Prise 2xT13 dont 1 commutee",
 "categorie": "Prises",
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 30,
-"variantes": [
-{
-"couleur": "blanc",
-"ref": "87203.FMI.K.61"
-},
-{
-"couleur": "noir",
-"ref": "87203.FMI.K.60"
-},
-{
-"couleur": "crema",
-"ref": "87203.FMI.K.35"
-},
-{
-"couleur": "gris clair",
-"ref": "87203.FMI.K.65"
-},
-{
-"couleur": "gris foncé",
-"ref": "87203.FMI.K.67"
-},
-{
-"couleur": "coffee",
-"ref": "87203.FMI.K.57"
-}
-]
-},
-{
-"libelle": "Prise 2×T13 dont 1 commutée",
-"categorie": "Prises",
-"unite": "pce",
-"sansCouleur": false,
-"favori": true,
-"ordre": 40,
+"ordre": 20,
 "variantes": [
 {
 "couleur": "blanc",
@@ -170,12 +102,12 @@
 ]
 },
 {
-"libelle": "Prise 3×T13",
+"libelle": "Prise 3xT13",
 "categorie": "Prises",
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 50,
+"ordre": 30,
 "variantes": [
 {
 "couleur": "blanc",
@@ -204,46 +136,12 @@
 ]
 },
 {
-"libelle": "Prise 3×T13 avec shutter",
+"libelle": "Prise 3xT13 dont 1 commutee",
 "categorie": "Prises",
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 60,
-"variantes": [
-{
-"couleur": "blanc",
-"ref": "87303.FMI.K.61"
-},
-{
-"couleur": "noir",
-"ref": "87303.FMI.K.60"
-},
-{
-"couleur": "crema",
-"ref": "87303.FMI.K.35"
-},
-{
-"couleur": "gris clair",
-"ref": "87303.FMI.K.65"
-},
-{
-"couleur": "gris foncé",
-"ref": "87303.FMI.K.67"
-},
-{
-"couleur": "coffee",
-"ref": "87303.FMI.K.57"
-}
-]
-},
-{
-"libelle": "Prise 3×T13 dont 1 commutée",
-"categorie": "Prises",
-"unite": "pce",
-"sansCouleur": false,
-"favori": true,
-"ordre": 70,
+"ordre": 40,
 "variantes": [
 {
 "couleur": "blanc",
@@ -277,7 +175,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 80,
+"ordre": 50,
 "variantes": [
 {
 "couleur": "blanc",
@@ -311,7 +209,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 90,
+"ordre": 60,
 "variantes": [
 {
 "couleur": "blanc",
@@ -345,7 +243,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 100,
+"ordre": 70,
 "variantes": [
 {
 "couleur": "blanc",
@@ -379,7 +277,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 110,
+"ordre": 80,
 "variantes": [
 {
 "couleur": "blanc",
@@ -413,7 +311,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 120,
+"ordre": 90,
 "variantes": [
 {
 "couleur": "blanc",
@@ -447,7 +345,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 130,
+"ordre": 100,
 "variantes": [
 {
 "couleur": "blanc",
@@ -481,7 +379,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 140,
+"ordre": 110,
 "variantes": [
 {
 "couleur": "blanc",
@@ -515,7 +413,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 150,
+"ordre": 120,
 "variantes": [
 {
 "couleur": "blanc",
@@ -549,7 +447,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 160,
+"ordre": 130,
 "variantes": [
 {
 "couleur": "blanc",
@@ -578,12 +476,12 @@
 ]
 },
 {
-"libelle": "Poussoir 2× A-R",
+"libelle": "Poussoir 2x A-R",
 "categorie": "Poussoirs",
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 170,
+"ordre": 140,
 "variantes": [
 {
 "couleur": "blanc",
@@ -617,7 +515,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 180,
+"ordre": 150,
 "variantes": [
 {
 "couleur": "blanc",
@@ -651,7 +549,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 190,
+"ordre": 160,
 "variantes": [
 {
 "couleur": "blanc",
@@ -685,7 +583,7 @@
 "unite": "pce",
 "sansCouleur": false,
 "favori": true,
-"ordre": 200,
+"ordre": 170,
 "variantes": [
 {
 "couleur": "blanc",
@@ -719,7 +617,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 220,
+"ordre": 190,
 "variantes": [
 {
 "couleur": "",
@@ -733,7 +631,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 230,
+"ordre": 200,
 "variantes": [
 {
 "couleur": "",
@@ -747,7 +645,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 240,
+"ordre": 210,
 "variantes": [
 {
 "couleur": "",
@@ -761,7 +659,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 250,
+"ordre": 220,
 "variantes": [
 {
 "couleur": "",
@@ -775,7 +673,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 260,
+"ordre": 230,
 "variantes": [
 {
 "couleur": "",
@@ -789,7 +687,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 270,
+"ordre": 240,
 "variantes": [
 {
 "couleur": "",
@@ -803,7 +701,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 280,
+"ordre": 250,
 "variantes": [
 {
 "couleur": "",
@@ -817,7 +715,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 290,
+"ordre": 260,
 "variantes": [
 {
 "couleur": "",
@@ -831,7 +729,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 300,
+"ordre": 270,
 "variantes": [
 {
 "couleur": "",
@@ -845,7 +743,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 310,
+"ordre": 280,
 "variantes": [
 {
 "couleur": "",
@@ -859,7 +757,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 320,
+"ordre": 290,
 "variantes": [
 {
 "couleur": "",
@@ -873,7 +771,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 330,
+"ordre": 300,
 "variantes": [
 {
 "couleur": "",
@@ -887,7 +785,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 340,
+"ordre": 310,
 "variantes": [
 {
 "couleur": "",
@@ -901,7 +799,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 350,
+"ordre": 320,
 "variantes": [
 {
 "couleur": "",
@@ -915,7 +813,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 360,
+"ordre": 330,
 "variantes": [
 {
 "couleur": "",
@@ -929,7 +827,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 370,
+"ordre": 340,
 "variantes": [
 {
 "couleur": "",
@@ -943,7 +841,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 380,
+"ordre": 350,
 "variantes": [
 {
 "couleur": "",
@@ -957,7 +855,7 @@
 "unite": "m",
 "sansCouleur": true,
 "favori": true,
-"ordre": 390,
+"ordre": 360,
 "variantes": [
 {
 "couleur": "",

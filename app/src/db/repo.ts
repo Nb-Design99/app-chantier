@@ -1,7 +1,7 @@
 import {
   db, uuid, maintenant,
   type Affaire, type Etape, type Local, type Metre, type MetreLigne,
-  type MaterielMouvement, type TypeAffaire, type Uuid,
+  type MaterielMouvement, type Tache, type TypeAffaire, type Uuid,
 } from './schema'
 
 /**
@@ -149,6 +149,46 @@ export async function besoinsMateriel(affaireId: Uuid): Promise<BesoinMateriel[]
     cumul.set(m.article_ref, e)
   }
   return [...cumul.values()].filter((b) => b.quantite !== 0)
+}
+
+// ---------------------------------------------------------------- Planning
+
+export const aujourdhui = (): string => new Date().toLocaleDateString('sv-SE')
+
+export async function creerTache(
+  affaireId: Uuid, libelle: string, jour: string, auteurId: Uuid, assigneA?: Uuid | null,
+) {
+  const t: Tache = {
+    id: uuid(), affaire_id: affaireId, jour, libelle: libelle.trim(),
+    faite: false, assigne_a: assigneA ?? null, cree_par: auteurId,
+    created_at: maintenant(), updated_at: maintenant(),
+  }
+  await db.transaction('rw', db.taches, db.sync_file, async () => {
+    await db.taches.add(t)
+    await journaliser('taches', 'insert', t)
+  })
+  return t.id
+}
+
+export async function basculerTache(t: Tache) {
+  const faite = !t.faite
+  const patch = {
+    faite,
+    date_faite: faite ? maintenant() : null,
+    updated_at: maintenant(),
+  }
+  await db.transaction('rw', db.taches, db.sync_file, async () => {
+    await db.taches.update(t.id, patch)
+    await journaliser('taches', 'update', { id: t.id, ...patch })
+  })
+}
+
+export async function supprimerTache(id: Uuid) {
+  const patch = { supprime_le: maintenant(), updated_at: maintenant() }
+  await db.transaction('rw', db.taches, db.sync_file, async () => {
+    await db.taches.update(id, patch)
+    await journaliser('taches', 'update', { id, ...patch })
+  })
 }
 
 // ------------------------------------------------------------------ Métrés

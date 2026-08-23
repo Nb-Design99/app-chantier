@@ -23,6 +23,9 @@ export async function chargerReferentiels() {
     // lieu de les fusionner, sinon un libellé renommé laisse un doublon fantôme
     // (la clé primaire des ensembles est le libellé).
       await db.ensembles.clear()
+      // Idem pour les articles : sans ça, une référence retirée du catalogue
+      // (les prises à shutter, par exemple) resterait indéfiniment cherchable.
+      await db.articles.clear()
       await db.categories.bulkPut(categories as never)
       await db.postes.bulkPut(postes as never)
       await db.codes_ci.bulkPut(codesCi as never)
@@ -30,9 +33,11 @@ export async function chargerReferentiels() {
       // Le catalogue complet d'abord, les 144 articles des favoris ensuite :
       // ces derniers portent un libellé court plus lisible, ils doivent gagner.
       await db.articles.bulkPut(
-        (catalogue as { ref: string; e_no: string; designation: string; couleur: string }[]).map(
-          (a) => ({ ...a, marque: 'Feller', gamme: 'EDIZIOdue', libelle: a.designation, unite: 'pce' }),
-        ) as never,
+        (catalogue as {
+          ref: string; e_no: string; designation: string; couleur: string; mots: string
+        }[]).map((a) => ({
+          ...a, marque: 'Feller', gamme: 'EDIZIOdue', libelle: a.designation, unite: 'pce',
+        })) as never,
       )
       await db.articles.bulkPut(articles as never)
       if ((await db.locaux_types.count()) === 0) {
