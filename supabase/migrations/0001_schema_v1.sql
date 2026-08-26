@@ -65,6 +65,8 @@ create table public.affaires (
   npa         text,
   localite    text,
   date_debut  date,
+  rendez_vous timestamptz,                  -- agenda des dépannages
+  duree_min   smallint,                     -- durée prévue, pour l'événement
   statut      text not null default 'en_cours'
               check (statut in ('a_venir','en_cours','en_attente','termine')),
   notes       text,
@@ -75,6 +77,8 @@ create table public.affaires (
 );
 create index affaires_sync_idx on public.affaires (updated_at);
 create index affaires_statut_idx on public.affaires (statut, date_debut desc);
+create index affaires_rdv_idx on public.affaires (rendez_vous)
+  where rendez_vous is not null and supprime_le is null;
 create trigger t_affaires_touch before update on public.affaires
   for each row execute function public.touch_updated_at();
 

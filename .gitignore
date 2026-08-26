@@ -1,0 +1,4 @@
+app/dist/
+app/dist-web/
+app/node_modules/
+.env.local

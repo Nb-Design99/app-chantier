@@ -5,6 +5,7 @@ import { db, type TypeAffaire } from '../db/schema'
 import { creerAffaire } from '../db/repo'
 import { useSession } from '../lib/session'
 import Planning from './Planning'
+import Agenda from './Agenda'
 
 const TYPES: { cle: TypeAffaire; libelle: string }[] = [
   { cle: 'chantier', libelle: 'Chantier' },
@@ -66,6 +67,7 @@ export default function Affaires() {
 
   return (
     <div className="mx-auto max-w-2xl p-4">
+      <Agenda />
       <Planning />
 
       <div className="mb-4 flex items-center justify-between">

@@ -4,6 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  // Sur GitHub Pages l'app vit dans un sous-dossier ; en local elle est à la
+  // racine. Vite expose la valeur au code via import.meta.env.BASE_URL, dont
+  // le routeur se sert comme préfixe — une seule source de vérité.
+  base: process.env.VITE_BASE ?? '/',
   plugins: [
     react(),
     tailwindcss(),
@@ -18,7 +22,9 @@ export default defineConfig({
        * l'écran. À remettre à `false` le jour de l'hébergement, quand le vrai
        * hors ligne (téléphone, sous-sol) deviendra le sujet.
        */
-      selfDestroying: true,
+      // Hors ligne uniquement pour la version en ligne (VITE_PWA=on).
+      // En local le précache n'apporte rien et sert obstinément l'ancienne version.
+      selfDestroying: process.env.VITE_PWA !== 'on',
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
@@ -26,7 +32,7 @@ export default defineConfig({
         short_name: 'Chantier',
         description: 'Affaires, métrés et matériel sur le chantier',
         lang: 'fr',
-        start_url: '/',
+        start_url: process.env.VITE_BASE ?? '/',
         display: 'standalone',
         background_color: '#0b1220',
         theme_color: '#0b1220',
@@ -38,7 +44,7 @@ export default defineConfig({
       workbox: {
         // L'app doit démarrer sans réseau : tout le bundle est précaché.
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
-        navigateFallback: '/index.html',
+        navigateFallback: (process.env.VITE_BASE ?? '/') + 'index.html',
       },
     }),
   ],

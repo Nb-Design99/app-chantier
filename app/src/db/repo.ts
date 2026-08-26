@@ -26,6 +26,7 @@ export async function creerAffaire(
   saisie: {
     type: TypeAffaire; nom: string; numero_affaire?: string
     adresse?: string; localite?: string; date_debut?: string
+    rendez_vous?: string | null; duree_min?: number | null; notes?: string
   },
   auteurId: Uuid,
 ): Promise<Uuid> {
@@ -38,6 +39,9 @@ export async function creerAffaire(
     adresse: saisie.adresse?.trim() || null,
     localite: saisie.localite?.trim() || null,
     date_debut: saisie.date_debut || null,
+    rendez_vous: saisie.rendez_vous || null,
+    duree_min: saisie.duree_min ?? null,
+    notes: saisie.notes?.trim() || null,
     statut: 'en_cours',
     cree_par: auteurId,
     created_at: maintenant(),

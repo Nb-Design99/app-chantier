@@ -42,6 +42,10 @@ export interface Affaire extends Synchronisable {
   npa?: string | null
   localite?: string | null
   date_debut?: string | null
+  /** Rendez-vous planifié (ISO complet). C'est lui qui fait vivre l'agenda. */
+  rendez_vous?: string | null
+  /** Durée prévue en minutes, pour l'événement d'agenda. */
+  duree_min?: number | null
   statut: StatutAffaire
   notes?: string | null
   cree_par?: Uuid | null
@@ -296,6 +300,11 @@ export class BaseChantier extends Dexie {
     // v5 : planning
     this.version(5).stores({
       taches: 'id, affaire_id, jour, faite, [jour+faite]',
+    })
+
+    // v6 : rendez-vous des dépannages, indexés pour trier l'agenda
+    this.version(6).stores({
+      affaires: 'id, statut, type, updated_at, rendez_vous',
     })
   }
 }

@@ -11,7 +11,7 @@ const racine = createRoot(document.getElementById('root')!)
 function afficherApp() {
   racine.render(
     <StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <App />
       </BrowserRouter>
     </StrictMode>,
